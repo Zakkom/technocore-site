@@ -55,8 +55,8 @@ export default function TechnoCoreLanding() {
         </nav>
         <header id="hero" className="flex flex-col items-center justify-center text-center px-6 py-12">
           <link rel="icon" href="/logo.png" />
-          <div className="relative w-60 h-40 mb-6">
-            <img src="/logo.png" alt="TechnoCore" className="h-20 w-auto" />
+          <div className="relative w-40 h-20 mb-6">
+            <img src="/logo.png" alt="TechnoCore" className="h-50 w-auto" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold">TECHNOCORE</h1>
           <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">Solutions for Industrial Air & Gas</h2>
