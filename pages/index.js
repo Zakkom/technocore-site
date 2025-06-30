@@ -1,4 +1,5 @@
+import TechnoCoreLanding from "../components/TechnoCoreLanding";
 
-// content truncated for brevity
-
-// Insert the full component code from the canvas here
+export default function Home() {
+  return <TechnoCoreLanding />;
+}
