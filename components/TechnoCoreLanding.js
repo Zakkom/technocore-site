@@ -67,23 +67,7 @@ export default function TechnoCoreLanding() {
                 <a href="#contact" className="text-gray-300 hover:text-green-400">Contact</a>
               </div>
             </div>
-<footer className="bg-black border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-      <div className="mb-2 md:mb-0">
-        <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
-      </div>
-      <div className="space-x-4">
-        <a href="#products" className="hover:text-green-400">Products</a>
-        <a href="#about" className="hover:text-green-400">About</a>
-        <a href="#contact" className="hover:text-green-400">Contact</a>
-      </div>
-    </div>
-    <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
-  </div>
-</footer>
           </nav>
-
           <header id="hero" className="flex flex-col items-center justify-center text-center px-6 py-12">
             <link rel="icon" href="/logo.png" />
             <div className="relative w-auto h-40 mb-6">
@@ -169,6 +153,22 @@ export default function TechnoCoreLanding() {
             </form>
           </section>
         </div>
+<footer className="bg-black border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+      <div className="mb-2 md:mb-0">
+        <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
+      </div>
+      <div className="space-x-4">
+        <a href="#products" className="hover:text-green-400">Products</a>
+        <a href="#about" className="hover:text-green-400">About</a>
+        <a href="#contact" className="hover:text-green-400">Contact</a>
+      </div>
+    </div>
+    <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
+  </div>
+</footer>
+
       </div>
     </>
   );
