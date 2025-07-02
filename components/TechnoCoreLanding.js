@@ -150,6 +150,7 @@ export default function TechnoCoreLanding() {
                 Send Message
               </button>
             </form>
+          </section>
 <footer className="bg-black border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
   <div className="max-w-6xl mx-auto px-4">
     <div className="flex flex-col md:flex-row justify-between items-center mb-4">
@@ -165,7 +166,6 @@ export default function TechnoCoreLanding() {
     <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
   </div>
 </footer>
-          </section>
         </div>
       </div>
     </>
