@@ -42,7 +42,6 @@ export default function TechnoCoreLanding() {
   ];
 
   return (
-    <>
       <div className="min-h-screen bg-black text-white font-sans scroll-smooth">
         <nav className="bg-black border-b border-green-500 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
