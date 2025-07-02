@@ -46,7 +46,7 @@ export default function TechnoCoreLanding() {
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
         {/* Верхний фон */}
         <div
-          className="absolute inset-x-0 top-0 h-96 bg-cover bg-center z-0"
+          className="absolute inset-x-0 top-0 h-80 bg-cover bg-center z-0"
           style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
         />
         {/* Нижний фон */}
