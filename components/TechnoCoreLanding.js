@@ -1,4 +1,3 @@
-// components/TechnoCoreLanding.js
 import React from "react";
 
 export default function TechnoCoreLanding() {
@@ -43,19 +42,21 @@ export default function TechnoCoreLanding() {
 
   return (
     <>
-      <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
+      <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth">
         {/* Верхний фон */}
         <div
           className="absolute inset-x-0 top-0 h-72 bg-cover bg-center z-0"
           style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
         />
+
         {/* Нижний фон */}
         <div
-  className="absolute inset-x-0 bottom-0 h-[600px] bg-cover bg-center z-0"
-  style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
-/>
-        {/* Основной контент */}
-        <div className="relative z-10">
+          className="absolute inset-x-0 bottom-0 h-[600px] bg-cover bg-center z-0 pointer-events-none"
+          style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
+        />
+
+        {/* Контент поверх фонов */}
+        <div className="relative z-10 flex flex-col min-h-screen">
           <nav className="bg-black border-b border-green-500 sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
               <a href="#" className="text-white text-lg font-bold">TechnoCore</a>
@@ -67,6 +68,7 @@ export default function TechnoCoreLanding() {
               </div>
             </div>
           </nav>
+
           <header id="hero" className="flex flex-col items-center justify-center text-center px-6 py-12">
             <link rel="icon" href="/logo.png" />
             <div className="relative w-auto h-40 mb-6">
@@ -151,24 +153,26 @@ export default function TechnoCoreLanding() {
               </button>
             </form>
           </section>
-<footer className="bg-black border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-      <div className="mb-2 md:mb-0">
-        <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
-      </div>
-      <div className="space-x-4">
-        <a href="#products" className="hover:text-green-400">Products</a>
-        <a href="#about" className="hover:text-green-400">About</a>
-        <a href="#contact" className="hover:text-green-400">Contact</a>
-      </div>
-    </div>
-    <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
-  </div>
-</footer>
+
+          <footer className="bg-black border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
+            <div className="max-w-6xl mx-auto px-4">
+              <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+                <div className="mb-2 md:mb-0">
+                  <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
+                </div>
+                <div className="space-x-4">
+                  <a href="#products" className="hover:text-green-400">Products</a>
+                  <a href="#about" className="hover:text-green-400">About</a>
+                  <a href="#contact" className="hover:text-green-400">Contact</a>
+                </div>
+              </div>
+              <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
+            </div>
+          </footer>
         </div>
       </div>
     </>
   );
 }
+
 
