@@ -51,10 +51,9 @@ export default function TechnoCoreLanding() {
         />
         {/* Нижний фон */}
         <div
-          className="absolute inset-x-0 bottom-0 h-64 bg-cover bg-center z-0"
+          className="absolute inset-x-0 bottom-0 h-72 bg-cover bg-center z-0"
           style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
         />
-
         {/* Основной контент */}
         <div className="relative z-10">
           <nav className="bg-black border-b border-green-500 sticky top-0 z-50">
@@ -152,7 +151,6 @@ export default function TechnoCoreLanding() {
               </button>
             </form>
           </section>
-        </div>
 <footer className="bg-black border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
   <div className="max-w-6xl mx-auto px-4">
     <div className="flex flex-col md:flex-row justify-between items-center mb-4">
@@ -169,6 +167,7 @@ export default function TechnoCoreLanding() {
   </div>
 </footer>
 
+        </div>
       </div>
     </>
   );
