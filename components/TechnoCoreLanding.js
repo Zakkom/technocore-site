@@ -42,17 +42,28 @@ export default function TechnoCoreLanding() {
   ];
 
   return (
-      <div className="min-h-screen bg-black text-white font-sans scroll-smooth">
-        <nav className="bg-black border-b border-green-500 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <a href="#" className="text-white text-lg font-bold">TechnoCore</a>
-            <div className="flex flex-wrap justify-center sm:justify-end space-x-4 text-sm">
-              <a href="#products" className="text-gray-300 hover:text-green-400">Products</a>
-              <a href="#gallery" className="text-gray-300 hover:text-green-400">Gallery</a>
-              <a href="#about" className="text-gray-300 hover:text-green-400">About</a>
-              <a href="#contact" className="text-gray-300 hover:text-green-400">Contact</a>
-            </div>
-          </div>
+  <>
+    <div className="relative">
+      {/* ВЕРХНИЙ ФОН */}
+      <div
+        className="absolute inset-x-0 top-0 h-64 bg-cover bg-center opacity-40 z-0"
+        style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
+      />
+
+      {/* КОНТЕНТ САЙТА */}
+      <div className="relative z-10 min-h-screen bg-black text-white font-sans scroll-smooth">
+        {/* весь твой текущий контент: navbar, header, sections и т.д. */}
+        ...
+      </div>
+
+      {/* НИЖНИЙ ФОН */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-64 bg-cover bg-center opacity-40 z-0"
+        style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
+      />
+    </div>
+  </>
+);
         </nav>
         <header id="hero" className="flex flex-col items-center justify-center text-center px-6 py-12">
           <link rel="icon" href="/logo.png" />
