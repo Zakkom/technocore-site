@@ -51,7 +51,7 @@ export default function TechnoCoreLanding() {
 
         {/* Нижний фон */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[600px] bg-cover bg-center z-0 pointer-events-none"
+          className="absolute inset-x-0 bottom-0 h-[400px] bg-cover bg-center z-0 pointer-events-none"
           style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
         />
 
@@ -71,6 +71,7 @@ export default function TechnoCoreLanding() {
 
           <header id="hero" className="flex flex-col items-center justify-center text-center px-6 py-12">
             <link rel="icon" href="/logo.png" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
             <div className="relative w-auto h-40 mb-6">
               <img src="/logo.png" alt="TechnoCore" className="h-full w-auto mx-auto" />
             </div>
