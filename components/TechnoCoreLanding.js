@@ -51,7 +51,7 @@ export default function TechnoCoreLanding() {
         />
         {/* Нижний фон */}
         <div
-          className="absolute inset-x-0 bottom-0 h-72 bg-cover bg-center z-0"
+          className="absolute inset-x-0 bottom-0 h-80 bg-cover bg-center z-0"
           style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
         />
         {/* Основной контент */}
