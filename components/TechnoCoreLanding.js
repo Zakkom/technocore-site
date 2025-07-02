@@ -36,7 +36,9 @@ export default function TechnoCoreLanding() {
     { src: "/images/r-dry-adsorption.jpg", alt: "Adsorption Dryer R-DRY" },
     { src: "/images/chiller-pci.jpg", alt: "Chiller PCI Unit" },
     { src: "/images/filtration-units.jpg", alt: "Filtration Units" },
-    { src: "/images/n2-box-unit.jpg", alt: "N2 Box Generator Unit" }
+    { src: "/images/n2-box-unit.jpg", alt: "N2 Box Generator Unit" },
+    { src: "/images/12345.jpg", alt: "12345" },
+    { src: "/images/6789.jpg", alt: "6789" }
   ];
 
   return (
