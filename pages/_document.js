@@ -11,6 +11,39 @@ export default function Document() {
           name="description"
           content="TechnoCore — Industrial Gas Solutions (Nitrogen, Oxygen, Filtration, Dryers)"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "TechnoCore",
+              "url": "https://technocore.ie",
+              "logo": "https://technocore.ie/logo.png",
+              "email": "sales@technocore.ie",
+              "description":
+                "TechnoCore — Industrial Gas Solutions in Ireland. Distributor of nitrogen and oxygen generators, dryers, chillers, and compressed air systems.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Dublin",
+                "addressRegion": "Leinster",
+                "addressCountry": "IE"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/technocore",
+                "https://www.instagram.com/technocore.ie"
+              ],
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "email": "sales@technocore.ie",
+                  "contactType": "sales",
+                  "availableLanguage": ["English"]
+                }
+              ]
+            })
+          }}
+        />
       </Head>
       <body className="bg-black text-white">
         <Main />
