@@ -1,3 +1,4 @@
+// components/TechnoCoreLanding.js
 import React from "react";
 
 export default function TechnoCoreLanding() {
@@ -42,21 +43,19 @@ export default function TechnoCoreLanding() {
 
   return (
     <>
-      <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth">
+      <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
         {/* Верхний фон */}
         <div
           className="absolute inset-x-0 top-0 h-72 bg-cover bg-center z-0"
           style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
         />
-
         {/* Нижний фон */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[400px] bg-cover bg-center z-0 pointer-events-none"
+          className="absolute inset-x-0 bottom-0 h-[600px] bg-cover bg-center z-0"
           style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
         />
-
-        {/* Контент поверх фонов */}
-        <div className="relative z-10 flex flex-col min-h-screen">
+        {/* Основной контент */}
+        <div className="relative z-10">
           <nav className="bg-black border-b border-green-500 sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
               <a href="#" className="text-white text-lg font-bold">TechnoCore</a>
@@ -68,17 +67,15 @@ export default function TechnoCoreLanding() {
               </div>
             </div>
           </nav>
-
           <header id="hero" className="flex flex-col items-center justify-center text-center px-6 py-12">
             <link rel="icon" href="/logo.png" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
             <div className="relative w-auto h-40 mb-6">
               <img src="/logo.png" alt="TechnoCore" className="h-full w-auto mx-auto" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold">TECHNOCORE</h1>
-            <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">Solutions for Industrial Air & Gas</h2>
+            <h1 className="text-3xl md:text-4xl font-bold">Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland</h1>
+            <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">PSA Systems · Dryers · Filtration · Turnkey Installations</h2>
             <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">
-              Distributor of OMEGA AIR equipment: nitrogen/oxygen generators, dryers, filters, chillers, and turnkey gas systems.
+              Official distributor of OMEGA AIR in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, and turnkey compressed air solutions.
             </p>
           </header>
 
@@ -102,7 +99,7 @@ export default function TechnoCoreLanding() {
           <section id="about" className="p-12 bg-black text-center">
             <h3 className="text-2xl font-bold mb-4 text-green-500">About TechnoCore</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              TechnoCore, based in Ireland, is the official partner of OMEGA AIR. We provide complete industrial gas solutions: air dryers, PSA generators, filtration systems, and custom-engineered units for pharmaceuticals, food production, laser cutting, electronics, and general manufacturing.
+              TechnoCore is Ireland’s trusted partner of OMEGA AIR, delivering PSA nitrogen and oxygen generators, compressed air dryers, gas filtration systems, chillers, and fully integrated industrial gas treatment solutions for manufacturing, food processing, pharma, and more.
             </p>
           </section>
 
@@ -154,7 +151,6 @@ export default function TechnoCoreLanding() {
               </button>
             </form>
           </section>
-
           <footer className="bg-black border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
             <div className="max-w-6xl mx-auto px-4">
               <div className="flex flex-col md:flex-row justify-between items-center mb-4">
@@ -175,5 +171,6 @@ export default function TechnoCoreLanding() {
     </>
   );
 }
+
 
 
