@@ -2,24 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.technocore.ie/</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2025-07-03</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.technocore.ie/#products</loc>
-    <priority>0.80</priority>
+    <lastmod>2025-07-03</lastmod>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.technocore.ie/#gallery</loc>
-    <priority>0.70</priority>
+    <lastmod>2025-07-03</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.technocore.ie/#about</loc>
-    <priority>0.60</priority>
+    <lastmod>2025-07-03</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://www.technocore.ie/#contact</loc>
-    <priority>0.90</priority>
+    <lastmod>2025-07-03</lastmod>
+    <priority>0.85</priority>
   </url>
 </urlset>
+
 
