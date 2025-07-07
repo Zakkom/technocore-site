@@ -42,6 +42,25 @@ export default function TechnoCoreLanding() {
     { src: "/images/6789.jpg", alt: "6789" }
   ];
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@graph": products.map((product) => ({
+      "@type": "Product",
+      "name": product.title,
+      "description": product.desc,
+      "brand": {
+        "@type": "Brand",
+        "name": "TechnoCore"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "price": "0.0"
+      }
+    }))
+  };
+
   return (
     <>
       <Head>
@@ -54,6 +73,10 @@ export default function TechnoCoreLanding() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
       </Head>
 
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
