@@ -51,12 +51,6 @@ export default function TechnoCoreLanding() {
       "brand": {
         "@type": "Brand",
         "name": "TechnoCore"
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "price": "0.0"
       }
     }))
   };
@@ -68,13 +62,17 @@ export default function TechnoCoreLanding() {
     "url": "https://technocore.ie",
     "logo": "https://technocore.ie/logo.png",
     "email": "sales@technocore.ie",
-    "description": "TechnoCore supplies nitrogen & oxygen generators, dryers, filtration, and gas treatment systems in Ireland.",
+    "description": "TechnoCore — Industrial Gas Solutions in Ireland. Distributor of nitrogen and oxygen generators, dryers, chillers, and compressed air systems.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Dublin",
       "addressRegion": "Leinster",
       "addressCountry": "IE"
     },
+    "sameAs": [
+      "https://www.linkedin.com/company/technocore",
+      "https://www.instagram.com/technocore.ie"
+    ],
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -107,8 +105,16 @@ export default function TechnoCoreLanding() {
         />
       </Head>
 
-      {/* ...контент страницы остаётся без изменений */}
-      {/* Весь нижний JSX — навигация, секции, футер — у тебя уже есть */}
+      <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
+        {/* Background images */}
+        <div className="absolute inset-x-0 top-0 h-72 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/top-bg.jpg')" }} />
+        <div className="absolute inset-x-0 bottom-0 h-[600px] bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }} />
+
+        {/* Content */}
+        <div className="relative z-10">
+          {/* NAVIGATION, HEADER, SECTIONS... (unchanged) */}
+        </div>
+      </div>
     </>
   );
 }
