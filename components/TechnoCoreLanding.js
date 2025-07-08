@@ -60,7 +60,7 @@ export default function TechnoCoreLanding() {
     <>
       <Head>
         <title>TechnoCore | Industrial Gas & Air Solutions in Ireland</title>
-        <meta name="description" content="TechnoCore: Nitrogen and Oxygen Generators, Dryers, Filtration, and Industrial Gas Solutions in Ireland." />
+        <meta name="description" content="TechnoCore: Nitrogen and Oxygen Generators, Air Dryers, Air & Gas Filtration, and Industrial Gas Solutions in Ireland." />
         <meta name="keywords" content="Nitrogen generators, Oxygen generators, Air dryers, Filtration systems, PSA, OMEGA AIR, Industrial gas treatment, Ireland" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
