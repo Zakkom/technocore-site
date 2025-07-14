@@ -63,7 +63,11 @@ export default function TechnoCoreLanding() {
         <meta name="description" content="TechnoCore: Nitrogen and Oxygen Generators, Air Dryers, Air & Gas Filtration, and Industrial Gas Solutions in Ireland." />
         <meta name="keywords" content="Nitrogen generators, Oxygen generators, Air dryers, Filtration systems, PSA, OMEGA AIR, Industrial gas treatment, Ireland" />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="canonical" href="https://technocore.ie/" />
+        <meta property="og:title" content="TechnoCore" />
+        <meta property="og:description" content="Industrial Nitrogen & Oxygen Generators, Dryers & Filtration in Ireland." />
+        <meta property="og:image" content="https://technocore.ie/images/n2-generator.jpg" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -81,12 +85,12 @@ export default function TechnoCoreLanding() {
         <div className="relative z-10">
           <nav className="bg-black border-b border-green-500 sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
-              <a href="#" className="text-white text-lg font-bold">TechnoCore</a>
+              <a href="/" className="text-white text-lg font-bold">TechnoCore</a>
               <div className="flex flex-wrap justify-center sm:justify-end space-x-4 text-sm">
-                <a href="#products" className="text-gray-300 hover:text-green-400">Products</a>
-                <a href="#gallery" className="text-gray-300 hover:text-green-400">Gallery</a>
-                <a href="#about" className="text-gray-300 hover:text-green-400">About</a>
-                <a href="#contact" className="text-gray-300 hover:text-green-400">Contact</a>
+                <a href="/#products" className="text-gray-300 hover:text-green-400">Products</a>
+                <a href="/#gallery" className="text-gray-300 hover:text-green-400">Gallery</a>
+                <a href="/#about" className="text-gray-300 hover:text-green-400">About</a>
+                <a href="/#contact" className="text-gray-300 hover:text-green-400">Contact</a>
               </div>
             </div>
           </nav>
@@ -132,6 +136,8 @@ export default function TechnoCoreLanding() {
             <p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
             <form action="https://formsubmit.co/sales@technocore.ie" method="POST" className="mt-8 max-w-xl mx-auto text-left">
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://technocore.ie/thanks" />
+              <input type="text" name="_honey" style={{ display: "none" }} />
               <div className="mb-4">
                 <label htmlFor="name" className="block text-gray-300 mb-1">Name</label>
                 <input type="text" id="name" name="name" required className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-green-500" />
@@ -157,9 +163,9 @@ export default function TechnoCoreLanding() {
                   <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
                 </div>
                 <div className="space-x-4">
-                  <a href="#products" className="hover:text-green-400">Products</a>
-                  <a href="#about" className="hover:text-green-400">About</a>
-                  <a href="#contact" className="hover:text-green-400">Contact</a>
+                  <a href="/#products" className="hover:text-green-400">Products</a>
+                  <a href="/#about" className="hover:text-green-400">About</a>
+                  <a href="/#contact" className="hover:text-green-400">Contact</a>
                 </div>
               </div>
               <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
@@ -170,3 +176,4 @@ export default function TechnoCoreLanding() {
     </>
   );
 }
+
