@@ -131,9 +131,10 @@ export default function TechnoCoreLanding() {
           </section>
 
           <section id="contact" className="p-12 bg-black text-center">
-            <h3 className="text-2xl font-bold mb-4 text-green-500">Contact</h3>
-            <p className="text-gray-400">Email: sales@technocore.ie</p>
-            <p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
+ 		 <h3 className="text-2xl font-bold mb-4 text-green-500">Contact</h3>
+ 		 <p className="text-gray-400">Email: sales@technocore.ie</p>
+ 		 <p className="text-gray-400">Phone: +353 85 231 44 30</p>
+  		<p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
             <form action="https://formsubmit.co/sales@technocore.ie" method="POST" className="mt-8 max-w-xl mx-auto text-left">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://technocore.ie/thanks" />
