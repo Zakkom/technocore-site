@@ -6,25 +6,26 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.technocore.ie/products</loc>
+    <loc>https://www.technocore.ie/#products</loc>
     <lastmod>2025-07-07</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.technocore.ie/gallery</loc>
+    <loc>https://www.technocore.ie/#gallery</loc>
     <lastmod>2025-07-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.technocore.ie/about</loc>
+    <loc>https://www.technocore.ie/#about</loc>
     <lastmod>2025-07-07</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://www.technocore.ie/contact</loc>
+    <loc>https://www.technocore.ie/#contact</loc>
     <lastmod>2025-07-07</lastmod>
     <priority>0.85</priority>
   </url>
 </urlset>
+
 
 
