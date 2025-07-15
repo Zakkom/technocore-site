@@ -25,7 +25,7 @@ export default function TechnoCoreLanding() {
       desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant."
     },
     {
-      title: "Chillers & Custom Solutions",
+      title: "Chillers & Сustom solutions for gas laser cutting systems",
       desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable."
     }
   ];
@@ -102,7 +102,7 @@ export default function TechnoCoreLanding() {
             <h1 className="text-3xl md:text-4xl font-bold">Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland</h1>
             <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">PSA Systems · Air Dryers · Air & Gas Filtration · Turnkey Installations</h2>
             <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">
-              Official distributor of OMEGA AIR in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, and turnkey compressed air solutions.
+              Supplier of OMEGA AIR solutions in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, chiller, and turnkey compressed air solutions.
             </p>
           </header>
 
