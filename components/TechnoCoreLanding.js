@@ -10,7 +10,7 @@ export default function TechnoCoreLanding() {
     },
     {
       title: "Oxygen Generators",
-      desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units."
+      desc: "On-site PSA oxygen generators (90–95% purity), ideal for aquaculture, medical, and welding applications. Plug-and-play systems that eliminate cylinder deliveries."
     },
     {
       title: "Refrigeration Air Dryers",
@@ -25,8 +25,8 @@ export default function TechnoCoreLanding() {
       desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant."
     },
     {
-      title: "Chillers & Сustom solutions for gas laser cutting systems",
-      desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable."
+      title: "Chillers & Turnkey Systems",
+      desc: "PCI chillers (2–180 kW) for lasers, compressors & food lines. Fully integrated SKID/BOX units for N2/O2 systems. Complete air & gas installations from design to commissioning."
     }
   ];
 
@@ -102,7 +102,7 @@ export default function TechnoCoreLanding() {
             <h1 className="text-3xl md:text-4xl font-bold">Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland</h1>
             <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">PSA Systems · Air Dryers · Air & Gas Filtration · Turnkey Installations</h2>
             <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">
-              Supplier of OMEGA AIR solutions in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, chiller, and turnkey compressed air solutions.
+              Supplier of OMEGA AIR solutions in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, chillers, and turnkey compressed air solutions.
             </p>
           </header>
 
@@ -126,15 +126,15 @@ export default function TechnoCoreLanding() {
           <section id="about" className="p-12 bg-black text-center">
             <h3 className="text-2xl font-bold mb-4 text-green-500">About TechnoCore</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              TechnoCore is Ireland’s trusted partner of OMEGA AIR, delivering PSA nitrogen and oxygen generators, compressed air dryers, gas filtration systems, chillers, and fully integrated industrial gas treatment solutions for manufacturing, food processing, pharma, and more.
+              TechnoCore is Ireland’s growing supplier of OMEGA AIR equipment — delivering PSA nitrogen and oxygen generators, chillers, compressed air dryers, filtration systems, and turnkey gas solutions for industry.
             </p>
           </section>
 
           <section id="contact" className="p-12 bg-black text-center">
- 		 <h3 className="text-2xl font-bold mb-4 text-green-500">Contact</h3>
- 		 <p className="text-gray-400">Email: sales@technocore.ie</p>
- 		 <p className="text-gray-400">Phone: +353 85 231 44 30</p>
-  		<p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
+            <h3 className="text-2xl font-bold mb-4 text-green-500">Contact</h3>
+            <p className="text-gray-400">Email: sales@technocore.ie</p>
+            <p className="text-gray-400">Phone: +353 85 231 44 30</p>
+            <p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
             <form action="https://formsubmit.co/sales@technocore.ie" method="POST" className="mt-8 max-w-xl mx-auto text-left">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://technocore.ie/thanks" />
