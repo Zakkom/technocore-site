@@ -126,7 +126,7 @@ export default function TechnoCoreLanding() {
           <section id="about" className="p-12 bg-black text-center">
             <h3 className="text-2xl font-bold mb-4 text-green-500">About TechnoCore</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              TechnoCore is Ireland’s growing supplier of OMEGA AIR equipment — delivering PSA nitrogen and oxygen generators, chillers, compressed air dryers, filtration systems, and turnkey gas solutions for industry.
+              TechnoCore is Ireland’s trusted partner of OMEGA AIR, delivering PSA nitrogen and oxygen generators, compressed air dryers, gas filtration systems, chillers, and fully integrated industrial gas treatment solutions for manufacturing, food processing, pharma, and more.
             </p>
           </section>
 
