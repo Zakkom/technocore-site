@@ -6,17 +6,56 @@ export default function TechnoCoreLanding() {
     {
       title: "Nitrogen Generators",
       desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units.",
-      seo: "PSA nitrogen generators provide on-site nitrogen production with high purity levels (up to 99.9995%). Ideal for packaging, laser cutting, electronics, and food processing industries. Units come in various formats like compact N2-Pack, Skid-mounted or BOX containerized modules."
+      seo: "Looking for a cost-effective way to generate nitrogen on-site? At **TechnoCore**, we offer high-purity **PSA nitrogen generators** tailored for industrial use across Ireland. 
+
+Our systems deliver **97% to 99.9995% nitrogen purity**, making them ideal for:
+- **Food packaging & beverage** industry
+- **Pharmaceutical and lab environments**
+- **Metal processing & laser cutting**
+
+✅ Reduce dependence on cylinder deliveries  
+✅ Lower your long-term nitrogen costs  
+✅ Compact SKID and BOX units available
+
+📍 TechnoCore – Your local partner for nitrogen solutions in Dublin, Wicklow, and across Ireland.
+
+👉 [Contact us today](#contact) for a free consultation."
     },
     {
       title: "Oxygen Generators",
       desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units.",
-      seo: "PSA oxygen systems allow for autonomous oxygen generation at 90–95% purity. Commonly used in aquaculture, medical backup systems, waste treatment, and metallurgy. Compact design fits into any facility without external gas supply."
+      seo: "Looking for an independent and efficient oxygen supply? TechnoCore offers PSA oxygen generators with 90–95% purity, ideal for:
+
+- Aquaculture & fish farms  
+- Medical & dental clinics  
+- Welding and metal cutting operations
+
+Our plug-and-play oxygen systems:
+- Eliminate the need for cylinder delivery
+- Are easy to install and maintain
+- Provide stable oxygen flow with low energy use
+
+🛠️ Compact Skid/BOX configurations available
+
+📍 Delivered and supported locally by TechnoCore in Dublin, Wicklow, and across Ireland."
     },
     {
       title: "Refrigeration Air Dryers",
       desc: "RDP/RDHP dryers with capacities up to 13200 m³/h, PDP +3°C, using R513a refrigerant and zero-loss drains.",
-      seo: "Refrigeration dryers remove water vapor from compressed air, ensuring consistent dew point at +3°C. Suitable for general manufacturing, packaging, painting, and pneumatic equipment protection. Energy-efficient and ozone-safe refrigerants."
+      seo: "**Moisture in compressed air** can damage your equipment and reduce product quality. **TechnoCore** supplies industrial-grade **air dryers** for every application:
+
+- **Refrigeration dryers (PDP +3°C)** for general use  
+- **Desiccant dryers (PDP -40°C)** for pharma & sensitive systems  
+- **Zero-loss condensate drains**, **energy-saving controls**
+
+Our units are built to handle high flow rates (up to 13200 m³/h) and ensure long-term efficiency and reliability.
+
+🌍 Serving customers throughout Ireland in:
+- Automotive & paint shops
+- Food processing plants
+- Manufacturing & heavy industry
+
+💬 Need help choosing the right dryer? [Talk to our engineers](#contact)."
     },
     {
       title: "Adsorption Dryers",
@@ -26,12 +65,39 @@ export default function TechnoCoreLanding() {
     {
       title: "Filtration Systems",
       desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant.",
-      seo: "Comprehensive filtration line including particulate, coalescing, carbon and sterile filters. Ensures air quality per ISO 8573-1 standards. Used in food & beverage, pharmaceuticals, paint lines, and cleanrooms."
+      seo: "TechnoCore supplies high-performance **air and gas filtration systems** designed to meet ISO 8573-1 standards.
+
+We provide:
+- **Coalescing filters** (oil/water removal)
+- **Particulate filters** (dust protection)
+- **Activated carbon filters** (oil vapor removal)
+- **Sterile filters** for pharma & food-grade applications
+
+✅ Improve compressed air quality  
+✅ Protect downstream equipment  
+✅ Ensure regulatory compliance
+
+🔍 Want cleaner air for your operations in Ireland? Contact TechnoCore for filtration solutions you can trust."
     },
     {
       title: "Chillers & Сustom solutions for gas laser cutting systems",
       desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable.",
-      seo: "TechnoCore provides industrial chillers and gas handling systems for high-precision applications like fiber/CO2 laser cutting. Containerized SKID/BOX platforms ensure modular expansion and process cooling reliability."
+      seo: "At TechnoCore, we don’t just supply equipment — we deliver **complete turnkey systems** for industrial gas treatment and compressed air.
+
+Our services include:
+- **Design & planning of full systems**
+- **Custom SKID or containerized BOX units**
+- **Installation, commissioning, and support**
+
+🔧 For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers  
+🌐 Single-vendor solution for your production site
+
+Let us handle the engineering — from source to final output.  
+✅ Reduce project complexity  
+✅ Ensure compatibility of all components  
+✅ Save time and cost
+
+📩 Ready to streamline your air or gas infrastructure? [Get in touch]"
     }
   ];
 
