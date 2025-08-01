@@ -60,7 +60,23 @@ Our units are built to handle high flow rates (up to 13200 m³/h) and ensure lon
     {
       title: "Adsorption Dryers",
       desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes.",
-      seo: `Adsorption dryers offer ultra-dry compressed air with pressure dew points as low as -40°C. Ideal for electronics, pharmaceuticals, and sensitive applications. Models include energy-saving purge cycle control with Siemens PLC.`
+      seo: `Need ultra-dry compressed air for sensitive processes? TechnoCore supplies **adsorption dryers** with pressure dew points as low as **-40°C**, ideal for:
+
+- **Pharmaceutical & medical production**
+- **Electronics & semiconductor industries**
+- **Precision instruments and optics**
+
+Our systems feature:
+- **Siemens SIMATIC PLC** for smart control
+- **Energy-saving purge cycles**
+- **Robust BVA, BVL, and BP models** with durable build
+
+✅ Ensure product quality and compliance  
+✅ Protect instruments from moisture-related damage  
+✅ Reduce downtime and maintenance costs
+
+📍 Installed and supported locally by TechnoCore across Dublin, Wicklow, and all of Ireland.  
+📩 [Contact us](#contact) to learn which model is right for your facility.`
     },
     {
       title: "Filtration Systems",
