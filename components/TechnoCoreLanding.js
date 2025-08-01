@@ -46,38 +46,6 @@ Our plug-and-play oxygen systems:
   const handleBack = () => setSelectedProduct(null);
 
   return (
-    <section id="products" className="bg-gray-900 p-8">
-      {!selectedProduct ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product, index) => (
-            <article key={index} className="bg-black border border-green-500 rounded p-6">
-              <h3
-                onClick={() => handleSelect(product)}
-                className="text-xl font-semibold text-green-400 mb-2 cursor-pointer hover:underline"
-              >
-                {product.title}
-              </h3>
-              <p className="text-gray-300 mb-4">{product.desc}</p>
-            </article>
-          ))}
-        </div>
-      ) : (
-        <div className="bg-black border border-green-500 rounded p-6 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-green-400 mb-4">{selectedProduct.title}</h3>
-          <p className="text-gray-300 whitespace-pre-line">{selectedProduct.seo}</p>
-          <button
-            onClick={handleBack}
-            className="mt-6 text-green-400 underline hover:text-green-300"
-          >
-            ← Back to products
-          </button>
-        </div>
-      )}
-    </section>
-  );
-}
-
-  return (
     <>
       <Head>
         <title>TechnoCore | Industrial Gas & Air Solutions in Ireland</title>
