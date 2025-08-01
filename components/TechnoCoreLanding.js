@@ -3,10 +3,10 @@ import Head from "next/head";
 
 export default function TechnoCoreLanding() {
   const products = [
-  {
-    title: "Nitrogen Generators",
-    desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units.",
-    seo: `Looking for a cost-effective way to generate nitrogen on-site? At **TechnoCore**, we offer high-purity **PSA nitrogen generators** tailored for industrial use across Ireland.
+    {
+      title: "Nitrogen Generators",
+      desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units.",
+      seo: `Looking for a cost-effective way to generate nitrogen on-site? At **TechnoCore**, we offer high-purity **PSA nitrogen generators** tailored for industrial use across Ireland.
 
 Our systems deliver **97% to 99.9995% nitrogen purity**, making them ideal for:
 - **Food packaging & beverage** industry
@@ -20,11 +20,11 @@ Our systems deliver **97% to 99.9995% nitrogen purity**, making them ideal for:
 📍 TechnoCore – Your local partner for nitrogen solutions in Dublin, Wicklow, and across Ireland.
 
 👉 [Contact us today](#contact) for a free consultation.`
-  },
-  {
-    title: "Oxygen Generators",
-    desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units.",
-    seo: `Looking for an independent and efficient oxygen supply? TechnoCore offers PSA oxygen generators with 90–95% purity, ideal for:
+    },
+    {
+      title: "Oxygen Generators",
+      desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units.",
+      seo: `Looking for an independent and efficient oxygen supply? TechnoCore offers PSA oxygen generators with 90–95% purity, ideal for:
 
 - Aquaculture & fish farms  
 - Medical & dental clinics  
@@ -38,11 +38,11 @@ Our plug-and-play oxygen systems:
 🛠️ Compact Skid/BOX configurations available
 
 📍 Delivered and supported locally by TechnoCore in Dublin, Wicklow, and across Ireland.`
-  },
-  {
-    title: "Refrigeration Air Dryers",
-    desc: "RDP/RDHP dryers with capacities up to 13200 m³/h, PDP +3°C, using R513a refrigerant and zero-loss drains.",
-    seo: `**Moisture in compressed air** can damage your equipment and reduce product quality. **TechnoCore** supplies industrial-grade **air dryers** for every application:
+    },
+    {
+      title: "Refrigeration Air Dryers",
+      desc: "RDP/RDHP dryers with capacities up to 13200 m³/h, PDP +3°C, using R513a refrigerant and zero-loss drains.",
+      seo: `**Moisture in compressed air** can damage your equipment and reduce product quality. **TechnoCore** supplies industrial-grade **air dryers** for every application:
 
 - **Refrigeration dryers (PDP +3°C)** for general use  
 - **Desiccant dryers (PDP -40°C)** for pharma & sensitive systems  
@@ -56,16 +56,16 @@ Our units are built to handle high flow rates (up to 13200 m³/h) and ensure lon
 - Manufacturing & heavy industry
 
 💬 Need help choosing the right dryer? [Talk to our engineers](#contact).`
-  },
-  {
-    title: "Adsorption Dryers",
-    desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes.",
-    seo: `Adsorption dryers offer ultra-dry compressed air with pressure dew points as low as -40°C. Ideal for electronics, pharmaceuticals, and sensitive applications. Models include energy-saving purge cycle control with Siemens PLC.`
-  },
-  {
-    title: "Filtration Systems",
-    desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant.",
-    seo: `TechnoCore supplies high-performance **air and gas filtration systems** designed to meet ISO 8573-1 standards.
+    },
+    {
+      title: "Adsorption Dryers",
+      desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes.",
+      seo: `Adsorption dryers offer ultra-dry compressed air with pressure dew points as low as -40°C. Ideal for electronics, pharmaceuticals, and sensitive applications. Models include energy-saving purge cycle control with Siemens PLC.`
+    },
+    {
+      title: "Filtration Systems",
+      desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant.",
+      seo: `TechnoCore supplies high-performance **air and gas filtration systems** designed to meet ISO 8573-1 standards.
 
 We provide:
 - **Coalescing filters** (oil/water removal)
@@ -78,11 +78,11 @@ We provide:
 ✅ Ensure regulatory compliance
 
 🔍 Want cleaner air for your operations in Ireland? Contact TechnoCore for filtration solutions you can trust.`
-  },
-  {
-    title: "Chillers & Сustom solutions for gas laser cutting systems",
-    desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable.",
-    seo: `At TechnoCore, we don’t just supply equipment — we deliver **complete turnkey systems** for industrial gas treatment and compressed air.
+    },
+    {
+      title: "Chillers & Сustom solutions for gas laser cutting systems",
+      desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable.",
+      seo: `At TechnoCore, we don’t just supply equipment — we deliver **complete turnkey systems** for industrial gas treatment and compressed air.
 
 Our services include:
 - **Design & planning of full systems**
@@ -98,10 +98,10 @@ Let us handle the engineering — from source to final output.
 ✅ Save time and cost
 
 📩 Ready to streamline your air or gas infrastructure? [Get in touch](#contact)`
-  }
-];
+    }
+  ];
 
-const images = [
+  const images = [
     { src: "/images/n2-generator.jpg", alt: "Nitrogen Generator - N2-Pack" },
     { src: "/images/o2-skid.jpg", alt: "Oxygen Skid System" },
     { src: "/images/rdp-dryer.jpg", alt: "Refrigeration Dryer RDP" },
@@ -112,11 +112,6 @@ const images = [
     { src: "/images/12345.jpg", alt: "12345" },
     { src: "/images/6789.jpg", alt: "6789" }
   ];
-
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const handleSelect = (product) => setSelectedProduct(product);
-  const handleBack = () => setSelectedProduct(null);
-
   return (
     <>
       <Head>
