@@ -6,7 +6,7 @@ export default function TechnoCoreLanding() {
     {
       title: "Nitrogen Generators",
       desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units.",
-      seo: "Looking for a cost-effective way to generate nitrogen on-site? At **TechnoCore**, we offer high-purity **PSA nitrogen generators** tailored for industrial use across Ireland. 
+      seo: `Looking for a cost-effective way to generate nitrogen on-site? At **TechnoCore**, we offer high-purity **PSA nitrogen generators** tailored for industrial use across Ireland.
 
 Our systems deliver **97% to 99.9995% nitrogen purity**, making them ideal for:
 - **Food packaging & beverage** industry
@@ -19,7 +19,7 @@ Our systems deliver **97% to 99.9995% nitrogen purity**, making them ideal for:
 
 📍 TechnoCore – Your local partner for nitrogen solutions in Dublin, Wicklow, and across Ireland.
 
-👉 [Contact us today](#contact) for a free consultation."
+👉 [Contact us today](#contact) for a free consultation.`
     },
     {
       title: "Oxygen Generators",
