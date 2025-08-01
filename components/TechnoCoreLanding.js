@@ -1,32 +1,37 @@
-// components/TechnoCoreLanding.js
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 
 export default function TechnoCoreLanding() {
   const products = [
     {
       title: "Nitrogen Generators",
-      desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units."
+      desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units.",
+      seo: "PSA nitrogen generators provide on-site nitrogen production with high purity levels (up to 99.9995%). Ideal for packaging, laser cutting, electronics, and food processing industries. Units come in various formats like compact N2-Pack, Skid-mounted or BOX containerized modules."
     },
     {
       title: "Oxygen Generators",
-      desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units."
+      desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units.",
+      seo: "PSA oxygen systems allow for autonomous oxygen generation at 90–95% purity. Commonly used in aquaculture, medical backup systems, waste treatment, and metallurgy. Compact design fits into any facility without external gas supply."
     },
     {
       title: "Refrigeration Air Dryers",
-      desc: "RDP/RDHP dryers with capacities up to 13200 m3/h, PDP +3°C, using R513a refrigerant and zero-loss drains."
+      desc: "RDP/RDHP dryers with capacities up to 13200 m³/h, PDP +3°C, using R513a refrigerant and zero-loss drains.",
+      seo: "Refrigeration dryers remove water vapor from compressed air, ensuring consistent dew point at +3°C. Suitable for general manufacturing, packaging, painting, and pneumatic equipment protection. Energy-efficient and ozone-safe refrigerants."
     },
     {
       title: "Adsorption Dryers",
-      desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes."
+      desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes.",
+      seo: "Adsorption dryers offer ultra-dry compressed air with pressure dew points as low as -40°C. Ideal for electronics, pharmaceuticals, and sensitive applications. Models include energy-saving purge cycle control with Siemens PLC."
     },
     {
       title: "Filtration Systems",
-      desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant."
+      desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant.",
+      seo: "Comprehensive filtration line including particulate, coalescing, carbon and sterile filters. Ensures air quality per ISO 8573-1 standards. Used in food & beverage, pharmaceuticals, paint lines, and cleanrooms."
     },
     {
       title: "Chillers & Сustom solutions for gas laser cutting systems",
-      desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable."
+      desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable.",
+      seo: "TechnoCore provides industrial chillers and gas handling systems for high-precision applications like fiber/CO2 laser cutting. Containerized SKID/BOX platforms ensure modular expansion and process cooling reliability."
     }
   ];
 
@@ -42,18 +47,14 @@ export default function TechnoCoreLanding() {
     { src: "/images/6789.jpg", alt: "6789" }
   ];
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@graph": products.map((product) => ({
-      "@type": "Service",
-      "name": product.title,
-      "description": product.desc,
-      "provider": {
-        "@type": "Organization",
-        "name": "TechnoCore",
-        "url": "https://technocore.ie"
-      }
-    }))
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleSelect = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const handleBack = () => {
+    setSelectedProduct(null);
   };
 
   return (
@@ -68,14 +69,6 @@ export default function TechnoCoreLanding() {
         <meta property="og:description" content="Industrial Nitrogen & Oxygen Generators, Dryers & Filtration in Ireland." />
         <meta property="og:image" content="https://technocore.ie/images/n2-generator.jpg" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
       </Head>
 
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
@@ -87,32 +80,50 @@ export default function TechnoCoreLanding() {
             <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
               <a href="/" className="text-white text-lg font-bold">TechnoCore</a>
               <div className="flex flex-wrap justify-center sm:justify-end space-x-4 text-sm">
-                <a href="/#products" className="text-gray-300 hover:text-green-400">Products</a>
-                <a href="/#gallery" className="text-gray-300 hover:text-green-400">Gallery</a>
-                <a href="/#about" className="text-gray-300 hover:text-green-400">About</a>
-                <a href="/#contact" className="text-gray-300 hover:text-green-400">Contact</a>
+                <a href="#products" className="text-gray-300 hover:text-green-400">Products</a>
+                <a href="#gallery" className="text-gray-300 hover:text-green-400">Gallery</a>
+                <a href="#about" className="text-gray-300 hover:text-green-400">About</a>
+                <a href="#contact" className="text-gray-300 hover:text-green-400">Contact</a>
               </div>
             </div>
           </nav>
 
-          <header id="hero" className="flex flex-col items-center justify-center text-center px-6 py-12">
+          <header className="flex flex-col items-center justify-center text-center px-6 py-12">
             <div className="relative w-auto h-40 mb-6">
               <img src="/logo.png" alt="TechnoCore logo" className="h-full w-auto mx-auto" />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold">Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland</h1>
             <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">PSA Systems · Air Dryers · Air & Gas Filtration · Turnkey Installations</h2>
-            <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">
-              Supplier of OMEGA AIR solutions in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, chiller, and turnkey compressed air solutions.
-            </p>
+            <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">Supplier of OMEGA AIR solutions in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, chiller, and turnkey compressed air solutions.</p>
           </header>
 
-          <section id="products" className="bg-gray-900 p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product, index) => (
-              <article key={index} className="bg-black border border-green-500 rounded p-6">
-                <h3 className="text-xl font-semibold text-green-400 mb-2">{product.title}</h3>
-                <p className="text-gray-300 mb-4">{product.desc}</p>
-              </article>
-            ))}
+          <section id="products" className="bg-gray-900 p-8">
+            {!selectedProduct ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {products.map((product, index) => (
+                  <article key={index} className="bg-black border border-green-500 rounded p-6">
+                    <h3
+                      onClick={() => handleSelect(product)}
+                      className="text-xl font-semibold text-green-400 mb-2 cursor-pointer hover:underline"
+                    >
+                      {product.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4">{product.desc}</p>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-black border border-green-500 rounded p-6 max-w-3xl mx-auto">
+                <h3 className="text-2xl font-bold text-green-400 mb-4">{selectedProduct.title}</h3>
+                <p className="text-gray-300 whitespace-pre-line">{selectedProduct.seo}</p>
+                <button
+                  onClick={handleBack}
+                  className="mt-6 text-green-400 underline hover:text-green-300"
+                >
+                  ← Back to products
+                </button>
+              </div>
+            )}
           </section>
 
           <section id="gallery" className="bg-black p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -131,10 +142,10 @@ export default function TechnoCoreLanding() {
           </section>
 
           <section id="contact" className="p-12 bg-black text-center">
- 		 <h3 className="text-2xl font-bold mb-4 text-green-500">Contact</h3>
- 		 <p className="text-gray-400">Email: sales@technocore.ie</p>
- 		 <p className="text-gray-400">Phone: +353 85 231 44 30</p>
-  		<p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
+            <h3 className="text-2xl font-bold mb-4 text-green-500">Contact</h3>
+            <p className="text-gray-400">Email: <a href="mailto:sales@technocore.ie" className="underline">sales@technocore.ie</a></p>
+            <p className="text-gray-400">Phone: +353 85 231 44 30</p>
+            <p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
             <form action="https://formsubmit.co/sales@technocore.ie" method="POST" className="mt-8 max-w-xl mx-auto text-left">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://technocore.ie/thanks" />
@@ -164,9 +175,9 @@ export default function TechnoCoreLanding() {
                   <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
                 </div>
                 <div className="space-x-4">
-                  <a href="/#products" className="hover:text-green-400">Products</a>
-                  <a href="/#about" className="hover:text-green-400">About</a>
-                  <a href="/#contact" className="hover:text-green-400">Contact</a>
+                  <a href="#products" className="hover:text-green-400">Products</a>
+                  <a href="#about" className="hover:text-green-400">About</a>
+                  <a href="#contact" className="hover:text-green-400">Contact</a>
                 </div>
               </div>
               <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
