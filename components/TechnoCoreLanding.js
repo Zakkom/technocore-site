@@ -1,3 +1,4 @@
+// components/TechnoCoreLanding.js
 import React, { useState } from "react";
 import Head from "next/head";
 
@@ -6,33 +7,59 @@ export default function TechnoCoreLanding() {
     {
       title: "Nitrogen Generators",
       desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units.",
-      seo: "PSA nitrogen generators provide on-site nitrogen production with high purity levels (up to 99.9995%). Ideal for packaging, laser cutting, electronics, and food processing industries. Units come in various formats like compact N2-Pack, Skid-mounted or BOX containerized modules."
-    },
-    {
-      title: "Oxygen Generators",
-      desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units.",
-      seo: "PSA oxygen systems allow for autonomous oxygen generation at 90–95% purity. Commonly used in aquaculture, medical backup systems, waste treatment, and metallurgy. Compact design fits into any facility without external gas supply."
-    },
-    {
-      title: "Refrigeration Air Dryers",
-      desc: "RDP/RDHP dryers with capacities up to 13200 m³/h, PDP +3°C, using R513a refrigerant and zero-loss drains.",
-      seo: "Refrigeration dryers remove water vapor from compressed air, ensuring consistent dew point at +3°C. Suitable for general manufacturing, packaging, painting, and pneumatic equipment protection. Energy-efficient and ozone-safe refrigerants."
-    },
-    {
-      title: "Adsorption Dryers",
-      desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes.",
-      seo: "Adsorption dryers offer ultra-dry compressed air with pressure dew points as low as -40°C. Ideal for electronics, pharmaceuticals, and sensitive applications. Models include energy-saving purge cycle control with Siemens PLC."
-    },
-    {
-      title: "Filtration Systems",
-      desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant.",
-      seo: "Comprehensive filtration line including particulate, coalescing, carbon and sterile filters. Ensures air quality per ISO 8573-1 standards. Used in food & beverage, pharmaceuticals, paint lines, and cleanrooms."
-    },
-    {
-      title: "Chillers & Сustom solutions for gas laser cutting systems",
-      desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable.",
-      seo: "TechnoCore provides industrial chillers and gas handling systems for high-precision applications like fiber/CO2 laser cutting. Containerized SKID/BOX platforms ensure modular expansion and process cooling reliability."
+      seo: `Looking for a cost-effective way to generate nitrogen on-site? At **TechnoCore**, we offer high-purity **PSA nitrogen generators** tailored for industrial use across Ireland.
+
+Our systems deliver **97% to 99.9995% nitrogen purity**, making them ideal for:
+- **Food packaging & beverage** industry
+- **Pharmaceutical and lab environments**
+- **Metal processing & laser cutting**
+
+✅ Reduce dependence on cylinder deliveries  
+✅ Lower your long-term nitrogen costs  
+✅ Compact SKID and BOX units available
+
+📍 TechnoCore – Your local partner for nitrogen solutions in Dublin, Wicklow, and across Ireland.
+
+👉 [Contact us today](#contact) for a free consultation.`
     }
+  ];
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const handleSelect = (product) => setSelectedProduct(product);
+  const handleBack = () => setSelectedProduct(null);
+
+  return (
+    <section id="products" className="bg-gray-900 p-8">
+      {!selectedProduct ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product, index) => (
+            <article key={index} className="bg-black border border-green-500 rounded p-6">
+              <h3
+                onClick={() => handleSelect(product)}
+                className="text-xl font-semibold text-green-400 mb-2 cursor-pointer hover:underline"
+              >
+                {product.title}
+              </h3>
+              <p className="text-gray-300 mb-4">{product.desc}</p>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="bg-black border border-green-500 rounded p-6 max-w-3xl mx-auto">
+          <h3 className="text-2xl font-bold text-green-400 mb-4">{selectedProduct.title}</h3>
+          <p className="text-gray-300 whitespace-pre-line">{selectedProduct.seo}</p>
+          <button
+            onClick={handleBack}
+            className="mt-6 text-green-400 underline hover:text-green-300"
+          >
+            ← Back to products
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
   ];
 
   const images = [
