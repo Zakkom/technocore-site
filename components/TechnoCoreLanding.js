@@ -1,5 +1,3 @@
-
-// components/TechnoCoreLanding.js
 import React, { useState } from "react";
 import Head from "next/head";
 
@@ -40,90 +38,44 @@ Our plug-and-play oxygen systems:
 🛠️ Compact Skid/BOX configurations available
 
 📍 Delivered and supported locally by TechnoCore in Dublin, Wicklow, and across Ireland.`
-    },
-    {
-      title: "Refrigeration Air Dryers",
-      desc: "RDP/RDHP dryers with capacities up to 13200 m³/h, PDP +3°C, using R513a refrigerant and zero-loss drains.",
-      seo: `**Moisture in compressed air** can damage your equipment and reduce product quality. **TechnoCore** supplies industrial-grade **air dryers** for every application:
-
-- **Refrigeration dryers (PDP +3°C)** for general use  
-- **Desiccant dryers (PDP -40°C)** for pharma & sensitive systems  
-- **Zero-loss condensate drains**, **energy-saving controls**
-
-Our units are built to handle high flow rates (up to 13200 m³/h) and ensure long-term efficiency and reliability.
-
-🌍 Serving customers throughout Ireland in:
-- Automotive & paint shops
-- Food processing plants
-- Manufacturing & heavy industry
-
-💬 Need help choosing the right dryer? [Talk to our engineers](#contact).`
-    },
-    {
-      title: "Adsorption Dryers",
-      desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes.",
-      seo: `Adsorption dryers offer ultra-dry compressed air with pressure dew points as low as -40°C. Ideal for electronics, pharmaceuticals, and sensitive applications. Models include energy-saving purge cycle control with Siemens PLC.`
-    },
-    {
-      title: "Filtration Systems",
-      desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant.",
-      seo: `TechnoCore supplies high-performance **air and gas filtration systems** designed to meet ISO 8573-1 standards.
-
-We provide:
-- **Coalescing filters** (oil/water removal)
-- **Particulate filters** (dust protection)
-- **Activated carbon filters** (oil vapor removal)
-- **Sterile filters** for pharma & food-grade applications
-
-✅ Improve compressed air quality  
-✅ Protect downstream equipment  
-✅ Ensure regulatory compliance
-
-🔍 Want cleaner air for your operations in Ireland? Contact TechnoCore for filtration solutions you can trust.`
-    },
-    {
-      title: "Chillers & Сustom solutions for gas laser cutting systems",
-      desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable.",
-      seo: `At TechnoCore, we don’t just supply equipment — we deliver **complete turnkey systems** for industrial gas treatment and compressed air.
-
-Our services include:
-- **Design & planning of full systems**
-- **Custom SKID or containerized BOX units**
-- **Installation, commissioning, and support**
-
-🔧 For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers  
-🌐 Single-vendor solution for your production site
-
-Let us handle the engineering — from source to final output.  
-✅ Reduce project complexity  
-✅ Ensure compatibility of all components  
-✅ Save time and cost
-
-📩 Ready to streamline your air or gas infrastructure? [Get in touch](#contact)`
     }
   ];
 
-  const images = [
-    { src: "/images/n2-generator.jpg", alt: "Nitrogen Generator - N2-Pack" },
-    { src: "/images/o2-skid.jpg", alt: "Oxygen Skid System" },
-    { src: "/images/rdp-dryer.jpg", alt: "Refrigeration Dryer RDP" },
-    { src: "/images/r-dry-adsorption.jpg", alt: "Adsorption Dryer R-DRY" },
-    { src: "/images/chiller-pci.jpg", alt: "Chiller PCI Unit" },
-    { src: "/images/filtration-units.jpg", alt: "Filtration Units" },
-    { src: "/images/n2-box-unit.jpg", alt: "N2 Box Generator Unit" },
-    { src: "/images/12345.jpg", alt: "12345" },
-    { src: "/images/6789.jpg", alt: "6789" }
-  ];
-
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const handleSelect = (product) => setSelectedProduct(product);
+  const handleBack = () => setSelectedProduct(null);
 
-  const handleSelect = (product) => {
-    setSelectedProduct(product);
-  };
-
-  const handleBack = () => {
-    setSelectedProduct(null);
-  };
+  return (
+    <section id="products" className="bg-gray-900 p-8">
+      {!selectedProduct ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product, index) => (
+            <article key={index} className="bg-black border border-green-500 rounded p-6">
+              <h3
+                onClick={() => handleSelect(product)}
+                className="text-xl font-semibold text-green-400 mb-2 cursor-pointer hover:underline"
+              >
+                {product.title}
+              </h3>
+              <p className="text-gray-300 mb-4">{product.desc}</p>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="bg-black border border-green-500 rounded p-6 max-w-3xl mx-auto">
+          <h3 className="text-2xl font-bold text-green-400 mb-4">{selectedProduct.title}</h3>
+          <p className="text-gray-300 whitespace-pre-line">{selectedProduct.seo}</p>
+          <button
+            onClick={handleBack}
+            className="mt-6 text-green-400 underline hover:text-green-300"
+          >
+            ← Back to products
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
 
   return (
     <>
