@@ -112,18 +112,23 @@ Let us handle the engineering — from source to final output.
     { src: "/images/12345.jpg", alt: "12345" },
     { src: "/images/6789.jpg", alt: "6789" }
   ];
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const handleSelect = (product) => setSelectedProduct(product);
+  const handleBack = () => setSelectedProduct(null);
+
   return (
-    <>
+    <main>
       <Head>
         <title>TechnoCore | Industrial Gas & Air Solutions in Ireland</title>
         <meta name="description" content="TechnoCore: Nitrogen and Oxygen Generators, Air Dryers, Air & Gas Filtration, and Industrial Gas Solutions in Ireland." />
         <meta name="keywords" content="Nitrogen generators, Oxygen generators, Air dryers, Gas filtration systems, PSA, Chillers, Refrigeration Air Dryers, Compressed Air, Industrial gas treatment, Ireland" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://technocore.ie/" />
         <meta property="og:title" content="TechnoCore" />
         <meta property="og:description" content="Industrial Nitrogen & Oxygen Generators, Dryers & Filtration in Ireland." />
         <meta property="og:image" content="https://technocore.ie/images/n2-generator.jpg" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://technocore.ie/" />
       </Head>
 
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
@@ -240,6 +245,6 @@ Let us handle the engineering — from source to final output.
           </footer>
         </div>
       </div>
-    </>
+    </main>
   );
 }
