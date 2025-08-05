@@ -170,7 +170,7 @@ Let us handle the engineering — from source to final output.
             </div>
             <h1 className="text-3xl md:text-4xl font-bold">Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland</h1>
             <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">PSA Systems · Air Dryers · Air & Gas Filtration · Turnkey Installations</h2>
-            <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">Supplier of OMEGA AIR solutions in Ireland — PSA nitrogen & oxygen generators, industrial air dryers, gas filtration systems, chiller, and turnkey compressed air solutions.</p>
+            <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">Engineering supplier in Ireland for gas generation and air treatment — from PSA nitrogen/oxygen generators to filtration, chillers, air dryers, and fully integrated turnkey compressed air systems.</p>
           </header>
 
           <section id="products" className="bg-gray-900 p-8">
