@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Главная страница -->
+  <!-- Главная страница сайта -->
   <url>
     <loc>https://www.technocore.ie/</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <priority>1.00</priority>
   </url>
-
-  <!-- Якорные секции главной страницы -->
-  <url>
-    <loc>https://www.technocore.ie/#products</loc>
-    <lastmod>2025-07-07</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://www.technocore.ie/#gallery</loc>
-    <lastmod>2025-07-07</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.technocore.ie/#about</loc>
-    <lastmod>2025-07-07</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://www.technocore.ie/#contact</loc>
-    <lastmod>2025-07-07</lastmod>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Новые страницы -->
-  <url>
-    <loc>https://www.technocore.ie/about</loc>
-    <lastmod>2025-07-07</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.technocore.ie/contact</loc>
-    <lastmod>2025-07-07</lastmod>
-    <priority>0.85</priority>
-  </url>
-
 </urlset>
