@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Sitemap: https://technocore.ie/sitemap.xml
+
+# Host
+Host: https://www.technocore.ie
+
+# Sitemaps
+Sitemap: https://www.technocore.ie/sitemap.xml
