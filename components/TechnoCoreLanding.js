@@ -158,8 +158,8 @@ Let us handle the engineering — from source to final output.
               <div className="flex flex-wrap justify-center sm:justify-end space-x-4 text-sm">
                 <a href="#products" className="text-gray-300 hover:text-green-400">Products</a>
                 <a href="#gallery" className="text-gray-300 hover:text-green-400">Gallery</a>
-                <a href="#about" className="text-gray-300 hover:text-green-400">About</a>
-                <a href="#contact" className="text-gray-300 hover:text-green-400">Contact</a>
+                <a href="/about" className="text-gray-300 hover:text-green-400">About</a>
+		<a href="/contact" className="text-gray-300 hover:text-green-400">Contact</a>
               </div>
             </div>
           </nav>
