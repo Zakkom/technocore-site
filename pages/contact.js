@@ -18,10 +18,7 @@ export default function Contact() {
         <h1 className="text-3xl font-bold text-green-500 mb-6">Contact TechnoCore</h1>
 
         <p className="text-gray-400 mb-2">
-          Email:{" "}
-          <a href="mailto:sales@technocore.ie" className="underline">
-            sales@technocore.ie
-          </a>
+          Email: <a href="mailto:sales@technocore.ie" className="underline">sales@technocore.ie</a>
         </p>
         <p className="text-gray-400 mb-2">Phone: +353 85 231 44 30</p>
         <p className="text-gray-400 mb-6">Location: Dublin / Wicklow, Ireland</p>
@@ -69,11 +66,12 @@ export default function Contact() {
           </div>
 
           <div className="flex gap-3">
+            {/* компактная «Back to Home» в виде ссылки-кнопки */}
             <Link
               href="/"
               className="inline-flex items-center justify-center border border-green-500 text-green-500 px-6 py-2 rounded hover:bg-green-500 hover:text-black transition"
             >
-              ← Back to Home
+              Back to Home
             </Link>
 
             <button
