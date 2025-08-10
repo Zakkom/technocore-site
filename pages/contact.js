@@ -16,6 +16,7 @@ export default function Contact() {
 
       <div className="p-12 text-center">
         <h1 className="text-3xl font-bold text-green-500 mb-6">Contact TechnoCore</h1>
+
         <p className="text-gray-400 mb-2">
           Email:{" "}
           <a href="mailto:sales@technocore.ie" className="underline">
@@ -35,9 +36,7 @@ export default function Contact() {
           <input type="text" name="_honey" style={{ display: "none" }} />
 
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-300 mb-1">
-              Name
-            </label>
+            <label htmlFor="name" className="block text-gray-300 mb-1">Name</label>
             <input
               type="text"
               id="name"
@@ -46,10 +45,9 @@ export default function Contact() {
               className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-green-500"
             />
           </div>
+
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-300 mb-1">
-              Email
-            </label>
+            <label htmlFor="email" className="block text-gray-300 mb-1">Email</label>
             <input
               type="email"
               id="email"
@@ -58,17 +56,16 @@ export default function Contact() {
               className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-green-500"
             />
           </div>
+
           <div className="mb-6">
-            <label htmlFor="message" className="block text-gray-300 mb-1">
-              Message
-            </label>
+            <label htmlFor="message" className="block text-gray-300 mb-1">Message</label>
             <textarea
               id="message"
               name="message"
               rows={5}
               required
               className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-green-500"
-            ></textarea>
+            />
           </div>
 
           <div className="flex gap-3">
@@ -78,6 +75,7 @@ export default function Contact() {
             >
               ← Back to Home
             </Link>
+
             <button
               type="submit"
               className="bg-green-500 hover:bg-green-600 text-black px-6 py-2 rounded transition"
