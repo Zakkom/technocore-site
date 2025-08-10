@@ -1,33 +1,35 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function TechnoCoreLanding() {
   const products = [
     {
       title: "Nitrogen Generators",
       desc: "PSA nitrogen systems with 97–99.9995% purity. Options include N2-Pack, Skid, and Box units.",
-      seo: `Looking for a cost-effective way to generate nitrogen on-site? At **TechnoCore**, we offer high-purity **PSA nitrogen generators** tailored for industrial use across Ireland.
+      seo: `Looking for a cost-effective way to generate nitrogen on-site? At TechnoCore, we offer high-purity PSA nitrogen generators tailored for industrial use across Ireland.
 
-Our systems deliver **97% to 99.9995% nitrogen purity**, making them ideal for:
-- **Food packaging & beverage** industry
-- **Pharmaceutical and lab environments**
-- **Metal processing & laser cutting**
+Our systems deliver 97% to 99.9995% nitrogen purity, making them ideal for:
+- Food packaging & beverage industry
+- Pharmaceutical and lab environments
+- Metal processing & laser cutting
 
-✅ Reduce dependence on cylinder deliveries  
-✅ Lower your long-term nitrogen costs  
+✅ Reduce dependence on cylinder deliveries
+✅ Lower your long-term nitrogen costs
 ✅ Compact SKID and BOX units available
 
 📍 TechnoCore – Your local partner for nitrogen solutions in Dublin, Wicklow, and across Ireland.
 
-👉 [Contact us today](#contact) for a free consultation.`
+Contact us today via the Contact page for a free consultation.`
     },
     {
       title: "Oxygen Generators",
       desc: "On-site PSA oxygen generators (90–95% purity) integrated in compact plug-and-play units.",
       seo: `Looking for an independent and efficient oxygen supply? TechnoCore offers PSA oxygen generators with 90–95% purity, ideal for:
 
-- Aquaculture & fish farms  
-- Medical & dental clinics  
+- Aquaculture & fish farms
+- Medical & dental clinics
 - Welding and metal cutting operations
 
 Our plug-and-play oxygen systems:
@@ -37,83 +39,65 @@ Our plug-and-play oxygen systems:
 
 🛠️ Compact Skid/BOX configurations available
 
-📍 Delivered and supported locally by TechnoCore in Dublin, Wicklow, and across Ireland.`
+Delivered and supported locally by TechnoCore in Dublin, Wicklow, and across Ireland.`
     },
     {
       title: "Refrigeration Air Dryers",
       desc: "RDP/RDHP dryers with capacities up to 13200 m³/h, PDP +3°C, using R513a refrigerant and zero-loss drains.",
-      seo: `**Moisture in compressed air** can damage your equipment and reduce product quality. **TechnoCore** supplies industrial-grade **air dryers** for every application:
+      seo: `Moisture in compressed air can damage your equipment and reduce product quality. TechnoCore supplies industrial-grade air dryers for every application:
 
-- **Refrigeration dryers (PDP +3°C)** for general use  
-- **Desiccant dryers (PDP -40°C)** for pharma & sensitive systems  
-- **Zero-loss condensate drains**, **energy-saving controls**
+- Refrigeration dryers (PDP +3°C) for general use
+- Desiccant dryers (PDP -40°C) for pharma & sensitive systems
+- Zero-loss condensate drains, energy-saving controls
 
-Our units are built to handle high flow rates (up to 13200 m³/h) and ensure long-term efficiency and reliability.
+Our units handle high flow rates (up to 13200 m³/h) and ensure long-term efficiency and reliability.
 
-🌍 Serving customers throughout Ireland in:
-- Automotive & paint shops
-- Food processing plants
-- Manufacturing & heavy industry
+Serving customers throughout Ireland in automotive & paint, food processing, and manufacturing.
 
-💬 Need help choosing the right dryer? [Talk to our engineers](#contact).`
+Need help choosing the right dryer? Talk to our engineers via the Contact page.`
     },
     {
       title: "Adsorption Dryers",
       desc: "R-DRY BVA/BVL/BP models with PDP down to -40°C. Siemens SIMATIC control and energy-saving DPD modes.",
-      seo: `Need ultra-dry compressed air for sensitive processes? TechnoCore supplies **adsorption dryers** with pressure dew points as low as **-40°C**, ideal for:
+      seo: `Need ultra-dry compressed air for sensitive processes? TechnoCore supplies adsorption dryers with pressure dew points as low as -40°C, ideal for:
 
-- **Pharmaceutical & medical production**
-- **Electronics & semiconductor industries**
-- **Precision instruments and optics**
+- Pharmaceutical & medical production
+- Electronics & semiconductor industries
+- Precision instruments and optics
 
-Our systems feature:
-- **Siemens SIMATIC PLC** for smart control
-- **Energy-saving purge cycles**
-- **Robust BVA, BVL, and BP models** with durable build
+Features:
+- Siemens SIMATIC PLC for smart control
+- Energy-saving purge cycles
+- Robust BVA, BVL, and BP models
 
-✅ Ensure product quality and compliance  
-✅ Protect instruments from moisture-related damage  
-✅ Reduce downtime and maintenance costs
+Ensure product quality and compliance while reducing downtime and maintenance costs.
 
-📍 Installed and supported locally by TechnoCore across Dublin, Wicklow, and all of Ireland.  
-📩 [Contact us](#contact) to learn which model is right for your facility.`
+Installed and supported locally by TechnoCore across Ireland.`
     },
     {
       title: "Filtration Systems",
       desc: "Full range of filters: coalescing, particulate, activated carbon and sterile, ISO 8573-1 compliant.",
-      seo: `TechnoCore supplies high-performance **air and gas filtration systems** designed to meet ISO 8573-1 standards.
+      seo: `TechnoCore supplies high-performance air and gas filtration systems designed to meet ISO 8573-1 standards.
 
 We provide:
-- **Coalescing filters** (oil/water removal)
-- **Particulate filters** (dust protection)
-- **Activated carbon filters** (oil vapor removal)
-- **Sterile filters** for pharma & food-grade applications
+- Coalescing filters (oil/water removal)
+- Particulate filters (dust protection)
+- Activated carbon filters (oil vapour removal)
+- Sterile filters for pharma & food-grade applications
 
-✅ Improve compressed air quality  
-✅ Protect downstream equipment  
-✅ Ensure regulatory compliance
-
-🔍 Want cleaner air for your operations in Ireland? Contact TechnoCore for filtration solutions you can trust.`
+Improve compressed air quality, protect downstream equipment, and ensure regulatory compliance.`
     },
     {
-      title: "Chillers & Сustom solutions for gas laser cutting systems",
+      title: "Chillers & Custom solutions for gas laser cutting systems",
       desc: "PCI chillers (2–180 kW) and containerized SKID/BOX systems for N2/O2 — modular and scalable.",
-      seo: `At TechnoCore, we don’t just supply equipment — we deliver **complete turnkey systems** for industrial gas treatment and compressed air.
+      seo: `We deliver complete turnkey systems for industrial gas treatment and compressed air.
 
 Our services include:
-- **Design & planning of full systems**
-- **Custom SKID or containerized BOX units**
-- **Installation, commissioning, and support**
+- Design & planning of full systems
+- Custom SKID or containerised BOX units
+- Installation, commissioning, and support
 
-🔧 For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers  
-🌐 Single-vendor solution for your production site
-
-Let us handle the engineering — from source to final output.  
-✅ Reduce project complexity  
-✅ Ensure compatibility of all components  
-✅ Save time and cost
-
-📩 Ready to streamline your air or gas infrastructure? [Get in touch](#contact)`
+For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers — a single-vendor solution for your production site.`
     }
   ];
 
