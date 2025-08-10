@@ -1,20 +1,21 @@
-// pages/about.js
-import Head from 'next/head';
+import Head from "next/head";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white font-sans">
       <Head>
-        <title>About Us | TechnoCore</title>
-        <meta name="description" content="Learn more about TechnoCore – your trusted supplier of PSA systems, air dryers, and filtration solutions in Ireland." />
+        <title>About TechnoCore | Industrial Gas Solutions in Ireland</title>
+        <meta name="description" content="Learn more about TechnoCore – Ireland’s trusted partner for nitrogen and oxygen generators, compressed air dryers, filtration and turnkey gas systems." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://technocore.ie/about" />
       </Head>
-      <main className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-6">About TechnoCore</h1>
-        <p className="text-lg leading-relaxed">
-          TechnoCore is the official distributor of OMEGA AIR in Ireland. We provide a full range of PSA nitrogen and oxygen generators, industrial air dryers, filtration systems,
-          and turnkey compressed air & gas solutions. Our expertise ensures reliability, performance, and service support tailored to industrial demands across Ireland.
+
+      <div className="p-12 text-center">
+        <h1 className="text-3xl font-bold text-green-500 mb-6">About TechnoCore</h1>
+        <p className="text-gray-300 max-w-3xl mx-auto">
+          TechnoCore is Ireland’s trusted partner of OMEGA AIR, delivering PSA nitrogen and oxygen generators, compressed air dryers, gas filtration systems, chillers, and fully integrated industrial gas treatment solutions. We proudly serve manufacturing, food processing, pharma, electronics and many other industries throughout Dublin, Wicklow, and all of Ireland.
         </p>
-      </main>
-    </div>
+      </div>
+    </main>
   );
-}
+} 
