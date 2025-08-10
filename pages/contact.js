@@ -40,3 +40,13 @@ export default function Contact() {
     </main>
   );
 }
+
+      {/* Кнопка возврата на главную */}
+      <Link href="/">
+        <button className="bg-transparent border border-green-500 text-green-500 px-6 py-2 rounded hover:bg-green-500 hover:text-black transition">
+          ← Back to Home
+        </button>
+      </Link>
+    </main>
+  );
+}
