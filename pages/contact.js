@@ -35,10 +35,7 @@ export default function Contact() {
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-300 mb-1">Name</label>
             <input
-              type="text"
-              id="name"
-              name="name"
-              required
+              type="text" id="name" name="name" required
               className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-green-500"
             />
           </div>
@@ -46,10 +43,7 @@ export default function Contact() {
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-300 mb-1">Email</label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              required
+              type="email" id="email" name="email" required
               className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-green-500"
             />
           </div>
@@ -57,16 +51,13 @@ export default function Contact() {
           <div className="mb-6">
             <label htmlFor="message" className="block text-gray-300 mb-1">Message</label>
             <textarea
-              id="message"
-              name="message"
-              rows={5}
-              required
+              id="message" name="message" rows={5} required
               className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-green-500"
             />
           </div>
 
           <div className="flex gap-3">
-            {/* компактная «Back to Home» в виде ссылки-кнопки */}
+            {/* компактная ссылка-кнопка, без unicode-стрелок */}
             <Link
               href="/"
               className="inline-flex items-center justify-center border border-green-500 text-green-500 px-6 py-2 rounded hover:bg-green-500 hover:text-black transition"
