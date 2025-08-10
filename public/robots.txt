@@ -1,9 +1,9 @@
-# Allow all search engines
+# *
 User-agent: *
 Allow: /
 
-# Preferred domain
+# Host
 Host: https://www.technocore.ie
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://www.technocore.ie/sitemap.xml
