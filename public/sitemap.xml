@@ -1,5 +1,12 @@
+Set-Content -Path 'public\sitemap.xml' -Encoding UTF8 -Value @'
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://www.technocore.ie/sitemap-0.xml</loc></sitemap>
-<sitemap><loc>https://www.technocore.ie/sitemap.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.technocore.ie/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://www.technocore.ie/about</loc></url>
+  <url><loc>https://www.technocore.ie/contact</loc></url>
+</urlset>
+'@
