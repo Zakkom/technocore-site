@@ -125,8 +125,8 @@ Let us handle the engineering — from source to final output.
     { src: "/images/chiller-pci.jpg", alt: "Chiller PCI Unit" },
     { src: "/images/filtration-units.jpg", alt: "Filtration Units" },
     { src: "/images/n2-box-unit.jpg", alt: "N2 Box Generator Unit" },
-    { src: "/images/12345.jpg", alt: "12345" },
-    { src: "/images/6789.jpg", alt: "6789" }
+    { src: "/images/HPR-DRY.jpg", alt: "HPR DRY" },
+    { src: "/images/D-dry-TAC.jpg", alt: "D dry TAC" }
   ];
 
   const [selectedProduct, setSelectedProduct] = useState(null);
