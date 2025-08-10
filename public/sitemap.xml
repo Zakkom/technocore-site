@@ -1,77 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- Home -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.technocore.ie/</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-
-    <!-- Gallery / product visuals -->
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/n2-generator.jpg</image:loc>
-      <image:title>Nitrogen Generator - N2-Pack</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/o2-skid.jpg</image:loc>
-      <image:title>Oxygen Skid System</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/rdp-dryer.jpg</image:loc>
-      <image:title>Refrigeration Dryer RDP</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/r-dry-adsorption.jpg</image:loc>
-      <image:title>Adsorption Dryer R-DRY</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/chiller-pci.jpg</image:loc>
-      <image:title>Chiller PCI Unit</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/filtration-units.jpg</image:loc>
-      <image:title>Filtration Units</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/n2-box-unit.jpg</image:loc>
-      <image:title>N2 Box Generator Unit</image:title>
-    </image:image>
-    <!-- при желании можно удалить «временные» картинки ниже -->
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/12345.jpg</image:loc>
-      <image:title>Image 12345</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.technocore.ie/images/6789.jpg</image:loc>
-      <image:title>Image 6789</image:title>
-    </image:image>
   </url>
-
-  <!-- About -->
   <url>
     <loc>https://www.technocore.ie/about</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.technocore.ie/logo.png</image:loc>
-      <image:title>TechnoCore Logo</image:title>
-    </image:image>
   </url>
-
-  <!-- Contact -->
   <url>
     <loc>https://www.technocore.ie/contact</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.technocore.ie/logo.png</image:loc>
-      <image:title>TechnoCore Logo</image:title>
-    </image:image>
   </url>
-
 </urlset>
