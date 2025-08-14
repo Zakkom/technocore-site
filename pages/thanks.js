@@ -5,7 +5,7 @@ export default function ThanksPage() {
     <>
       <Head>
         <title>Thank You | TechnoCore</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="index, follow" />
       </Head>
       <main className="min-h-screen bg-black text-white flex flex-col justify-center items-center text-center p-8">
         <h1 className="text-3xl font-bold text-green-500 mb-4">Thank you!</h1>
