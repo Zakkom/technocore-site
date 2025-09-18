@@ -129,6 +129,16 @@ For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers — a single-vendor solu
         <meta property="og:image" content="https://technocore.ie/images/n2-generator.jpg" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://technocore.ie/" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17428189544">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17428189544');
+</script>
       </Head>
 
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
