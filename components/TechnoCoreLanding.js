@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function TechnoCoreLanding() {
   const products = [
@@ -119,6 +120,7 @@ For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers — a single-vendor solu
 
   return (
     <main>
+
       <Head>
         <title>TechnoCore | Industrial Gas & Air Solutions in Ireland</title>
         <meta name="description" content="TechnoCore: Nitrogen and Oxygen Generators, Air Dryers, Air & Gas Filtration, and Industrial Gas Solutions in Ireland." />
@@ -129,6 +131,8 @@ For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers — a single-vendor solu
         <meta property="og:image" content="https://technocore.ie/images/n2-generator.jpg" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://technocore.ie/" />
+      </Head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17428189544">
 </script>
@@ -139,7 +143,6 @@ For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers — a single-vendor solu
 
   gtag('config', 'AW-17428189544');
 </script>
-      </Head>
 
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-72 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/top-bg.jpg')" }} />
