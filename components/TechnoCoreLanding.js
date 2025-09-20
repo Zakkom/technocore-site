@@ -143,6 +143,7 @@ For Nitrogen, Oxygen, Air Dryers, Filtration & Chillers — a single-vendor solu
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-17428189544');
+	gtag('config', 'G-NGRNF7SK90', { send_page_view: true });
       `}</Script>
 
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
