@@ -21,7 +21,14 @@ export default function About() {
         />
         <link rel="canonical" href="https://www.technocore.ie/about" />
       </Head>
-
+<section className="mt-10 text-center">
+  <a href="/contact" className="inline-block bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded">
+    Request Quote
+  </a>
+  <a href="tel:+353852314430" className="ml-3 inline-block border border-sky-500 text-sky-400 hover:bg-sky-500/10 px-6 py-3 rounded">
+    Call +353 85 231 4430
+  </a>
+</section>
       {/* HERO with separate hero image (optional different visual than page bg) */}
       <section
         className="relative h-[320px] md:h-[420px] flex items-center justify-center text-center overflow-hidden"
