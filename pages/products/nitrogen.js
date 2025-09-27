@@ -16,9 +16,9 @@ export default function NitrogenPage() {
 
       {/* узкий баннер */}
       <div
-        className="h-64 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/n2-generator.jpg')" }}
-      />
+  className="h-40 md:h-56 bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/…-hero.jpg')" }}
+/>
 
       {/* центральный блок */}
       <main className="bg-black px-6 py-12 text-center">
@@ -60,7 +60,7 @@ export default function NitrogenPage() {
       <img
         src="/images/n2-box-unit.jpg"
         alt="Nitrogen generator installation"
-        className="w-full object-cover"
+        className="w-full h-48 md:h-72 lg:h-96 object-cover"
       />
     </SiteLayout>
   );

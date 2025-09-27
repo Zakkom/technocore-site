@@ -15,9 +15,9 @@ export default function ChillersPage() {
       </Head>
 
       <div
-        className="h-64 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/chiller-pci.jpg')" }}
-      />
+  className="h-40 md:h-56 bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/…-hero.jpg')" }}
+/>
 
       <main className="bg-black px-6 py-12 text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
@@ -56,7 +56,7 @@ export default function ChillersPage() {
       <img
         src="/images/chiller-system.jpg"
         alt="Industrial chiller system"
-        className="w-full object-cover"
+        className="w-full h-48 md:h-72 lg:h-96 object-cover"
       />
     </SiteLayout>
   );
