@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import SiteLayout from "../../components/SiteLayout";
 
 export default function Filtration() {
   return (
