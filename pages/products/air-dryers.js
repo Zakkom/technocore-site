@@ -15,9 +15,9 @@ export default function AirDryersPage() {
       </Head>
 
       <div
-        className="h-64 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/rdp-dryer.jpg')" }}
-      />
+  className="h-40 md:h-56 bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/…-hero.jpg')" }}
+/>
 
       <main className="bg-black px-6 py-12 text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
@@ -66,7 +66,7 @@ export default function AirDryersPage() {
       <img
         src="/images/HPR-DRY.jpg"
         alt="Desiccant dryer installation"
-        className="w-full object-cover"
+        className="w-full h-48 md:h-72 lg:h-96 object-cover"
       />
     </SiteLayout>
   );

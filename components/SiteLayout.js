@@ -45,7 +45,9 @@ export default function SiteLayout({ children }) {
                 <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
               </div>
               <div className="flex gap-4">
-                <Link href="/products" className="hover:text-green-400">Products</Link>
+                <Link href="/products" className="text-gray-300 hover:text-green-400"> 
+			Products
+		</Link>
                 <Link href="/about" className="hover:text-green-400">About</Link>
                 <Link href="/contact" className="hover:text-green-400">Contact</Link>
               </div>
