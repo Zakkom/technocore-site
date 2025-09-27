@@ -6,42 +6,60 @@ export default function OxygenPage() {
   return (
     <SiteLayout>
       <Head>
-        <title>PSA Oxygen Generators | TechnoCore Ireland</title>
+        <title>PSA Oxygen Generators (90–95%) | TechnoCore Ireland</title>
         <meta
           name="description"
-          content="PSA oxygen generators 90–95% purity for aquaculture, medical & dental, welding. Compact SKID/BOX, easy install, stable O₂ flow. Local support in Ireland."
+          content="On-site PSA oxygen 90–95% for aquaculture, medical & dental, welding & cutting. Compact SKID/BOX, easy install & local service across Ireland."
         />
         <link rel="canonical" href="https://technocore.ie/products/oxygen" />
       </Head>
 
-      <section className="max-w-5xl mx-auto px-6 py-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-4">
-          PSA Oxygen Generators
+      <div
+        className="h-64 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/o2-skid.jpg')" }}
+      />
+
+      <main className="bg-black px-6 py-12 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
+          PSA Oxygen Generators (90–95%)
         </h1>
-
-        <p className="text-gray-300 mb-6">
-          TechnoCore provides PSA oxygen generators with 90–95% purity — a safe and reliable
-          solution for <strong>aquaculture, medical & dental clinics, welding and metalworking</strong>.
-          Installing an on-site O₂ system eliminates the need for continuous cylinder deliveries and
-          ensures an uninterrupted oxygen supply.
+        <p className="text-gray-300 max-w-3xl mx-auto mb-4">
+          Independent and efficient on-site O<sub>2</sub> in compact <strong>SKID/BOX</strong> packages.
+          Easy to install and maintain with local support across Ireland.
         </p>
-
-        <h2 className="text-xl font-semibold text-green-400 mb-2">Why choose TechnoCore?</h2>
-        <ul className="list-disc list-inside text-gray-300 mb-8">
-          <li>Compact SKID & BOX plug-and-play units</li>
-          <li>Stable flow and low energy use</li>
-          <li>Simple installation and maintenance</li>
-          <li>Local delivery, service & support across Ireland</li>
-        </ul>
-
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left mt-6">
+          <div>
+            <h2 className="text-green-400 font-semibold mb-2">Where it fits</h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-1">
+              <li>Aquaculture & fish farms</li>
+              <li>Medical & dental clinics</li>
+              <li>Welding & metal cutting</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-green-400 font-semibold mb-2">Why on-site O₂</h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-1">
+              <li>No cylinder logistics or rentals</li>
+              <li>Stable flow with low energy use</li>
+              <li>Safe, scalable configurations</li>
+            </ul>
+          </div>
+        </div>
         <Link
           href="/contact"
-          className="inline-block bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold"
+          className="inline-block mt-8 bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold"
         >
-          Gain independence from cylinders — Contact Us
+          💨 Gain independence from cylinders — Contact Us
         </Link>
-      </section>
+      </main>
+
+      <img
+        src="/images/oxygen-plant.jpg"
+        alt="Oxygen generator plant"
+        className="w-full object-cover"
+      />
     </SiteLayout>
   );
 }
+
 

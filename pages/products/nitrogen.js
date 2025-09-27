@@ -2,58 +2,66 @@ import Head from "next/head";
 import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
 
-export default function Nitrogen() {
+export default function NitrogenPage() {
   return (
     <SiteLayout>
       <Head>
-        <title>Nitrogen Generators | TechnoCore Ireland</title>
+        <title>PSA Nitrogen Generators (97–99.9995%) | TechnoCore Ireland</title>
         <meta
           name="description"
-          content="PSA nitrogen generators 97–99.9995% purity for laser cutting, food packaging, pharma. Reduce gas costs up to 10x with TechnoCore Ireland."
+          content="On-site PSA nitrogen generation 97–99.9995% for laser cutting, food packaging, pharma & labs. SKID/BOX options, ROI & sizing, install & service across Ireland."
         />
-        <meta
-          name="keywords"
-          content="Nitrogen generator, PSA nitrogen, laser cutting gas, industrial nitrogen Ireland"
-        />
+        <link rel="canonical" href="https://technocore.ie/products/nitrogen" />
       </Head>
 
-      <section className="max-w-5xl mx-auto p-8">
-        <h1 className="text-3xl font-bold text-green-400 mb-4">
-          PSA Nitrogen Generators
+      {/* узкий баннер */}
+      <div
+        className="h-64 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/n2-generator.jpg')" }}
+      />
+
+      {/* центральный блок */}
+      <main className="bg-black px-6 py-12 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
+          PSA Nitrogen Generators (97–99.9995%)
         </h1>
-        <p className="text-gray-300 mb-6">
-          TechnoCore supplies industrial PSA nitrogen generators in Ireland
-          delivering purity from 97% up to 99.9995%. Our systems are widely used
-          in <strong>laser cutting, food packaging, beverage production,
-          pharmaceuticals and laboratories</strong>. By installing an on-site
-          nitrogen generator, your business reduces dependence on costly gas
-          cylinders, cuts operating costs, and ensures a stable 24/7 gas
-          supply.
+        <p className="text-gray-300 max-w-3xl mx-auto mb-4">
+          Generate high-purity nitrogen on-site and cut gas costs. TechnoCore sizes, supplies and
+          installs PSA N<sub>2</sub> systems across Ireland with compact <strong>SKID</strong> and
+          containerised <strong>BOX</strong> options tailored to your demand.
         </p>
-
-        <h2 className="text-xl font-semibold text-green-400 mb-2">Benefits</h2>
-        <ul className="list-disc list-inside text-gray-300 mb-6">
-          <li>Reduce nitrogen costs by up to 10×</li>
-          <li>SKID and BOX plug-and-play units</li>
-          <li>Installation, commissioning & service in Ireland</li>
-          <li>ROI calculation and system sizing included</li>
-        </ul>
-
-        <h2 className="text-xl font-semibold text-green-400 mb-2">Applications</h2>
-        <ul className="list-disc list-inside text-gray-300 mb-6">
-          <li>Metal laser cutting</li>
-          <li>Food & beverage packaging</li>
-          <li>Pharma and lab gas supply</li>
-        </ul>
-
-        <div className="mt-8">
-          <Link href="/contact">
-            <a className="bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold">
-              ✅ Cut nitrogen costs — Request Quote
-            </a>
-          </Link>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left mt-6">
+          <div>
+            <h2 className="text-green-400 font-semibold mb-2">Applications</h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-1">
+              <li>Laser cutting & metal processing</li>
+              <li>Food packaging & beverage</li>
+              <li>Pharma / labs / R&amp;D</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-green-400 font-semibold mb-2">Benefits</h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-1">
+              <li>Reduce cylinder dependence & logistics</li>
+              <li>Stable 24/7 supply, predictable OPEX</li>
+              <li>ROI & sizing calculation included</li>
+            </ul>
+          </div>
         </div>
-      </section>
+        <Link
+          href="/contact"
+          className="inline-block mt-8 bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold"
+        >
+          ✅ Cut nitrogen cost — Request Quote
+        </Link>
+      </main>
+
+      {/* нижняя картинка */}
+      <img
+        src="/images/n2-box-unit.jpg"
+        alt="Nitrogen generator installation"
+        className="w-full object-cover"
+      />
     </SiteLayout>
   );
 }
