@@ -63,11 +63,34 @@ export default function ProductsIndex() {
         <link rel="canonical" href="https://technocore.ie/products" />
       </Head>
 
-      {/* узкий баннер */}
-      <div
-        className="h-40 md:h-56 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
-      />
+      <div className="relative">
+  {/* общий фон (не фото продукции) */}
+  <div
+    className="h-48 md:h-72 bg-cover bg-center"
+    style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
+  />
+  {/* логотип по центру поверх */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <img
+      src="/logo.png"
+      alt="TechnoCore"
+      className="h-16 md:h-24 w-auto drop-shadow-[0_5px_15px_rgba(0,0,0,0.6)]"
+    />
+  </div>
+</div>
+
+<header className="text-center px-4 pt-6 pb-2">
+  <h1 className="text-3xl md:text-4xl font-bold">
+    Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland
+  </h1>
+  <p className="text-green-400 mt-2 text-lg md:text-xl">
+    PSA Systems · Air Dryers · Air & Gas Filtration · Turnkey Installations
+  </p>
+  <p className="text-gray-300 mt-3 max-w-3xl mx-auto">
+    Engineering supplier in Ireland for gas generation and air treatment — from PSA nitrogen/oxygen
+    generators to filtration, chillers, air dryers, and fully integrated turnkey compressed air systems.
+  </p>
+</header>
 
       <main className="bg-black px-6 py-10">
         <h1 className="text-3xl md:text-4xl font-bold text-green-400 text-center mb-8">

@@ -7,38 +7,34 @@ export default function SiteLayout({ children }) {
       {/* HEADER */}
       <nav className="sticky top-0 z-50 bg-black/90 border-b border-green-500 backdrop-blur">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* ЛОГО СЛЕВА, КЛИКАБЕЛЕН И БОЛЬШЕ */}
+          {/* Кликабельный логотип слева */}
           <Link href="/" aria-label="TechnoCore — Home" className="flex items-center gap-3">
-            <img
-              src="/logo.png"
-              alt="TechnoCore"
-              className="h-12 md:h-14 w-auto"   // было ~ h-8–10
-            />
-            <span className="sr-only">TechnoCore</span>
+            <img src="/logo.png" alt="TechnoCore" className="h-12 md:h-14 w-auto" />
+            <span className="text-white font-semibold hidden sm:block">TechnoCore</span>
           </Link>
 
-          {/* КНОПКИ ПОБОЛЬШЕ */}
-          <div className="flex items-center gap-6">
-            <Link href="/products" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+          {/* Пункты меню — крупнее */}
+          <div className="flex items-center gap-7">
+            <Link href="/products" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
               Products
             </Link>
-            <a href="/#gallery" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+            <a href="/#gallery" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
               Gallery
             </a>
-            <Link href="/about" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+            <Link href="/about" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
               About
             </Link>
-            <Link href="/contact" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+            <Link href="/contact" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
               Contact
             </Link>
           </div>
         </div>
       </nav>
 
-      {/* КОНТЕНТ */}
+      {/* CONTENT */}
       {children}
 
-      {/* УЗКИЙ НИЖНИЙ ФОН (БЫЛ ОГРОМНЫЙ) */}
+      {/* Узкий нижний фон */}
       <div
         className="h-32 md:h-44 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
