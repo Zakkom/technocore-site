@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Chillers() {
   return (
-    <main className="bg-black text-white font-sans">
+    <SiteLayout>
       <Head>
         <title>Chillers & Custom Solutions | TechnoCore Ireland</title>
         <meta
@@ -38,6 +38,6 @@ export default function Chillers() {
           </Link>
         </div>
       </section>
-    </main>
+    </SiteLayout>
   );
 }

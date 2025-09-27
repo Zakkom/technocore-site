@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PaintBooth() {
   return (
-    <main className="bg-black text-white font-sans">
+     <SiteLayout>
       <Head>
         <title>Paint Booth Air Preparation | TechnoCore Ireland</title>
         <meta
@@ -39,6 +39,6 @@ export default function PaintBooth() {
           </Link>
         </div>
       </section>
-    </main>
+    </SiteLayout>
   );
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Filtration() {
   return (
-    <main className="bg-black text-white font-sans">
+    <SiteLayout>
       <Head>
         <title>Air & Gas Filtration | TechnoCore Ireland</title>
         <meta
@@ -42,6 +42,6 @@ export default function Filtration() {
           </Link>
         </div>
       </section>
-    </main>
+     </SiteLayout>
   );
 }

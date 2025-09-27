@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Nitrogen() {
   return (
-    <main className="bg-black text-white font-sans">
+    <SiteLayout>
       <Head>
         <title>Nitrogen Generators | TechnoCore Ireland</title>
         <meta
@@ -53,6 +53,6 @@ export default function Nitrogen() {
           </Link>
         </div>
       </section>
-    </main>
+    </SiteLayout>
   );
 }
