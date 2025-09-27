@@ -227,7 +227,7 @@ export default function TechnoCoreLanding() {
                   <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
                 </div>
                 <div className="space-x-4">
-                  <a href="#products" className="hover:text-green-400">Products</a>
+		<a href="/products" className="text-gray-300 hover:text-green-400">Products</a>
                   <a href="#gallery" className="hover:text-green-400">Gallery</a>
                   <a href="/about" className="hover:text-green-400">About</a>
                   <a href="/contact" className="hover:text-green-400">Contact</a>
