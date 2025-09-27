@@ -3,59 +3,63 @@ import Link from "next/link";
 
 export default function SiteLayout({ children }) {
   return (
-    <div className="relative min-h-screen bg-black text-white font-sans overflow-hidden">
-      {/* background images */}
-      <div
-        className="absolute inset-x-0 top-0 h-72 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-x-0 bottom-0 h-[600px] bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
-        aria-hidden="true"
-      />
+    <div className="min-h-screen bg-black text-white">
+      {/* HEADER */}
+      <nav className="sticky top-0 z-50 bg-black/90 border-b border-green-500 backdrop-blur">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+          {/* ЛОГО СЛЕВА, КЛИКАБЕЛЕН И БОЛЬШЕ */}
+          <Link href="/" aria-label="TechnoCore — Home" className="flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="TechnoCore"
+              className="h-12 md:h-14 w-auto"   // было ~ h-8–10
+            />
+            <span className="sr-only">TechnoCore</span>
+          </Link>
 
-      {/* content layer */}
-      <div className="relative z-10 flex min-h-screen flex-col">
-        {/* NAV */}
-        <nav className="bg-black/95 border-b border-green-500 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <Link href="/" className="flex items-center gap-3">
-              <img src="/logo.png" alt="TechnoCore" className="h-8 w-auto" />
-              <span className="text-white text-lg font-bold">TechnoCore</span>
+          {/* КНОПКИ ПОБОЛЬШЕ */}
+          <div className="flex items-center gap-6">
+            <Link href="/products" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+              Products
             </Link>
-            <div className="flex flex-wrap justify-center sm:justify-end gap-4 text-sm">
-              <Link href="/products" className="text-gray-300 hover:text-green-400">Products</Link>
-              <Link href="/#gallery" className="text-gray-300 hover:text-green-400">Gallery</Link>
-              <Link href="/about" className="text-gray-300 hover:text-green-400">About</Link>
-              <Link href="/contact" className="text-gray-300 hover:text-green-400">Contact</Link>
-            </div>
+            <a href="/#gallery" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+              Gallery
+            </a>
+            <Link href="/about" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-200 hover:text-green-400 text-base md:text-lg">
+              Contact
+            </Link>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        {/* MAIN */}
-        <div className="flex-1">{children}</div>
+      {/* КОНТЕНТ */}
+      {children}
 
-        {/* FOOTER */}
-        <footer className="bg-black/95 border-t border-green-500 mt-12 py-6 text-center text-gray-400 text-sm">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-              <div className="mb-2 md:mb-0">
-                <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
-              </div>
-              <div className="flex gap-4">
-                <Link href="/products" className="text-gray-300 hover:text-green-400"> 
-			Products
-		</Link>
-                <Link href="/about" className="hover:text-green-400">About</Link>
-                <Link href="/contact" className="hover:text-green-400">Contact</Link>
-              </div>
-            </div>
-            <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
+      {/* УЗКИЙ НИЖНИЙ ФОН (БЫЛ ОГРОМНЫЙ) */}
+      <div
+        className="h-32 md:h-44 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
+      />
+
+      {/* FOOTER */}
+      <footer className="border-t border-green-500 py-6 text-center text-gray-400 text-sm">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+          <div>
+            <span className="text-white font-semibold">TechnoCore</span> — Industrial Gas Solutions
           </div>
-        </footer>
-      </div>
+          <div className="flex gap-4">
+            <Link href="/products" className="hover:text-green-400">Products</Link>
+            <a href="/#gallery" className="hover:text-green-400">Gallery</a>
+            <Link href="/about" className="hover:text-green-400">About</Link>
+            <Link href="/contact" className="hover:text-green-400">Contact</Link>
+          </div>
+        </div>
+        <p className="mt-3">© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
+

@@ -19,6 +19,11 @@ export default function NitrogenPage() {
   className="h-40 md:h-56 bg-cover bg-center"
   style={{ backgroundImage: "url('/images/…-hero.jpg')" }}
 />
+{/* Центр-логотип, как на главной */}
+<div className="py-6 flex justify-center">
+  <img src="/logo.png" alt="TechnoCore logo" className="h-14 md:h-16 w-auto" />
+</div>
+
 
       {/* центральный блок */}
       <main className="bg-black px-6 py-12 text-center">

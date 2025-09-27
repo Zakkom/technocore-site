@@ -18,6 +18,11 @@ export default function AirDryersPage() {
   className="h-40 md:h-56 bg-cover bg-center"
   style={{ backgroundImage: "url('/images/…-hero.jpg')" }}
 />
+{/* Центр-логотип, как на главной */}
+<div className="py-6 flex justify-center">
+  <img src="/logo.png" alt="TechnoCore logo" className="h-14 md:h-16 w-auto" />
+</div>
+
 
       <main className="bg-black px-6 py-12 text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">

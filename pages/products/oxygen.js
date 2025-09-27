@@ -15,9 +15,12 @@ export default function OxygenPage() {
       </Head>
 
       <div
-        className="h-64 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/o2-skid.jpg')" }}
-      />
+  className="h-40 md:h-56 bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
+/>
+<div className="py-6 flex justify-center">
+  <img src="/logo.png" alt="TechnoCore logo" className="h-14 md:h-16 w-auto" />
+</div>
 
       <main className="bg-black px-6 py-12 text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
@@ -56,7 +59,7 @@ export default function OxygenPage() {
       <img
         src="/images/oxygen-plant.jpg"
         alt="Oxygen generator plant"
-        className="w-full object-cover"
+        className="w-full h-48 md:h-72 lg:h-96 object-cover"
       />
     </SiteLayout>
   );
