@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AirDryers() {
   return (
-    <main className="bg-black text-white font-sans">
+    <SiteLayout>{
       <Head>
         <title>Air Dryers | TechnoCore Ireland</title>
         <meta
@@ -64,6 +64,6 @@ export default function AirDryers() {
           </Link>
         </div>
       </section>
-    </main>
+    }</SiteLayout>
   );
 }
