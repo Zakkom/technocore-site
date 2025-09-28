@@ -9,7 +9,7 @@ export default function SiteLayout({ children }) {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Кликабельный логотип слева */}
           <Link href="/" aria-label="TechnoCore — Home" className="flex items-center gap-3">
-            <img src="/logo.png" alt="TechnoCore" className="h-12 md:h-14 w-auto" />
+            <img src="/logo.png" alt="TechnoCore" className="h-16 md:h-18 w-auto" />
             <span className="text-white font-semibold hidden sm:block">TechnoCore</span>
           </Link>
 
