@@ -124,7 +124,7 @@ export default function TechnoCoreLanding() {
 
               {/* Меню */}
               <div className="flex flex-wrap justify-center sm:justify-end gap-5 md:gap-8">
-                <a href="#products" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
+                <a href="/products" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
                   Products
                 </a>
                 <a href="#gallery" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
