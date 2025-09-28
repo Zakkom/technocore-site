@@ -19,7 +19,7 @@ export default function FiltrationPage() {
       <div className="relative">
         <div
           className="h-40 md:h-56 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/plant-hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/top-bg.jpg')" }}
           aria-hidden="true"
         />
         <div className="absolute inset-0 flex items-center justify-center">
