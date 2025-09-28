@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная -->
   <url>
-    <loc>https://www.technocore.ie/</loc>
+    <loc>https://technocore.ie/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Страницы -->
   <url>
-    <loc>https://www.technocore.ie/about</loc>
+    <loc>https://technocore.ie/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.technocore.ie/contact</loc>
+    <loc>https://technocore.ie/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Продукты -->
+  <url>
+    <loc>https://technocore.ie/products/nitrogen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://technocore.ie/products/oxygen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://technocore.ie/products/air-dryers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://technocore.ie/products/chillers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://technocore.ie/products/filtration</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://technocore.ie/products/paint-booth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
