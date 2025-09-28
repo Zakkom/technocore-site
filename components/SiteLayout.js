@@ -1,7 +1,11 @@
 // components/SiteLayout.js
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function SiteLayout({ children }) {
+  const router = useRouter();
+  const isHome = router.pathname === "/"; // показываем нижний фон только на главной
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* HEADER */}
@@ -34,11 +38,13 @@ export default function SiteLayout({ children }) {
       {/* CONTENT */}
       {children}
 
-      {/* Узкий нижний фон */}
-      <div
-        className="h-32 md:h-44 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
-      />
+      {/* Нижний фон — ТОЛЬКО на главной */}
+      {isHome && (
+        <div
+          className="h-32 md:h-44 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }}
+        />
+      )}
 
       {/* FOOTER */}
       <footer className="border-t border-green-500 py-6 text-center text-gray-400 text-sm">
@@ -58,4 +64,3 @@ export default function SiteLayout({ children }) {
     </div>
   );
 }
-
