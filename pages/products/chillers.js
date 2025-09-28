@@ -58,12 +58,7 @@ export default function ChillersPage() {
         </Link>
       </main>
 
-      <img
-        src="/images/chiller-system.jpg"
-        alt="Industrial chiller system"
-        className="w-full h-48 md:h-72 lg:h-96 object-cover"
-      />
-    </SiteLayout>
+          </SiteLayout>
   );
 }
 

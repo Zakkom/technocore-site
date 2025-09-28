@@ -1,57 +1,40 @@
 import Head from "next/head";
-import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
+import ProductPage from "../../components/ProductPage";
 
 export default function FiltrationPage() {
   return (
     <SiteLayout>
       <Head>
-        <title>Air & Gas Filtration | TechnoCore Ireland</title>
+        <title>Industrial Air & Gas Filtration | TechnoCore Ireland</title>
         <meta
           name="description"
-          content="Industrial filtration solutions: coalescing, particulate, activated-carbon and sterile filters. ISO 8573-1 compliant, engineered and delivered across Ireland."
+          content="Air & gas filtration systems ISO 8573-1: coalescing, particulate, activated-carbon, sterile. Improve air quality, protect equipment, meet compliance."
         />
         <link rel="canonical" href="https://technocore.ie/products/filtration" />
       </Head>
 
-      {/* Узкая верхняя картинка */}
-      <div
-        className="h-64 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/filtration-bg.jpg')" }}
+      <ProductPage
+        title="Industrial Air & Gas Filtration"
+        intro="TechnoCore supplies high-performance filtration systems ISO 8573-1 compliant: coalescing, particulate, activated-carbon and sterile filters."
+        col1Title="We provide"
+        col1Items={[
+          "Oil/water removal (coalescing filters)",
+          "Dust protection (particulate filters)",
+          "Oil vapour removal (activated-carbon)",
+          "Sterile filters for pharma & food-grade",
+        ]}
+        col2Title="Benefits"
+        col2Items={[
+          "Protect downstream equipment",
+          "Improve product quality",
+          "Meet ISO 8573-1 standards",
+        ]}
+        ctaText="Guarantee clean air — Request Solution"
+        ctaHref="/contact"
+        heroImage="/images/plant-hero.jpg"
+        bottomImage="/images/filtration-units.jpg"
       />
-
-      {/* Текстовый блок на отдельном фоне */}
-      <main className="bg-black px-6 py-12 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
-          Industrial Air & Gas Filtration
-        </h1>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-6">
-          TechnoCore supplies high-performance filtration solutions compliant with ISO 8573-1.
-          We provide coalescing filters for oil & water removal, particulate filters for dust
-          protection, activated-carbon filters for vapour removal and sterile filters for food
-          & pharma industries.
-        </p>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-8">
-          Correct filtration improves product quality, protects equipment and ensures
-          compliance with industry regulations. TechnoCore engineers design and supply
-          complete filter systems tailored to your needs.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold"
-        >
-          🔒 Guarantee clean air — Request Solution
-        </Link>
-      </main>
-
-      {/* Нижнее фото */}
-      <div className="w-full">
-        <img
-          src="/images/filtration-units.jpg"
-          alt="Filtration systems"
-          className="w-full object-cover"
-        />
-      </div>
     </SiteLayout>
   );
 }
