@@ -5,43 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function TechnoCoreLanding() {
+  // ---- DATA ----
   const products = [
-    {
-      key: "nitrogen",
-      title: "Nitrogen Generators",
-      desc: "PSA nitrogen systems with 97–99.9995% purity. Options: N2-Pack, Skid, Box.",
-      href: "/products/nitrogen",
-    },
-    {
-      key: "oxygen",
-      title: "Oxygen Generators",
-      desc: "On‑site PSA oxygen (90–95% purity) in compact plug‑and‑play units.",
-      href: "/products/oxygen",
-    },
-    {
-      key: "ref-dryers",
-      title: "Refrigeration Air Dryers",
-      desc: "RDP/RDHP up to 13,200 m³/h, PDP +3 °C, R513a, zero‑loss drains.",
-      href: "/products/air-dryers",
-    },
-    {
-      key: "ads-dryers",
-      title: "Adsorption (Desiccant) Dryers",
-      desc: "BVA/BVL/BP, PDP to −40 °C, Siemens SIMATIC, energy‑saving modes.",
-      href: "/products/air-dryers#desiccant",
-    },
-    {
-      key: "filtration",
-      title: "Filtration Systems",
-      desc: "Coalescing, particulate, activated‑carbon & sterile filters — ISO 8573‑1.",
-      href: "/products/filtration",
-    },
-    {
-      key: "turnkey",
-      title: "Chillers & Turnkey Systems",
-      desc: "PCI chillers (2–180 kW) + SKID/BOX for N₂/O₂ & compressed air.",
-      href: "/products/chillers",
-    },
+    { key: "nitrogen", title: "Nitrogen Generators", desc: "PSA nitrogen systems with 97–99.9995% purity. Options: N2-Pack, Skid, Box.", href: "/products/nitrogen" },
+    { key: "oxygen", title: "Oxygen Generators", desc: "On‑site PSA oxygen (90–95% purity) in compact plug‑and‑play units.", href: "/products/oxygen" },
+    { key: "ref-dryers", title: "Refrigeration Air Dryers", desc: "RDP/RDHP up to 13,200 m³/h, PDP +3 °C, R513a, zero‑loss drains.", href: "/products/air-dryers" },
+    { key: "ads-dryers", title: "Adsorption (Desiccant) Dryers", desc: "BVA/BVL/BP, PDP to −40 °C, Siemens SIMATIC, energy‑saving modes.", href: "/products/air-dryers#desiccant" },
+    { key: "filtration", title: "Filtration Systems", desc: "Coalescing, particulate, activated‑carbon & sterile filters — ISO 8573‑1.", href: "/products/filtration" },
+    { key: "turnkey", title: "Chillers & Turnkey Systems", desc: "PCI chillers (2–180 kW) + SKID/BOX for N₂/O₂ & compressed air.", href: "/products/chillers" },
   ];
 
   const images = [
@@ -56,6 +27,7 @@ export default function TechnoCoreLanding() {
     { src: "/images/D-dry-TAC.jpg", alt: "D dry TAC" },
   ];
 
+  // ---- EVENTS: track lead actions ----
   const track = useCallback((action, params = {}) => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", action, { event_category: "lead", ...params });
@@ -69,27 +41,32 @@ export default function TechnoCoreLanding() {
     <main>
       <Head>
         <title>TechnoCore | Industrial Gas & Air Solutions in Ireland</title>
-        <meta
-          name="description"
-          content="TechnoCore: Nitrogen & Oxygen Generators, Air Dryers, Filtration, and Turnkey Industrial Gas Solutions in Ireland. Supply • Installation • Service."
-        />
-        <meta
-          name="keywords"
-          content="Nitrogen generators, Oxygen generators, Air dryers, Gas filtration systems, PSA, Chillers, Refrigeration Air Dryers, Compressed Air, Industrial gas treatment, Ireland"
-        />
+        <meta name="description" content="TechnoCore: Nitrogen & Oxygen Generators, Air Dryers, Filtration, and Turnkey Industrial Gas Solutions in Ireland. Supply • Installation • Service." />
+        <meta name="keywords" content="Nitrogen generators, Oxygen generators, Air dryers, Gas filtration systems, PSA, Chillers, Refrigeration Air Dryers, Compressed Air, Industrial gas treatment, Ireland" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="TechnoCore — Industrial Gas & Air Solutions" />
-        <meta
-          property="og:description"
-          content="Industrial Nitrogen & Oxygen Generators, Dryers & Filtration in Ireland."
-        />
+        <meta property="og:description" content="Industrial Nitrogen & Oxygen Generators, Dryers & Filtration in Ireland." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.technocore.ie/" />
         <meta property="og:image" content="https://www.technocore.ie/images/n2-generator.jpg" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://www.technocore.ie/" />
+        {/* LocalBusiness schema for trust & local SEO */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "TechnoCore Ltd",
+          url: "https://www.technocore.ie/",
+          telephone: "+353 85 231 4430",
+          email: "sales@technocore.ie",
+          address: { "@type": "PostalAddress", addressLocality: "Wicklow/Dublin", addressCountry: "IE" },
+          areaServed: "Ireland",
+          image: "https://www.technocore.ie/images/n2-generator.jpg",
+          sameAs: ["https://www.linkedin.com/company/technocore-ie"],
+        }) }} />
       </Head>
 
+      {/* Google tags */}
       <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17428189544" strategy="afterInteractive" />
       <Script id="gtag-init" strategy="afterInteractive">{`
         window.dataLayer = window.dataLayer || [];
@@ -100,59 +77,65 @@ export default function TechnoCoreLanding() {
         gtag('config', 'G-NGRNF7SK90', { send_page_view: true });
       `}</Script>
 
+      {/* PAGE WRAPPER */}
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-72 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/top-bg.jpg')" }} />
-        <div className="absolute inset-x-0 bottom-0 h-[600px] bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }} />
-
-        <div className="relative z-10">
-          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 border-b border-green-500 backdrop-blur">
-            <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
-              <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-                <Image src="/logo.png" alt="TechnoCore logo" width={40} height={40} className="h-8 w-8 md:h-10 md:w-10 transition-transform group-active:scale-95" priority />
-                <span className="text-white text-xl md:text-2xl font-bold transition-colors group-hover:text-green-400">TechnoCore</span>
-              </Link>
-              <div className="flex flex-wrap justify-center sm:justify-end gap-5 md:gap-8">
-                <a href="#products" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">Products</a>
-                <a href="#gallery" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">Gallery</a>
-                <a href="#about" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">About</a>
-                <a href="#contact" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">Contact</a>
-              </div>
-            </div>
-          </nav>
-
-          <div className="h-16 sm:h-[68px]" />
-
-          <header className="flex flex-col items-center justify-center text-center px-6 py-12">
-            <div className="relative w-auto h-40 mb-6">
-              <img src="/logo.png" alt="TechnoCore logo large" className="h-full w-auto mx-auto" />
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold">
-              Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland
-            </h1>
-            <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">
-              PSA Systems · Air Dryers · Air & Gas Filtration · Turnkey Installations
-            </h2>
-            <p className="text-gray-300 mt-4 max-w-md sm:max-w-xl">
-              Engineering supplier in Ireland for gas generation and air treatment — from PSA nitrogen/oxygen
-              generators to filtration, chillers, air dryers, and fully integrated turnkey compressed air systems.
-            </p>
-          </header>
+        {/* Backgrounds (RESTORED original visible top image, no dark overlay) */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-x-0 top-0 h-72 bg-cover bg-center" style={{ backgroundImage: "url('/images/top-bg.jpg')" }} aria-hidden />
+          <div className="absolute inset-x-0 bottom-0 h-[520px] bg-cover bg-center" style={{ backgroundImage: "url('/images/bottom-bg.jpg')" }} aria-hidden />
+          {/* No gradient overlay to keep top image as before */}
         </div>
-      </div>
-    </main>
-  );
-}
->
 
-        {/* ABOUT (short trust block) */}
+        {/* FIXED HEADER */}
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 border-b border-green-500 backdrop-blur supports-[backdrop-filter]:backdrop-blur">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
+            {/* Logo */}
+            <a href="#top" className="flex items-center gap-3 group focus:outline-none">
+              <Image src="/logo.png" alt="TechnoCore logo" width={40} height={40} className="h-8 w-8 md:h-10 md:w-10 transition-transform group-active:scale-95" priority />
+              <span className="text-white text-xl md:text-2xl font-bold transition-colors group-hover:text-green-400">TechnoCore</span>
+            </a>
+            {/* Menu (anchors) */}
+            <div className="flex flex-wrap justify-center sm:justify-end gap-5 md:gap-8">
+              <a href="#products" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">Products</a>
+              <a href="#gallery" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">Gallery</a>
+              <a href="#about" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">About</a>
+              <a href="#contact" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">Contact</a>
+            </div>
+          </div>
+        </nav>
+
+        {/* Spacer under fixed header */}
+        <div className="h-16 sm:h-[68px]" />
+
+        {/* HERO */}
+        <header id="top" className="relative flex flex-col items-center justify-center text-center px-6 py-12">
+          <div className="relative w-40 h-40 mb-6">
+            <Image src="/logo.png" alt="TechnoCore logo large" fill sizes="(max-width: 768px) 160px, 200px" className="object-contain" priority />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold max-w-4xl">
+            Industrial Nitrogen & Oxygen Generators | Compressed Air & Gas Solutions in Ireland
+          </h1>
+          <h2 className="text-green-500 text-xl md:text-2xl font-semibold mt-2">
+            PSA Systems · Air Dryers · Air & Gas Filtration · Turnkey Installations
+          </h2>
+          <p className="text-gray-200 mt-4 max-w-2xl">
+            Supply • Installation • Commissioning • Service for gas generation and air treatment — from PSA N₂/O₂ generators to filtration, chillers, air dryers, and fully integrated turnkey systems.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 justify-center">
+            <a href="#contact" onClick={onQuoteClick} className="bg-green-500 hover:bg-green-600 text-black px-5 py-2 rounded font-medium">Request a Quote</a>
+            <a href="#products" className="border border-sky-500 text-sky-400 hover:bg-sky-500/10 px-5 py-2 rounded font-medium">Explore Products</a>
+          </div>
+        </header>
+
+        {/* ABOUT */}
         <section id="about" className="bg-gray-900/60 px-6 py-10">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-3 text-green-400">About TechnoCore</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-200">
                 TechnoCore is an Irish engineering supplier focused on Omega Air solutions: PSA nitrogen & oxygen generation, air dryers, and ISO 8573‑1 compliant filtration. We deliver end‑to‑end projects — audit, sizing, supply, installation, commissioning, and after‑sales service.
               </p>
-              <ul className="mt-4 text-gray-300 list-disc list-inside space-y-1">
+              <ul className="mt-4 text-gray-200 list-disc list-inside space-y-1">
                 <li>Lead times from EU stock; local service in Ireland</li>
                 <li>Laser cutting N₂ packages, paint‑booth air preparation, food & pharma</li>
                 <li>CE/ISO documentation, FAT/SAT & commissioning reports</li>
@@ -209,12 +192,7 @@ export default function TechnoCoreLanding() {
             <p className="text-gray-400">Phone: +353 85 231 4430</p>
             <p className="text-gray-400">Location: Dublin / Wicklow, Ireland</p>
 
-            <form
-              action="https://formsubmit.co/sales@technocore.ie"
-              method="POST"
-              className="mt-8 text-left"
-              onSubmit={onFormSubmit}
-            >
+            <form action="https://formsubmit.co/sales@technocore.ie" method="POST" className="mt-8 text-left" onSubmit={onFormSubmit}>
               {/* FormSubmit hardening */}
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://www.technocore.ie/thanks" />
