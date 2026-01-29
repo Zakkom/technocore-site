@@ -18,21 +18,29 @@ export default function SiteLayout({ children }) {
           </Link>
 
           {/* Пункты меню — крупнее */}
-          <div className="flex items-center gap-7">
-            <Link href="/products" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
-              Products
-            </Link>
-            <a href="/#gallery" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
-              Gallery
-            </a>
-            <Link href="/about" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
-              Contact
-            </Link>
-          </div>
-        </div>
+          <div className="flex items-center gap-6">
+  <Link href="/products" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
+    Products
+  </Link>
+  <a href="/#gallery" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
+    Gallery
+  </a>
+  <Link href="/about" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
+    About
+  </Link>
+  <Link href="/contact" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
+    Contact
+  </Link>
+
+  {/* 📞 Phone CTA */}
+  <a
+    href="tel:+353874386157"
+    className="ml-2 hidden md:inline-flex items-center border border-green-500 text-green-400 px-4 py-2 rounded hover:bg-green-500 hover:text-black transition"
+  >
+    Call +353 87 438 6157
+  </a>
+</div>
+
       </nav>
 
       {/* CONTENT */}
