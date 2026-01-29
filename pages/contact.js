@@ -40,7 +40,12 @@ export default function Contact() {
               sales@technocore.ie
             </a>
           </p>
-          <p className="text-gray-400 mb-2">Phone: +353 85 231 4430</p>
+          <p className="text-gray-400 mb-2">
+  Phone:{" "}
+  <a href="tel:+353874386157" className="underline hover:text-green-400">
+    +353 87 438 6157
+  </a>
+</p>
           <p className="text-gray-400 mb-6">
             Location: Dublin / Wicklow, Ireland
           </p>
