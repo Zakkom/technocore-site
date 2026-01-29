@@ -62,22 +62,22 @@ export default function About() {
       {/* Спейсер под фикс-хедер */}
       <div className="h-16 sm:h-[68px]" />
 
-      {/* ====== CTA-панель сверху (как у тебя) ====== */}
-      <section className="mt-2 text-center">
-        <Link href="/contact" className="inline-block bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded">
-          Request Quote
-        </Link>
-        <a
-          Phone:{" "}
-  <a href="tel:+353874386157" className="underline hover:text-green-400">
-    +353 87 438 6157
-  </a>
-          className="ml-3 inline-block border border-sky-500 text-sky-400 hover:bg-sky-500/10 px-6 py-3 rounded"
-        >
-          Call +353 85 231 4430
-        </a>
-      </section>
+     {/* ====== CTA-панель сверху ====== */}
+<section className="mt-2 text-center">
+  <Link
+    href="/contact"
+    className="inline-block bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded"
+  >
+    Request Quote
+  </Link>
 
+  <a
+    href="tel:+353874386157"
+    className="ml-3 inline-block border border-sky-500 text-sky-400 hover:bg-sky-500/10 px-6 py-3 rounded"
+  >
+    Call +353 87 438 6157
+  </a>
+</section>
       {/* ====== HERO с отдельным изображением ====== */}
       <section
         className="relative h-[320px] md:h-[420px] flex items-center justify-center text-center overflow-hidden"
