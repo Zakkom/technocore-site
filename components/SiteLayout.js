@@ -1,6 +1,7 @@
 // components/SiteLayout.js
 import Link from "next/link";
 import { useRouter } from "next/router";
+import CookieConsent from "./CookieConsent";
 
 export default function SiteLayout({ children }) {
   const router = useRouter();
@@ -66,7 +67,19 @@ export default function SiteLayout({ children }) {
             <a href="/#gallery" className="hover:text-green-400">Gallery</a>
             <Link href="/about" className="hover:text-green-400">About</Link>
             <Link href="/contact" className="hover:text-green-400">Contact</Link>
+<Link href="/privacy-policy" className="hover:text-green-400">
+  Privacy Policy
+</Link>
 
+<button
+  type="button"
+  onClick={() =>
+    window.dispatchEvent(new Event("technocore:open-cookie-settings"))
+  }
+  className="hover:text-green-400"
+>
+  Cookie Settings
+</button>
             {/* Phone in footer */}
             <a href="tel:+353874386157" className="hover:text-green-400">
               +353 87 438 6157
@@ -76,6 +89,7 @@ export default function SiteLayout({ children }) {
 
         <p className="mt-3">© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
       </footer>
+<CookieConsent />
     </div>
   );
 }
