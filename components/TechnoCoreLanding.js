@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Script from "next/script";
+import CookieConsent from "./CookieConsent";;
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -80,17 +80,7 @@ export default function TechnoCoreLanding() {
       </Head>
 
       {/* Google tags */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17428189544"
-        strategy="afterInteractive"
-      />
-      <Script id="gtag-init" strategy="afterInteractive">{`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-17428189544');
-        gtag('config', 'G-NGRNF7SK90', { send_page_view: true });
-      `}</Script>
+     
 
       <div className="relative min-h-screen bg-black text-white font-sans scroll-smooth overflow-hidden">
         {/* Фоновые изображения */}
@@ -124,19 +114,29 @@ export default function TechnoCoreLanding() {
 
               {/* Меню */}
               <div className="flex flex-wrap justify-center sm:justify-end gap-5 md:gap-8">
-                <a href="/products" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
-                  Products
-                </a>
-                <a href="#gallery" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
-                  Gallery
-                </a>
-                <a href="/about" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
-                  About
-                </a>
-                <a href="/contact" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
-                  Contact
-                </a>
-              </div>
+  <a href="/products" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
+    Products
+  </a>
+
+  <a
+    href="/compressed-air-treatment-ireland"
+    className="text-gray-300 hover:text-green-400 text-lg md:text-xl"
+  >
+    Air Treatment
+  </a>
+
+  <a href="#gallery" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
+    Gallery
+  </a>
+
+  <a href="/about" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
+    About
+  </a>
+
+  <a href="/contact" className="text-gray-300 hover:text-green-400 text-lg md:text-xl">
+    Contact
+  </a>
+</div>
             </div>
           </nav>
 
@@ -315,25 +315,29 @@ export default function TechnoCoreLanding() {
                   <span className="text-white font-semibold text-lg">TechnoCore</span> — Industrial Gas Solutions
                 </div>
                 <div className="space-x-4">
-                  <a href="/products" className="text-gray-300 hover:text-green-400">
-                    Products
-                  </a>
-                  <a href="#gallery" className="hover:text-green-400">
-                    Gallery
-                  </a>
-                  <a href="/about" className="hover:text-green-400">
-                    About
-                  </a>
-                  <a href="/contact" className="hover:text-green-400">
-                    Contact
-                  </a>
-                </div>
+  <a href="/products" className="text-gray-300 hover:text-green-400">
+    Products
+  </a>
+  <a href="#gallery" className="hover:text-green-400">
+    Gallery
+  </a>
+  <a href="/about" className="hover:text-green-400">
+    About
+  </a>
+  <a href="/contact" className="hover:text-green-400">
+    Contact
+  </a>
+  <a href="/privacy-policy" className="hover:text-green-400">
+    Privacy Policy
+  </a>
+</div>
               </div>
               <p>© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
             </div>
           </footer>
         </div>
       </div>
+<CookieConsent />
     </main>
   );
 }
