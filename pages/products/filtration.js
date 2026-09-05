@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
+import IrelandCoverage from "../../components/IrelandCoverage";
 
 export default function FiltrationPage() {
   const filtrationTypes = [
@@ -642,6 +643,8 @@ export default function FiltrationPage() {
 
         </section>
 
+{/* IRELAND COVERAGE */}
+<IrelandCoverage product="industrial compressed air filtration systems" />
 
         {/* FAQ */}
         <section className="max-w-5xl mx-auto px-6 py-16">

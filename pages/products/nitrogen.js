@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
+import IrelandCoverage from "../../components/IrelandCoverage";
 
 const applications = [
   {
@@ -681,7 +682,8 @@ export default function NitrogenPage() {
           </div>
         </div>
       </section>
-
+{/* IRELAND COVERAGE */}
+<IrelandCoverage product="on-site nitrogen generation systems" />
       {/* FINAL CTA */}
       <section className="bg-black py-20 px-6">
         <div className="max-w-5xl mx-auto border border-green-500/40 bg-[#081115] rounded-3xl p-8 md:p-12 text-center">

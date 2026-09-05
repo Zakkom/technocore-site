@@ -87,7 +87,13 @@ export default function SiteLayout({ children }) {
           </div>
         </div>
 
-        <p className="mt-3">© {new Date().getFullYear()} TechnoCore. All rights reserved.</p>
+	<p className="mt-4 text-sm text-gray-400">
+  	Based in Newtownmountkennedy, Co. Wicklow · Supporting industrial customers throughout Ireland
+	</p>
+
+        <p className="mt-2">
+          © {new Date().getFullYear()} TechnoCore. All rights reserved.
+        </p>
       </footer>
 <CookieConsent />
     </div>

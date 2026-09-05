@@ -3,6 +3,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
+import IrelandCoverage from "../../components/IrelandCoverage";
 
 export default function ChillersPage() {
   const benefits = [
@@ -645,6 +646,8 @@ export default function ChillersPage() {
           </div>
         </div>
       </section>
+{/* IRELAND COVERAGE */}
+<IrelandCoverage product="industrial process cooling and chiller systems" />
 
       {/* CTA */}
       <section className="relative bg-[#0d6b45] text-white">

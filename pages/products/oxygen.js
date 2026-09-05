@@ -3,6 +3,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
+import IrelandCoverage from "../../components/IrelandCoverage";
 
 export default function OxygenPage() {
   const benefits = [
@@ -797,7 +798,8 @@ export default function OxygenPage() {
           </div>
         </div>
       </section>
-
+{/* IRELAND COVERAGE */}
+<IrelandCoverage product="on-site oxygen generation systems" />
       {/* FAQ */}
       <section className="bg-[#02130d] text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">

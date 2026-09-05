@@ -3,6 +3,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
+import IrelandCoverage from "../../components/IrelandCoverage";
 
 export default function PaintBoothPage() {
   const benefits = [
@@ -646,6 +647,8 @@ export default function PaintBoothPage() {
           </div>
         </div>
       </section>
+
+<IrelandCoverage product="paint booth and compressed air filtration systems" />
 
       {/* FAQ */}
       <section className="bg-[#02130d] text-white">

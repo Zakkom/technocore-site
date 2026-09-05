@@ -728,8 +728,8 @@ export default function TechnoCoreLanding() {
                 </a>
 
                 <div>
-                  Co. Wicklow · Ireland
-                </div>
+  Newtownmountkennedy, Co. Wicklow · Ireland
+</div>
               </div>
             </div>
 
@@ -977,8 +977,8 @@ export default function TechnoCoreLanding() {
                 </a>
 
                 <div>
-                  Co. Wicklow, Ireland
-                </div>
+  Newtownmountkennedy, Co. Wicklow, Ireland
+</div>
               </div>
             </div>
           </div>
@@ -989,8 +989,8 @@ export default function TechnoCoreLanding() {
             </p>
 
             <p>
-              Industrial Engineering · Ireland
-            </p>
+  Based in Newtownmountkennedy, Co. Wicklow · Supporting industrial customers throughout Ireland
+</p>
           </div>
         </div>
       </footer>

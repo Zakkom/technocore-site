@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import SiteLayout from "../../components/SiteLayout";
+import IrelandCoverage from "../../components/IrelandCoverage";
 
 const CheckIcon = () => (
   <svg
@@ -656,7 +657,8 @@ export default function AirDryersPage() {
           </div>
         </div>
       </section>
-
+{/* IRELAND COVERAGE */}
+<IrelandCoverage product="compressed air drying and treatment systems" />
       {/* FAQ */}
       <section className="bg-white text-black">
         <div className="max-w-5xl mx-auto px-6 py-20 lg:py-24">
