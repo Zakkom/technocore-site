@@ -34,8 +34,9 @@ export default function Document() {
                 "addressCountry": "IE"
               },
               "sameAs": [
-                "https://www.linkedin.com/company/technocore",
-                "https://www.instagram.com/technocore.ie"
+                "https://www.linkedin.com/company/technocore-ireland",
+                "https://www.instagram.com/technocore.ie",
+                "https://www.facebook.com/profile.php?id=61586598854615"
               ],
               "contactPoint": [
                 {
