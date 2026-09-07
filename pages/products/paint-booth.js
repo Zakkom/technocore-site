@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 import IrelandCoverage from "../../components/IrelandCoverage";
 
@@ -104,6 +105,29 @@ export default function PaintBoothPage() {
     })),
   };
 
+  // Service (not Product) is the correct schema type here: air-preparation
+  // systems are sized and quoted individually per project rather than sold
+  // at a fixed price, and Service does not require a price to be valid
+  // structured data.
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Compressed Air Filtration for Spray Painting",
+    name: "Paint Booth Air Preparation (PP Series)",
+    description:
+      "Point-of-use compressed air filtration for paint booths and spray finishing, removing water, oil aerosols and fine particles, with optional activated carbon stage, up to 78 Nm³/h at 16 bar maximum.",
+    provider: {
+      "@type": "Organization",
+      name: "TechnoCore",
+      url: "https://www.technocore.ie",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Ireland",
+    },
+    url: "https://www.technocore.ie/products/paint-booth",
+  };
+
   return (
     <SiteLayout>
       <Head>
@@ -157,15 +181,25 @@ export default function PaintBoothPage() {
             __html: JSON.stringify(faqSchema),
           }}
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceSchema),
+          }}
+        />
       </Head>
 
       {/* HERO */}
       <section className="relative min-h-[600px] lg:min-h-[660px] flex items-center overflow-hidden bg-[#050706]">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/paint-booth-hero.png"
             alt="Compressed air filtration system for industrial spray painting"
-            className="w-full h-full object-cover object-center"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/15" />
@@ -329,12 +363,16 @@ export default function PaintBoothPage() {
             </div>
           </div>
 
-          <div className="bg-white flex items-center justify-center p-8 lg:p-14">
-            <img
-              src="/images/paint-booth.jpg"
-              alt="PP series compressed air filtration system"
-              className="max-h-[430px] w-full object-contain"
-            />
+          <div className="relative bg-white flex items-center justify-center p-8 lg:p-14">
+            <div className="relative w-full max-h-[430px] h-[400px]">
+              <Image
+                src="/images/paint-booth.jpg"
+                alt="PP series compressed air filtration system"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -648,7 +686,7 @@ export default function PaintBoothPage() {
         </div>
       </section>
 
-<IrelandCoverage product="paint booth and compressed air filtration systems" />
+      <IrelandCoverage product="paint booth and compressed air filtration systems" />
 
       {/* FAQ */}
       <section className="bg-[#02130d] text-white">
@@ -716,4 +754,3 @@ export default function PaintBoothPage() {
     </SiteLayout>
   );
 }
-
