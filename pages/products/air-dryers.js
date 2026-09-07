@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 import IrelandCoverage from "../../components/IrelandCoverage";
 
@@ -37,6 +38,66 @@ const ArrowIcon = () => (
   </svg>
 );
 
+// FAQ content lives in one place and drives BOTH the on-page FAQ block
+// and the FAQPage structured data below, so the two can never drift apart.
+const faqs = [
+  {
+    q: "What is the difference between a refrigerated and adsorption air dryer?",
+    a: "Refrigerated dryers are normally used for general industrial compressed air. Adsorption dryers are used when much lower moisture levels and lower pressure dew points are required.",
+  },
+  {
+    q: "What is a membrane air dryer?",
+    a: "A membrane air dryer removes water vapour by passing compressed air through hollow-fibre membrane modules that allow moisture to permeate out of the air stream. Membrane dryers have no moving parts, require little maintenance and can be a compact option for point-of-use or moderate dew point requirements.",
+  },
+  {
+    q: "What pressure dew point do I need?",
+    a: "The required pressure dew point depends on the process, environmental conditions and required compressed air quality. General manufacturing and critical process applications can have very different requirements.",
+  },
+  {
+    q: "Can TechnoCore size an air dryer for an existing compressor?",
+    a: "Yes. Provide the compressor flow, working pressure, temperatures and application, and we can help select an appropriate dryer and associated air treatment equipment.",
+  },
+  {
+    q: "Do I need filters before and after the dryer?",
+    a: "Filtration requirements depend on the dryer technology and the required air quality. Pre-filtration and final filtration are often important parts of a complete compressed air treatment system.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
+// Service (not Product) is the correct schema type here: dryer systems are
+// sized and quoted individually per project rather than sold at a fixed
+// price, and Service does not require a price to be valid structured data.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Compressed Air Dryers",
+  name: "Industrial Compressed Air Dryers",
+  description:
+    "Refrigerated, adsorption, membrane, heat-regenerated and high-pressure compressed air dryer solutions, engineered and sized around flow, pressure and required pressure dew point.",
+  provider: {
+    "@type": "Organization",
+    name: "TechnoCore",
+    url: "https://www.technocore.ie",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Ireland",
+  },
+  url: "https://www.technocore.ie/products/air-dryers",
+};
+
 export default function AirDryersPage() {
   return (
     <SiteLayout>
@@ -47,7 +108,7 @@ export default function AirDryersPage() {
 
         <meta
           name="description"
-          content="Industrial compressed air dryers in Ireland. Refrigerated, adsorption, heat-regenerated and high-pressure dryer solutions for manufacturing and process applications."
+          content="Industrial compressed air dryers in Ireland. Refrigerated, adsorption, membrane, heat-regenerated and high-pressure dryer solutions for manufacturing and process applications."
         />
 
         <link
@@ -62,7 +123,7 @@ export default function AirDryersPage() {
 
         <meta
           property="og:description"
-          content="Refrigerated, adsorption, heat-regenerated and specialist compressed air dryer solutions engineered for industrial applications in Ireland."
+          content="Refrigerated, adsorption, membrane, heat-regenerated and specialist compressed air dryer solutions engineered for industrial applications in Ireland."
         />
 
         <meta
@@ -74,15 +135,28 @@ export default function AirDryersPage() {
           property="og:image"
           content="https://www.technocore.ie/images/air-dryers-hero.jpg"
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
       </Head>
 
       {/* HERO */}
       <section className="relative min-h-[700px] lg:min-h-[760px] overflow-hidden bg-black flex items-center">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/air-dryers-hero.jpg"
             alt="Industrial compressed air drying system"
-            className="w-full h-full object-cover object-center"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/72 to-black/10" />
@@ -103,9 +177,9 @@ export default function AirDryersPage() {
             </h1>
 
             <p className="text-gray-200 text-lg md:text-xl leading-relaxed mt-7 max-w-2xl">
-              Refrigerated, adsorption and heat-regenerated air drying
-              solutions engineered around your flow, pressure, dew point and
-              process requirements.
+              Refrigerated, adsorption, membrane and heat-regenerated air
+              drying solutions engineered around your flow, pressure, dew
+              point and process requirements.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-9 max-w-2xl">
@@ -180,8 +254,8 @@ export default function AirDryersPage() {
 
               <p>
                 TechnoCore supplies and sizes refrigerated, adsorption,
-                heat-regenerated and specialist compressed air dryers for
-                industrial systems across Ireland.
+                membrane, heat-regenerated and specialist compressed air
+                dryers for industrial systems across Ireland.
               </p>
             </div>
           </div>
@@ -264,11 +338,13 @@ export default function AirDryersPage() {
             </div>
 
             <div>
-              <div className="overflow-hidden bg-[#edf1ef]">
-                <img
+              <div className="relative overflow-hidden bg-[#edf1ef] h-[430px] md:h-[560px]">
+                <Image
                   src="/images/dryer-refrigerated.jpg"
                   alt="Industrial refrigerated compressed air dryers"
-                  className="w-full h-[430px] md:h-[560px] object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
 
@@ -289,11 +365,13 @@ export default function AirDryersPage() {
         <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <div className="order-2 lg:order-1">
-              <div className="overflow-hidden border border-white/10">
-                <img
+              <div className="relative overflow-hidden border border-white/10 h-[430px] md:h-[580px]">
+                <Image
                   src="/images/dryer-adsorption.jpg"
                   alt="Adsorption desiccant compressed air dryer"
-                  className="w-full h-[430px] md:h-[580px] object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -357,6 +435,95 @@ export default function AirDryersPage() {
         </div>
       </section>
 
+      {/* MEMBRANE */}
+      <section id="membrane" className="bg-white text-black">
+        <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+            <div>
+              <p className="text-green-600 text-xs font-bold tracking-[0.2em] uppercase">
+                Compact Drying
+              </p>
+
+              <h2 className="text-4xl md:text-5xl font-bold mt-4">
+                Membrane Air Dryers
+              </h2>
+
+              <p className="text-gray-700 text-lg leading-relaxed mt-6">
+                Membrane air dryers remove water vapour by passing compressed
+                air through hollow-fibre membrane modules. Moisture permeates
+                through the membrane wall and is vented away, leaving a drier
+                air stream downstream.
+              </p>
+
+              <p className="text-gray-700 text-lg leading-relaxed mt-4">
+                With no moving parts, no electrical supply and minimal
+                maintenance, membrane dryers can be a practical option for
+                point-of-use drying, instrumentation air and applications
+                where a compact, simple solution is preferred over very low
+                dew points.
+              </p>
+
+              <div className="mt-8">
+                <h3 className="font-semibold text-lg">
+                  Typical applications
+                </h3>
+
+                <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mt-4 text-gray-700">
+                  {[
+                    "Point-of-use drying",
+                    "Instrumentation air",
+                    "Analytical equipment",
+                    "Remote or unmanned sites",
+                    "Small compressed air branches",
+                    "Backup or supplementary drying",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span className="text-green-600 mt-0.5">
+                        <CheckIcon />
+                      </span>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="border border-gray-200 bg-[#f7f8f7] p-8">
+              <p className="text-green-600 font-semibold text-lg">
+                Why choose a membrane dryer
+              </p>
+
+              <ul className="mt-5 space-y-3 text-gray-700">
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>No moving parts or electrical connection required</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>Compact footprint for point-of-use installation</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>Minimal ongoing maintenance</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>Suitable where moderate dew point suppression is sufficient</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* HEAT REGENERATED */}
       <section className="bg-[#e9eeeb] text-black">
         <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
@@ -405,11 +572,13 @@ export default function AirDryersPage() {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white">
-              <img
+            <div className="relative overflow-hidden bg-white h-[460px] md:h-[620px]">
+              <Image
                 src="/images/dryer-heat-regenerated.jpg"
                 alt="Heat regenerated industrial adsorption dryer"
-                className="w-full h-[460px] md:h-[620px] object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
               />
             </div>
           </div>
@@ -465,7 +634,7 @@ export default function AirDryersPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-5 mt-10">
             {[
               {
                 value: "+3°C",
@@ -476,6 +645,11 @@ export default function AirDryersPage() {
                 value: "−40°C",
                 title: "Adsorption",
                 text: "Low dew point applications and critical process air.",
+              },
+              {
+                value: "Compact",
+                title: "Membrane",
+                text: "Point-of-use and instrumentation air with moderate dew point needs.",
               },
               {
                 value: "Large Flow",
@@ -657,8 +831,10 @@ export default function AirDryersPage() {
           </div>
         </div>
       </section>
-{/* IRELAND COVERAGE */}
-<IrelandCoverage product="compressed air drying and treatment systems" />
+
+      {/* IRELAND COVERAGE */}
+      <IrelandCoverage product="compressed air drying and treatment systems" />
+
       {/* FAQ */}
       <section className="bg-white text-black">
         <div className="max-w-5xl mx-auto px-6 py-20 lg:py-24">
@@ -673,24 +849,7 @@ export default function AirDryersPage() {
           </div>
 
           <div className="mt-12 divide-y divide-gray-200">
-            {[
-              {
-                q: "What is the difference between a refrigerated and adsorption air dryer?",
-                a: "Refrigerated dryers are normally used for general industrial compressed air. Adsorption dryers are used when much lower moisture levels and lower pressure dew points are required.",
-              },
-              {
-                q: "What pressure dew point do I need?",
-                a: "The required pressure dew point depends on the process, environmental conditions and required compressed air quality. General manufacturing and critical process applications can have very different requirements.",
-              },
-              {
-                q: "Can TechnoCore size an air dryer for an existing compressor?",
-                a: "Yes. Provide the compressor flow, working pressure, temperatures and application, and we can help select an appropriate dryer and associated air treatment equipment.",
-              },
-              {
-                q: "Do I need filters before and after the dryer?",
-                a: "Filtration requirements depend on the dryer technology and the required air quality. Pre-filtration and final filtration are often important parts of a complete compressed air treatment system.",
-              },
-            ].map((item) => (
+            {faqs.map((item) => (
               <div
                 key={item.q}
                 className="py-7"
