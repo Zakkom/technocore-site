@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 import IrelandCoverage from "../../components/IrelandCoverage";
 
@@ -199,6 +200,28 @@ export default function OxygenPage() {
     })),
   };
 
+  // Service (not Product) is the correct schema type here: oxygen systems are
+  // sized and quoted individually per project rather than sold at a fixed
+  // price, and Service does not require a price to be valid structured data.
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "On-Site Oxygen Generation Systems",
+    name: "PSA Oxygen Generators",
+    description:
+      "On-site PSA oxygen generation systems up to 95% purity, from standalone O-GEN units to O2 SKID and O2 BOX containerised packages.",
+    provider: {
+      "@type": "Organization",
+      name: "TechnoCore",
+      url: "https://www.technocore.ie",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Ireland",
+    },
+    url: "https://www.technocore.ie/products/oxygen",
+  };
+
   return (
     <SiteLayout>
       <Head>
@@ -249,15 +272,25 @@ export default function OxygenPage() {
             __html: JSON.stringify(faqSchema),
           }}
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceSchema),
+          }}
+        />
       </Head>
 
       {/* HERO */}
       <section className="relative min-h-[620px] lg:min-h-[680px] flex items-center overflow-hidden bg-[#030504]">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/oxygen-hero.png"
             alt="Industrial on-site oxygen generation system"
-            className="w-full h-full object-cover object-center"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/10" />
@@ -402,11 +435,15 @@ export default function OxygenPage() {
           </div>
 
           <div className="relative bg-white min-h-[470px] flex items-center">
-            <img
-              src="/images/oxygen-o-gen.jpg"
-              alt="OMEGA AIR O-GEN PSA oxygen generator"
-              className="w-full h-[450px] object-contain p-8 lg:p-12"
-            />
+            <div className="relative w-full h-[450px]">
+              <Image
+                src="/images/oxygen-o-gen.jpg"
+                alt="OMEGA AIR O-GEN PSA oxygen generator"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain p-8 lg:p-12"
+              />
+            </div>
 
             <div className="hidden xl:block absolute right-10 top-1/2 -translate-y-1/2 max-w-[220px]">
               <p className="text-green-700 text-xs tracking-[0.2em] uppercase font-bold">
@@ -637,11 +674,13 @@ export default function OxygenPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mt-9">
             {applications.map((item) => (
               <article key={item.title}>
-                <div className="h-[155px] overflow-hidden bg-gray-300">
-                  <img
+                <div className="relative h-[155px] overflow-hidden bg-gray-300">
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                    className="object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
 
@@ -713,10 +752,12 @@ export default function OxygenPage() {
         <div className="grid lg:grid-cols-2">
           {/* ENGINEER */}
           <div className="relative min-h-[560px] overflow-hidden">
-            <img
+            <Image
               src="/images/oxygen-engineer.png"
               alt="TechnoCore engineer inspecting an industrial oxygen system"
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
             />
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/30 to-transparent" />
@@ -759,11 +800,13 @@ export default function OxygenPage() {
 
               <div className="grid sm:grid-cols-2 gap-5 mt-8">
                 <div className="bg-[#c7d0c8] border border-[#b4beb6] overflow-hidden">
-                  <div className="h-[230px] bg-white p-3">
-                    <img
+                  <div className="relative h-[230px] bg-white p-3">
+                    <Image
                       src="/images/oxygen-o2-skid.jpg"
                       alt="OMEGA AIR O2 SKID oxygen station"
-                      className="w-full h-full object-contain"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 25vw"
+                      className="object-contain p-3"
                     />
                   </div>
 
@@ -777,11 +820,13 @@ export default function OxygenPage() {
                 </div>
 
                 <div className="bg-[#c7d0c8] border border-[#b4beb6] overflow-hidden">
-                  <div className="h-[230px] overflow-hidden">
-                    <img
+                  <div className="relative h-[230px] overflow-hidden">
+                    <Image
                       src="/images/oxygen-o2-box.jpg"
                       alt="Containerised oxygen generation system"
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 25vw"
+                      className="object-cover"
                     />
                   </div>
 
@@ -836,11 +881,13 @@ export default function OxygenPage() {
 
       {/* CTA */}
       <section className="relative min-h-[320px] flex items-center overflow-hidden">
-        <img
+        <Image
           src="/images/oxygen-cta-forest.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-[#052518]/75 to-black/25" />
