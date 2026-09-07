@@ -1,7 +1,68 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 import IrelandCoverage from "../../components/IrelandCoverage";
+
+// FAQ content lives in one place and drives BOTH the on-page FAQ block
+// and the FAQPage structured data below, so the two can never drift apart.
+const faqs = [
+  {
+    q: "What contaminants can compressed air filters remove?",
+    a: "Depending on the filtration grade and technology, filters can reduce solid particles, liquid water, oil aerosols, oil vapour and other contaminants from compressed air.",
+  },
+  {
+    q: "What is a coalescing compressed air filter?",
+    a: "A coalescing filter is designed to capture fine liquid aerosols such as water and oil and combine them into larger droplets that can be drained from the filter housing.",
+  },
+  {
+    q: "When should a compressed air filter element be replaced?",
+    a: "Replacement intervals depend on the filter manufacturer, operating hours, contamination level and differential pressure. Elements should be maintained according to the applicable manufacturer's recommendations.",
+  },
+  {
+    q: "Can TechnoCore find an alternative replacement element?",
+    a: "Yes. Send us the manufacturer, model and part number of your existing filter element. If available, we can check suitable replacement options for your compressed air system.",
+  },
+  {
+    q: "Do I need several filters in one compressed air system?",
+    a: "Often yes. Different filtration stages may be required before and after the dryer depending on the dryer technology, air quality requirement and final application.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
+// Service (not Product) is the correct schema type here: filtration systems
+// are sized and quoted individually per project rather than sold at a fixed
+// price, and Service does not require a price to be valid structured data.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Industrial Compressed Air and Gas Filtration",
+  name: "Industrial Compressed Air Filters",
+  description:
+    "Coalescing, particulate, activated carbon, sterile and high-pressure compressed air and gas filtration, plus replacement filter elements for existing systems.",
+  provider: {
+    "@type": "Organization",
+    name: "TechnoCore",
+    url: "https://www.technocore.ie",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Ireland",
+  },
+  url: "https://www.technocore.ie/products/filtration",
+};
 
 export default function FiltrationPage() {
   const filtrationTypes = [
@@ -125,6 +186,16 @@ export default function FiltrationPage() {
           rel="canonical"
           href="https://www.technocore.ie/products/filtration"
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
       </Head>
 
       <main className="bg-black text-white">
@@ -133,10 +204,13 @@ export default function FiltrationPage() {
         <section className="relative overflow-hidden border-b border-gray-800">
 
           <div className="absolute inset-0">
-            <img
+            <Image
               src="/images/filtration-elements.png"
               alt="Industrial compressed air filter elements"
-              className="w-full h-full object-cover object-center opacity-45"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center opacity-45"
             />
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
@@ -378,12 +452,14 @@ export default function FiltrationPage() {
             </div>
 
 
-            <div className="rounded-xl overflow-hidden border border-gray-700">
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-700">
 
-              <img
+              <Image
                 src="/images/filter-indicator.png"
                 alt="Compressed air filter differential pressure indicator"
-                className="w-full h-auto"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain bg-black"
               />
 
             </div>
@@ -394,10 +470,12 @@ export default function FiltrationPage() {
 {/* TECHNICIAN / SERVICE VISUAL */}
 <section className="relative h-[320px] md:h-[430px] overflow-hidden border-y border-gray-800">
 
-  <img
+  <Image
     src="/images/filtration-technician.png"
     alt="Technician replacing a compressed air filter element"
-    className="absolute inset-0 w-full h-full object-cover object-center"
+    fill
+    sizes="100vw"
+    className="object-cover object-center"
   />
 
   <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
@@ -433,12 +511,14 @@ export default function FiltrationPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-            <div className="rounded-xl overflow-hidden border border-gray-800">
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-800">
 
-              <img
+              <Image
                 src="/images/alternative-filter-elements.png"
                 alt="Alternative compressed air replacement filter elements"
-                className="w-full h-auto"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain bg-black"
               />
 
             </div>
@@ -655,70 +735,17 @@ export default function FiltrationPage() {
 
           <div className="space-y-8 mt-10">
 
-            <div>
-              <h3 className="text-xl font-semibold">
-                What contaminants can compressed air filters remove?
-              </h3>
+            {faqs.map((item) => (
+              <div key={item.q}>
+                <h3 className="text-xl font-semibold">
+                  {item.q}
+                </h3>
 
-              <p className="text-gray-300 mt-3 leading-relaxed">
-                Depending on the filtration grade and technology, filters can
-                reduce solid particles, liquid water, oil aerosols, oil vapour
-                and other contaminants from compressed air.
-              </p>
-            </div>
-
-
-            <div>
-              <h3 className="text-xl font-semibold">
-                What is a coalescing compressed air filter?
-              </h3>
-
-              <p className="text-gray-300 mt-3 leading-relaxed">
-                A coalescing filter is designed to capture fine liquid aerosols
-                such as water and oil and combine them into larger droplets that
-                can be drained from the filter housing.
-              </p>
-            </div>
-
-
-            <div>
-              <h3 className="text-xl font-semibold">
-                When should a compressed air filter element be replaced?
-              </h3>
-
-              <p className="text-gray-300 mt-3 leading-relaxed">
-                Replacement intervals depend on the filter manufacturer,
-                operating hours, contamination level and differential pressure.
-                Elements should be maintained according to the applicable
-                manufacturer's recommendations.
-              </p>
-            </div>
-
-
-            <div>
-              <h3 className="text-xl font-semibold">
-                Can TechnoCore find an alternative replacement element?
-              </h3>
-
-              <p className="text-gray-300 mt-3 leading-relaxed">
-                Yes. Send us the manufacturer, model and part number of your
-                existing filter element. If available, we can check suitable
-                replacement options for your compressed air system.
-              </p>
-            </div>
-
-
-            <div>
-              <h3 className="text-xl font-semibold">
-                Do I need several filters in one compressed air system?
-              </h3>
-
-              <p className="text-gray-300 mt-3 leading-relaxed">
-                Often yes. Different filtration stages may be required before
-                and after the dryer depending on the dryer technology, air
-                quality requirement and final application.
-              </p>
-            </div>
+                <p className="text-gray-300 mt-3 leading-relaxed">
+                  {item.a}
+                </p>
+              </div>
+            ))}
 
           </div>
 
