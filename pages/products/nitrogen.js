@@ -126,26 +126,26 @@ const faqJsonLd = {
   })),
 };
 
-const productJsonLd = {
+// Service (not Product) is the correct schema type here: TechnoCore engineers
+// custom systems per project rather than selling a fixed-price catalogue item,
+// and Service does not require a price to be valid structured data.
+const serviceJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
+  "@type": "Service",
+  serviceType: "On-Site Nitrogen Generation Systems",
   name: "On-Site Nitrogen Generation Systems",
   description:
-    "Engineered PSA and membrane nitrogen generation systems, from standalone generators to complete skid and containerised packages, with purity up to 99.9995% N2.",
-  brand: {
-    "@type": "Brand",
+    "Engineered PSA and membrane nitrogen generation systems, from standalone generators to complete skid and containerised packages, with purity up to 99.9995% N2. Systems are sized and quoted individually per project.",
+  provider: {
+    "@type": "Organization",
     name: "TechnoCore",
+    url: "https://www.technocore.ie",
   },
   areaServed: {
     "@type": "Country",
     name: "Ireland",
   },
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "EUR",
-    availability: "https://schema.org/InStock",
-    url: "https://www.technocore.ie/products/nitrogen",
-  },
+  url: "https://www.technocore.ie/products/nitrogen",
 };
 
 export default function NitrogenPage() {
@@ -173,7 +173,7 @@ export default function NitrogenPage() {
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
         />
       </Head>
 
