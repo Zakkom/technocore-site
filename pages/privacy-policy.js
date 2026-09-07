@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import CookieConsent from "../components/CookieConsent";
+import SiteLayout from "../components/SiteLayout";
 
 export default function PrivacyPolicy() {
   return (
-    <main>
+    <SiteLayout>
       <Head>
         <title>Privacy Policy | TechnoCore Limited</title>
         <meta
@@ -13,21 +13,10 @@ export default function PrivacyPolicy() {
           content="TechnoCore Limited privacy notice explaining how personal data is collected and processed through technocore.ie."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://technocore.ie/privacy-policy" />
+        <link rel="canonical" href="https://www.technocore.ie/privacy-policy" />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
-        <nav className="border-b border-green-500 bg-black">
-          <div className="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
-            <Link href="/" className="text-2xl font-bold hover:text-green-400">
-              TechnoCore
-            </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-green-400">
-              Contact
-            </Link>
-          </div>
-        </nav>
-
+      <div className="bg-black text-white">
         <article className="max-w-4xl mx-auto px-6 py-14">
           <h1 className="text-4xl md:text-5xl font-bold">Privacy Policy</h1>
           <p className="text-gray-400 mt-3">Last updated: 2 September 2026</p>
@@ -209,16 +198,7 @@ export default function PrivacyPolicy() {
             </section>
           </div>
         </article>
-
-        <footer className="border-t border-green-500 py-7 text-center text-gray-400 text-sm">
-          <Link href="/" className="hover:text-green-400">Home</Link>
-          <span className="mx-3">·</span>
-          <Link href="/contact" className="hover:text-green-400">Contact</Link>
-          <p className="mt-3">© {new Date().getFullYear()} TechnoCore Limited.</p>
-        </footer>
-
-        <CookieConsent />
       </div>
-    </main>
+    </SiteLayout>
   );
 }
