@@ -724,10 +724,24 @@ export default function CompressedAirTreatmentIreland() {
           </Link>
 
           <Link
+            href="/products/air-dryers"
+            className="block hover:text-green-400"
+          >
+            Air Dryers
+          </Link>
+
+          <Link
             href="/products/filtration"
             className="block hover:text-green-400"
           >
             Filtration
+          </Link>
+
+          <Link
+            href="/products/chillers"
+            className="block hover:text-green-400"
+          >
+            Chillers
           </Link>
         </div>
       </div>
