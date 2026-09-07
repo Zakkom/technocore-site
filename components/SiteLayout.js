@@ -22,44 +22,65 @@ export default function SiteLayout({ children }) {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* HEADER */}
-      <nav className="sticky top-0 z-50 bg-black/90 border-b border-green-500 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" aria-label="TechnoCore — Home" className="flex items-center gap-3">
-            <div className="relative h-16 md:h-18 w-32">
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 h-[76px] flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2.5 group overflow-visible">
+            <div className="relative w-[108px] h-[58px] shrink-0 overflow-visible -ml-8">
               <Image
                 src="/logo.png"
                 alt="TechnoCore"
-                fill
+                width={130}
+                height={130}
                 priority
-                sizes="128px"
-                className="object-contain object-left"
+                className="absolute left-[-4px] top-1/2 -translate-y-1/2 w-[112px] h-[112px] max-w-none object-contain"
               />
             </div>
-            <span className="text-white font-semibold hidden sm:block">TechnoCore</span>
+
+            <div className="leading-none">
+              <div className="text-[25px] font-bold tracking-tight">
+                TechnoCore
+              </div>
+              <div className="hidden sm:block text-[10px] uppercase tracking-[0.25em] text-gray-400 mt-1.5">
+                Industrial Engineering
+              </div>
+            </div>
           </Link>
-          {/* Menu + Phone */}
-          <div className="flex items-center gap-6">
-            <Link href="/products" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
-              Products
+
+          <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-300">
+            <Link href="/#solutions" className="hover:text-green-400 transition-colors">
+              Solutions
             </Link>
-            <a href="/#gallery" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
-              Gallery
-            </a>
-            <Link href="/about" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
+
+            <Link
+              href="/compressed-air-treatment-ireland"
+              className="hover:text-green-400 transition-colors"
+            >
+              Air Treatment
+            </Link>
+
+            <Link href="/#engineering" className="hover:text-green-400 transition-colors">
+              Engineering
+            </Link>
+
+            <Link href="/#industries" className="hover:text-green-400 transition-colors">
+              Industries
+            </Link>
+
+            <Link href="/about" className="hover:text-green-400 transition-colors">
               About
             </Link>
-            <Link href="/contact" className="text-gray-200 hover:text-green-400 text-lg md:text-xl">
+
+            <Link href="/contact" className="hover:text-green-400 transition-colors">
               Contact
             </Link>
-            {/* 📞 Phone CTA (desktop) */}
-            <a
-              href="tel:+353874386157"
-              className="ml-2 hidden md:inline-flex items-center border border-green-500 text-green-400 px-4 py-2 rounded hover:bg-green-500 hover:text-black transition"
-            >
-              Call +353 87 438 6157
-            </a>
           </div>
+
+          <Link
+            href="/contact"
+            className="hidden sm:inline-flex bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-md transition"
+          >
+            Discuss Your Project
+          </Link>
         </div>
       </nav>
       {/* CONTENT */}
