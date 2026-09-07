@@ -936,6 +936,13 @@ export default function TechnoCoreLanding() {
                 >
                   Chillers
                 </Link>
+
+                <Link
+                  href="/products/paint-booth"
+                  className="block hover:text-green-400"
+                >
+                  Paint Booth Air Preparation
+                </Link>
               </div>
             </div>
 
