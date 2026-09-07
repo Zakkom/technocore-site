@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 import IrelandCoverage from "../../components/IrelandCoverage";
 
@@ -79,6 +80,74 @@ const applications = [
   },
 ];
 
+// FAQ content lives in one place and drives BOTH the on-page FAQ block
+// and the FAQPage structured data below, so the two can never drift apart.
+const faqs = [
+  {
+    q: "What is an on-site nitrogen generator?",
+    a: "An on-site nitrogen generator separates nitrogen from compressed air so nitrogen can be produced directly at your facility instead of being supplied entirely by cylinders or bulk deliveries.",
+  },
+  {
+    q: "What nitrogen purity do I need?",
+    a: "The required purity depends on the application. TechnoCore nitrogen systems can be configured from general-purpose purity levels up to 99.9995% N2. Higher purity is not automatically better, because increasing purity affects generator capacity and energy consumption, so the system should be sized around the actual process requirement.",
+  },
+  {
+    q: "What is the difference between PSA and membrane nitrogen generation?",
+    a: "PSA technology is commonly selected for applications requiring higher nitrogen purity, while membrane systems can be attractive for applications requiring moderate purity with a compact and simple configuration.",
+  },
+  {
+    q: "Can a nitrogen generator replace cylinders?",
+    a: "In many applications, yes. The technical and financial suitability depends on nitrogen consumption, operating hours, required purity, pressure and current gas supply costs.",
+  },
+  {
+    q: "How much does a nitrogen generator cost?",
+    a: "Pricing depends on required flow rate, purity, operating pressure and system configuration (standalone generator, skid package or containerised unit). Send us your current nitrogen consumption and required purity and we can provide a system proposal with pricing for your application.",
+  },
+  {
+    q: "Can TechnoCore supply the compressor and air treatment equipment as well?",
+    a: "Yes. A nitrogen system can be configured with compressed air generation, dryers, filtration, receivers, nitrogen generation, monitoring and other required equipment.",
+  },
+  {
+    q: "Can the system be installed outdoors?",
+    a: "Where required, nitrogen generation equipment can be supplied as a packaged or containerised solution suitable for an external installation, subject to project requirements.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "On-Site Nitrogen Generation Systems",
+  description:
+    "Engineered PSA and membrane nitrogen generation systems, from standalone generators to complete skid and containerised packages, with purity up to 99.9995% N2.",
+  brand: {
+    "@type": "Brand",
+    name: "TechnoCore",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Ireland",
+  },
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    url: "https://www.technocore.ie/products/nitrogen",
+  },
+};
+
 export default function NitrogenPage() {
   return (
     <SiteLayout>
@@ -96,14 +165,27 @@ export default function NitrogenPage() {
           rel="canonical"
           href="https://www.technocore.ie/products/nitrogen"
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
       </Head>
 
       {/* HERO */}
       <section className="relative min-h-[560px] flex items-center overflow-hidden border-b border-gray-800">
-        <img
+        <Image
           src="/images/nitrogen-hero.png"
           alt="Industrial on-site nitrogen generation system"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20" />
@@ -124,8 +206,9 @@ export default function NitrogenPage() {
             <p className="text-gray-200 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
               Generate nitrogen directly at your facility and reduce dependence
               on cylinders, bundles and bulk liquid nitrogen deliveries.
-              TechnoCore supplies engineered PSA and membrane nitrogen systems
-              for industrial applications across Ireland.
+              TechnoCore supplies engineered PSA and membrane nitrogen systems,
+              with purity up to 99.9995% N2, for industrial applications across
+              Ireland.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">
@@ -207,10 +290,12 @@ export default function NitrogenPage() {
 
       {/* PSA VS MEMBRANE IMAGE */}
       <section className="relative h-[360px] md:h-[520px] overflow-hidden border-y border-gray-800">
-        <img
+        <Image
           src="/images/nitrogen-psa-membrane.png"
           alt="PSA and membrane nitrogen generation technologies"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/30 to-black/20" />
@@ -249,7 +334,8 @@ export default function NitrogenPage() {
               <p className="text-gray-300 mt-4 leading-relaxed">
                 Pressure Swing Adsorption systems use carbon molecular sieve
                 technology to separate oxygen from compressed air and produce
-                high-purity nitrogen.
+                high-purity nitrogen, up to 99.9995% N2 depending on system
+                configuration.
               </p>
 
               <ul className="text-gray-300 mt-6 space-y-3">
@@ -308,10 +394,12 @@ export default function NitrogenPage() {
 
       {/* COMPLETE SYSTEM IMAGE */}
       <section className="relative h-[380px] md:h-[540px] overflow-hidden border-y border-gray-800">
-        <img
+        <Image
           src="/images/nitrogen-complete-system.png"
           alt="Complete industrial nitrogen generation system with air treatment and storage"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/45 to-transparent" />
@@ -356,11 +444,13 @@ export default function NitrogenPage() {
           <div className="grid md:grid-cols-3 gap-7 mt-12">
             {/* Standalone */}
             <div className="border border-gray-800 rounded-2xl overflow-hidden bg-[#081115] hover:border-green-500 transition">
-              <div className="h-64 bg-white overflow-hidden">
-                <img
+              <div className="relative h-64 bg-white overflow-hidden">
+                <Image
                   src="/images/n2-generator.jpg"
                   alt="Standalone industrial nitrogen generator"
-                  className="w-full h-full object-contain p-4"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-contain p-4"
                 />
               </div>
 
@@ -383,13 +473,15 @@ export default function NitrogenPage() {
 
             {/* Skid */}
             <div className="border border-gray-800 rounded-2xl overflow-hidden bg-[#081115] hover:border-green-500 transition">
-              <div className="h-64 bg-white overflow-hidden flex items-center justify-center">
-  <img
-    src="/images/nitrogen-skid.jpg"
-    alt="Complete skid mounted nitrogen generation system"
-    className="w-full h-full object-contain p-4"
-  />
-</div>
+              <div className="relative h-64 bg-white overflow-hidden flex items-center justify-center">
+                <Image
+                  src="/images/nitrogen-skid.jpg"
+                  alt="Complete skid mounted nitrogen generation system"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-contain p-4"
+                />
+              </div>
 
               <div className="p-7">
                 <p className="text-green-400 font-semibold text-sm uppercase tracking-wider">
@@ -410,11 +502,13 @@ export default function NitrogenPage() {
 
             {/* BOX */}
             <div className="border border-gray-800 rounded-2xl overflow-hidden bg-[#081115] hover:border-green-500 transition">
-              <div className="h-64 bg-white overflow-hidden">
-                <img
+              <div className="relative h-64 bg-white overflow-hidden">
+                <Image
                   src="/images/n2-box-unit.jpg"
                   alt="Containerised outdoor nitrogen generation station"
-                  className="w-full h-full object-contain p-4"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-contain p-4"
                 />
               </div>
 
@@ -485,10 +579,12 @@ export default function NitrogenPage() {
 
       {/* APPLICATIONS IMAGE */}
       <section className="relative h-[360px] md:h-[520px] overflow-hidden border-y border-gray-800">
-        <img
+        <Image
           src="/images/nitrogen-applications.png"
           alt="Industrial applications for on-site nitrogen generation"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/25 to-transparent" />
@@ -550,7 +646,8 @@ export default function NitrogenPage() {
               <p className="text-gray-300 mt-5 leading-relaxed">
                 Nitrogen generation should be selected from the actual process
                 requirement. Providing a few basic parameters allows us to
-                evaluate generator size and system configuration.
+                evaluate generator size, system configuration and indicative
+                pricing.
               </p>
             </div>
 
@@ -558,7 +655,7 @@ export default function NitrogenPage() {
               <div className="space-y-5">
                 {[
                   ["Required flow", "Nm³/h, SCFH or current consumption"],
-                  ["Nitrogen purity", "Required N₂ concentration"],
+                  ["Nitrogen purity", "Required N₂ concentration, up to 99.9995%"],
                   ["Outlet pressure", "Required process pressure"],
                   ["Application", "How nitrogen is being used"],
                   [
@@ -644,32 +741,7 @@ export default function NitrogenPage() {
           </div>
 
           <div className="mt-12 space-y-5">
-            {[
-              {
-                q: "What is an on-site nitrogen generator?",
-                a: "An on-site nitrogen generator separates nitrogen from compressed air so nitrogen can be produced directly at your facility instead of being supplied entirely by cylinders or bulk deliveries.",
-              },
-              {
-                q: "What nitrogen purity do I need?",
-                a: "The required purity depends on the application. Higher purity is not automatically better because increasing purity can affect generator capacity and energy consumption. The system should be sized around the actual process requirement.",
-              },
-              {
-                q: "What is the difference between PSA and membrane nitrogen generation?",
-                a: "PSA technology is commonly selected for applications requiring higher nitrogen purity, while membrane systems can be attractive for applications requiring moderate purity with a compact and simple configuration.",
-              },
-              {
-                q: "Can a nitrogen generator replace cylinders?",
-                a: "In many applications, yes. The technical and financial suitability depends on nitrogen consumption, operating hours, required purity, pressure and current gas supply costs.",
-              },
-              {
-                q: "Can TechnoCore supply the compressor and air treatment equipment as well?",
-                a: "Yes. A nitrogen system can be configured with compressed air generation, dryers, filtration, receivers, nitrogen generation, monitoring and other required equipment.",
-              },
-              {
-                q: "Can the system be installed outdoors?",
-                a: "Where required, nitrogen generation equipment can be supplied as a packaged or containerised solution suitable for an external installation, subject to project requirements.",
-              },
-            ].map((item) => (
+            {faqs.map((item) => (
               <div
                 key={item.q}
                 className="border border-gray-800 bg-black rounded-xl p-6"
@@ -682,8 +754,10 @@ export default function NitrogenPage() {
           </div>
         </div>
       </section>
-{/* IRELAND COVERAGE */}
-<IrelandCoverage product="on-site nitrogen generation systems" />
+
+      {/* IRELAND COVERAGE */}
+      <IrelandCoverage product="on-site nitrogen generation systems" />
+
       {/* FINAL CTA */}
       <section className="bg-black py-20 px-6">
         <div className="max-w-5xl mx-auto border border-green-500/40 bg-[#081115] rounded-3xl p-8 md:p-12 text-center">
