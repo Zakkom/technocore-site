@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../components/SiteLayout";
 
 const EngineeringIcon = () => (
@@ -101,6 +102,33 @@ export default function AboutPage() {
           property="og:image"
           content="https://www.technocore.ie/images/about-hero.jpg"
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              url: "https://www.technocore.ie/about",
+              mainEntity: {
+                "@type": "Organization",
+                name: "TechnoCore Limited",
+                url: "https://www.technocore.ie",
+                identifier: {
+                  "@type": "PropertyValue",
+                  name: "CRO Number",
+                  value: "791230",
+                },
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Newtownmountkennedy",
+                  addressRegion: "Co. Wicklow",
+                  addressCountry: "IE",
+                },
+              },
+            }),
+          }}
+        />
       </Head>
 
       {/* ======================================================
@@ -108,10 +136,13 @@ export default function AboutPage() {
 ====================================================== */}
 <section className="relative min-h-[680px] lg:min-h-[740px] flex items-center overflow-hidden bg-black">
   <div className="absolute inset-0">
-    <img
+    <Image
       src="/images/about-hero.jpg"
       alt="Industrial gas generation and process utility installation"
-      className="w-full h-full object-cover object-center"
+      fill
+      priority
+      sizes="100vw"
+      className="object-cover object-center"
     />
 
     {/* Strong contrast behind copy, image remains visible on the right */}
@@ -207,10 +238,12 @@ export default function AboutPage() {
       <section className="bg-[#07140e]">
         <div className="grid lg:grid-cols-2 min-h-[600px]">
           <div className="relative min-h-[420px] lg:min-h-full overflow-hidden">
-            <img
+            <Image
               src="/images/about-installation.jpg"
               alt="Industrial gas generation system installation"
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
 
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#07140e]/35" />
@@ -396,11 +429,15 @@ export default function AboutPage() {
             </div>
 
             <div className="relative overflow-hidden">
-              <img
-                src="/images/about-engineering.jpg"
-                alt="Industrial compressed air and gas treatment equipment"
-                className="w-full aspect-[4/3] object-cover"
-              />
+              <div className="relative w-full aspect-[4/3]">
+                <Image
+                  src="/images/about-engineering.jpg"
+                  alt="Industrial compressed air and gas treatment equipment"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
 
               <div className="absolute left-0 bottom-0 bg-[#082218] text-white px-6 py-5 max-w-[300px]">
                 <p className="text-green-400 text-xs font-bold tracking-[0.16em] uppercase">
@@ -420,10 +457,12 @@ export default function AboutPage() {
     INDUSTRIES — BIG IMAGE STRIP
 ====================================================== */}
 <section className="relative overflow-hidden bg-black text-white">
-  <img
+  <Image
     src="/images/about-industries.jpg"
     alt="Industries supported by TechnoCore engineering solutions"
-    className="absolute inset-0 w-full h-full object-cover opacity-80"
+    fill
+    sizes="100vw"
+    className="object-cover opacity-80"
   />
 
   <div className="absolute inset-0 bg-gradient-to-r from-black/78 via-black/42 to-black/10" />
@@ -478,11 +517,15 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 py-20 lg:py-24">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1 relative">
-              <img
-                src="/images/about-filtration.jpg"
-                alt="Industrial compressed air filtration elements"
-                className="w-full aspect-[16/11] object-cover"
-              />
+              <div className="relative w-full aspect-[16/11]">
+                <Image
+                  src="/images/about-filtration.jpg"
+                  alt="Industrial compressed air filtration elements"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             <div className="order-1 lg:order-2">
