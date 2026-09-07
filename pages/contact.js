@@ -12,7 +12,25 @@ export default function Contact() {
           content="Contact TechnoCore to discuss nitrogen and oxygen generators, compressed air dryers, chillers, and industrial gas treatment systems in Ireland."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://technocore.ie/contact" />
+        <link rel="canonical" href="https://www.technocore.ie/contact" />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Contact TechnoCore | Industrial Gas Systems Ireland"
+        />
+        <meta
+          property="og:description"
+          content="Get in touch to discuss nitrogen and oxygen generation, compressed air dryers, filtration, chillers, or turnkey gas systems in Ireland."
+        />
+        <meta
+          property="og:url"
+          content="https://www.technocore.ie/contact"
+        />
+        <meta
+          property="og:image"
+          content="https://www.technocore.ie/images/top-bg.jpg"
+        />
       </Head>
 
       {/* HERO */}
@@ -47,7 +65,7 @@ export default function Contact() {
   </a>
 </p>
           <p className="text-gray-400 mb-6">
-            Location: Dublin / Wicklow, Ireland
+            Location: Newtownmountkennedy, Co. Wicklow, Ireland
           </p>
 
           {/* CONTACT FORM */}
@@ -61,7 +79,7 @@ export default function Contact() {
             <input
               type="hidden"
               name="_next"
-              value="https://technocore.ie/thanks"
+              value="https://www.technocore.ie/thanks"
             />
             <input type="text" name="_honey" style={{ display: "none" }} readOnly />
 
@@ -173,4 +191,3 @@ export default function Contact() {
     </SiteLayout>
   );
 }
-
