@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 import IrelandCoverage from "../../components/IrelandCoverage";
 
@@ -93,6 +94,29 @@ export default function ChillersPage() {
     })),
   };
 
+  // Service (not Product) is the correct schema type here: chiller systems
+  // are sized and quoted individually per project rather than sold at a
+  // fixed price, and Service does not require a price to be valid
+  // structured data.
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Industrial Process Cooling",
+    name: "Industrial Chillers",
+    description:
+      "OMEGA AIR process chillers from compact 1 kW systems to large industrial cooling installations, engineered around cooling load, process temperature and installation conditions.",
+    provider: {
+      "@type": "Organization",
+      name: "TechnoCore",
+      url: "https://www.technocore.ie",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Ireland",
+    },
+    url: "https://www.technocore.ie/products/chillers",
+  };
+
   return (
     <SiteLayout>
       <Head>
@@ -145,15 +169,25 @@ export default function ChillersPage() {
             __html: JSON.stringify(faqSchema),
           }}
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceSchema),
+          }}
+        />
       </Head>
 
       {/* HERO */}
       <section className="relative min-h-[590px] lg:min-h-[650px] flex items-center overflow-hidden bg-[#030504]">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/chiller-hero.jpg"
             alt="Industrial process chiller"
-            className="w-full h-full object-cover object-center"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/30" />
@@ -314,12 +348,16 @@ export default function ChillersPage() {
             </div>
           </div>
 
-          <div className="bg-white flex items-center justify-center p-8 lg:p-14">
-            <img
-              src="/images/chiller-pci.jpg"
-              alt="OMEGA AIR industrial water chiller"
-              className="max-h-[430px] w-full object-contain"
-            />
+          <div className="relative bg-white flex items-center justify-center p-8 lg:p-14">
+            <div className="relative w-full max-h-[430px] h-[400px]">
+              <Image
+                src="/images/chiller-pci.jpg"
+                alt="OMEGA AIR industrial water chiller"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
