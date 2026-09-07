@@ -130,7 +130,7 @@ export default function CompressedAirTreatmentIreland() {
     provider: {
       "@type": "Organization",
       name: "TechnoCore Limited",
-      url: "https://technocore.ie",
+      url: "https://www.technocore.ie",
       email: "sales@technocore.ie",
       telephone: "+353874386157",
     },
@@ -138,7 +138,7 @@ export default function CompressedAirTreatmentIreland() {
       "@type": "Country",
       name: "Ireland",
     },
-    url: "https://technocore.ie/compressed-air-treatment-ireland",
+    url: "https://www.technocore.ie/compressed-air-treatment-ireland",
   };
 
   return (
@@ -154,7 +154,7 @@ export default function CompressedAirTreatmentIreland() {
           content="compressed air treatment Ireland, compressed air dryer Ireland, refrigerated air dryer Ireland, adsorption dryer Ireland, desiccant air dryer Ireland, compressed air filtration Ireland, coalescing filter Ireland, particulate filter Ireland, activated carbon filter Ireland, water separator Ireland, condensate drain Ireland, oil water separator Ireland, pressure dew point, ISO 8573-1"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://technocore.ie/compressed-air-treatment-ireland" />
+        <link rel="canonical" href="https://www.technocore.ie/compressed-air-treatment-ireland" />
 
         <meta property="og:type" content="website" />
         <meta
@@ -167,11 +167,11 @@ export default function CompressedAirTreatmentIreland() {
         />
         <meta
           property="og:url"
-          content="https://technocore.ie/compressed-air-treatment-ireland"
+          content="https://www.technocore.ie/compressed-air-treatment-ireland"
         />
         <meta
           property="og:image"
-          content="https://technocore.ie/images/rdp-dryer.jpg"
+          content="https://www.technocore.ie/images/rdp-dryer.jpg"
         />
 
         <script
@@ -556,7 +556,7 @@ export default function CompressedAirTreatmentIreland() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://technocore.ie/thanks"
+                value="https://www.technocore.ie/thanks"
               />
               <input type="hidden" name="_subject" value="Compressed Air Treatment Enquiry" />
               <input type="text" name="_honey" style={{ display: "none" }} readOnly />
