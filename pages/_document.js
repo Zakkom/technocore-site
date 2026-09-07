@@ -21,9 +21,10 @@ export default function Document() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "TechnoCore",
-              "url": "https://technocore.ie",
-              "logo": "https://technocore.ie/logo.png",
+              "url": "https://www.technocore.ie",
+              "logo": "https://www.technocore.ie/logo.png",
               "email": "sales@technocore.ie",
+              "telephone": "+353874386157",
               "description":
                 "TechnoCore — Industrial Gas Solutions in Ireland. Distributor of nitrogen and oxygen generators, dryers, chillers, and compressed air systems.",
               "address": {
@@ -39,8 +40,10 @@ export default function Document() {
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
+                  "telephone": "+353874386157",
                   "email": "sales@technocore.ie",
                   "contactType": "sales",
+                  "areaServed": "IE",
                   "availableLanguage": ["English"]
                 }
               ]
