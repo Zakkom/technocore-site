@@ -209,7 +209,6 @@ export default function TechnoCoreLanding() {
     alt="TechnoCore"
     width={130}
     height={130}
-    priority
     className="absolute left-[-4px] top-1/2 -translate-y-1/2 w-[112px] h-[112px] max-w-none object-contain"
   />
 </div>
@@ -265,10 +264,13 @@ export default function TechnoCoreLanding() {
       {/* HERO */}
       <section className="relative min-h-[760px] lg:min-h-[800px] flex items-center pt-[76px]">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/nitrogen-hero.png"
             alt="Industrial compressed air and gas engineering system"
-            className="w-full h-full object-cover object-center brightness-[1.15]"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center brightness-[1.15]"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/5" />
@@ -372,10 +374,12 @@ export default function TechnoCoreLanding() {
           </div>
 
           <div className="relative min-h-[420px] lg:min-h-full">
-            <img
+            <Image
               src="/images/nitrogen-complete-system.png"
               alt="Complete industrial utility system"
-              className="absolute inset-0 w-full h-full object-cover brightness-[1.08]"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover brightness-[1.08]"
             />
 
             <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#d2d9d3]/88 via-[#d2d9d3]/20 to-transparent" />
@@ -419,13 +423,15 @@ export default function TechnoCoreLanding() {
                 className="group overflow-hidden border border-white/15 bg-[#0b130e]"
               >
                 <div className="relative h-[280px] bg-[#dce2dd] overflow-hidden">
-                  <img
+                  <Image
                     src={solution.image}
                     alt={solution.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className={
                       solution.contain
-                        ? "w-full h-full object-contain p-6 transition duration-700 group-hover:scale-[1.03]"
-                        : "w-full h-full object-cover brightness-[1.05] transition duration-700 group-hover:scale-105"
+                        ? "object-contain p-6 transition duration-700 group-hover:scale-[1.03]"
+                        : "object-cover brightness-[1.05] transition duration-700 group-hover:scale-105"
                     }
                   />
                 </div>
@@ -550,10 +556,12 @@ export default function TechnoCoreLanding() {
       <section className="bg-[#cbd4cc] text-black">
         <div className="grid lg:grid-cols-2 min-h-[560px]">
           <div className="relative min-h-[430px] lg:min-h-full">
-            <img
+            <Image
               src="/images/top-bg.jpg"
               alt="Industrial plant and engineered utility system"
-              className="absolute inset-0 w-full h-full object-cover object-center brightness-[1.08] saturate-[1.03]"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center brightness-[1.08] saturate-[1.03]"
             />
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-[#cbd4cc]/88" />
@@ -667,10 +675,12 @@ export default function TechnoCoreLanding() {
 
       {/* INDUSTRIAL IMAGE STRIP */}
       <section className="relative h-[240px] overflow-hidden">
-        <img
+        <Image
           src="/images/bottom-bg.jpg"
           alt="Industrial compressed air and gas installation"
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.62] contrast-[1.08]"
+          fill
+          sizes="100vw"
+          className="object-cover object-center brightness-[0.62] contrast-[1.08]"
         />
 
         <div className="absolute inset-0 bg-black/45" />
@@ -907,10 +917,24 @@ export default function TechnoCoreLanding() {
                 </Link>
 
                 <Link
+                  href="/products/air-dryers"
+                  className="block hover:text-green-400"
+                >
+                  Air Dryers
+                </Link>
+
+                <Link
                   href="/products/filtration"
                   className="block hover:text-green-400"
                 >
                   Filtration
+                </Link>
+
+                <Link
+                  href="/products/chillers"
+                  className="block hover:text-green-400"
+                >
+                  Chillers
                 </Link>
               </div>
             </div>
@@ -921,6 +945,13 @@ export default function TechnoCoreLanding() {
               </h3>
 
               <div className="mt-5 space-y-3 text-gray-400">
+                <Link
+                  href="/products"
+                  className="block hover:text-green-400"
+                >
+                  All Products
+                </Link>
+
                 <Link
                   href="/about"
                   className="block hover:text-green-400"
