@@ -1,16 +1,19 @@
 // pages/_document.js
 import { Html, Head, Main, NextScript } from 'next/document';
-
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="theme-color" content="#000000" />
-        <meta
-          name="description"
-          content="TechnoCore — Industrial Gas Solutions (Nitrogen, Oxygen, Filtration, Dryers)"
-        />
+        {/*
+          No generic <meta name="description"> here on purpose.
+          Each page sets its own unique description via next/head in its
+          own <Head>. A description defined here would render before the
+          page-level one in the final HTML, and search engines generally
+          read the first occurrence — silently overriding every page's
+          unique, keyword-targeted description with this one.
+        */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -25,8 +28,8 @@ export default function Document() {
                 "TechnoCore — Industrial Gas Solutions in Ireland. Distributor of nitrogen and oxygen generators, dryers, chillers, and compressed air systems.",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Dublin",
-                "addressRegion": "Leinster",
+                "addressLocality": "Newtownmountkennedy",
+                "addressRegion": "Co. Wicklow",
                 "addressCountry": "IE"
               },
               "sameAs": [
