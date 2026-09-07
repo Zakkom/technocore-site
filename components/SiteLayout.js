@@ -13,6 +13,7 @@ const solutions = [
   { label: "Air Dryers", href: "/products/air-dryers" },
   { label: "Industrial Filtration", href: "/products/filtration" },
   { label: "Industrial Chillers", href: "/products/chillers" },
+  { label: "Paint Booth Air Preparation", href: "/products/paint-booth" },
   { label: "Compressed Air Treatment", href: "/compressed-air-treatment-ireland" },
 ];
 
