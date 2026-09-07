@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 
 const items = [
@@ -60,7 +61,7 @@ export default function ProductsIndex() {
       <Head>
         <title>Products | TechnoCore</title>
         <meta name="description" content="TechnoCore products: nitrogen & oxygen generators, air dryers, filtration, paint booth air prep, chillers & turnkey packages." />
-        <link rel="canonical" href="https://technocore.ie/products" />
+        <link rel="canonical" href="https://www.technocore.ie/products" />
       </Head>
 
       <div className="relative">
@@ -71,11 +72,15 @@ export default function ProductsIndex() {
   />
   {/* логотип по центру поверх */}
   <div className="absolute inset-0 flex items-center justify-center">
-    <img
-      src="/logo.png"
-      alt="TechnoCore"
-      className="h-16 md:h-24 w-auto drop-shadow-[0_5px_15px_rgba(0,0,0,0.6)]"
-    />
+    <div className="relative h-16 md:h-24 w-40 md:w-56 drop-shadow-[0_5px_15px_rgba(0,0,0,0.6)]">
+      <Image
+        src="/logo.png"
+        alt="TechnoCore"
+        fill
+        sizes="224px"
+        className="object-contain"
+      />
+    </div>
   </div>
 </div>
 
@@ -93,15 +98,21 @@ export default function ProductsIndex() {
 </header>
 
       <main className="bg-black px-6 py-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-green-400 text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-green-400 text-center mb-8">
           Products
-        </h1>
+        </h2>
 
         <div className="max-w-7xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (
             <article key={it.key} className="bg-gray-900 border border-green-500 rounded overflow-hidden flex flex-col">
-              <div className="w-full h-44 md:h-52 lg:h-56">
-                <img src={it.img} alt={it.title} className="w-full h-full object-cover" />
+              <div className="relative w-full h-44 md:h-52 lg:h-56">
+                <Image
+                  src={it.img}
+                  alt={it.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
               </div>
               <div className="p-5 grow">
                 <h2 className="text-lg font-semibold text-green-400">{it.title}</h2>
