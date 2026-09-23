@@ -166,6 +166,40 @@ export default function NitrogenPage() {
           href="https://www.technocore.ie/products/nitrogen"
         />
 
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Nitrogen Generators Ireland | On-Site N2 Systems | TechnoCore"
+        />
+        <meta
+          property="og:description"
+          content="On-site nitrogen generation systems in Ireland. PSA and membrane nitrogen generators, complete skid and containerised N2 systems for laser cutting, food, pharmaceutical, electronics and industrial applications."
+        />
+        <meta
+          property="og:url"
+          content="https://www.technocore.ie/products/nitrogen"
+        />
+        <meta
+          property="og:image"
+          content="https://www.technocore.ie/images/nitrogen-hero.png"
+        />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Nitrogen Generators Ireland | On-Site N2 Systems | TechnoCore"
+        />
+        <meta
+          name="twitter:description"
+          content="Engineered PSA and membrane nitrogen generators for industry in Ireland, with purity up to 99.9995% N2. Standalone, skid and containerised systems."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.technocore.ie/images/nitrogen-hero.png"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

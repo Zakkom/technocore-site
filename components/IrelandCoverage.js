@@ -23,25 +23,21 @@ export default function IrelandCoverage({
   ];
 
   const areaServedJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: product,
-    provider: {
-      "@type": "Organization",
-      name: "TechnoCore",
-      url: "https://www.technocore.ie",
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "TechnoCore",
+  url: "https://www.technocore.ie",
+  areaServed: [
+    ...regions.map((region) => ({
+      "@type": "AdministrativeArea",
+      name: region,
+    })),
+    {
+      "@type": "Country",
+      name: "Ireland",
     },
-    areaServed: [
-      ...regions.map((region) => ({
-        "@type": "AdministrativeArea",
-        name: region,
-      })),
-      {
-        "@type": "Country",
-        name: "Ireland",
-      },
-    ],
-  };
+  ],
+};
 
   return (
     <section className="bg-[#eef2ef] text-black">

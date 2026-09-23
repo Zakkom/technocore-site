@@ -51,14 +51,14 @@ export default function TechnoCoreLanding() {
       contain: false,
     },
     {
-      title: "Turnkey Systems",
-      description:
-        "Integrated compressed air and gas generation packages including treatment, storage, controls and system integration.",
-      href: "/contact",
-      image: "/images/n2-box-unit.jpg",
-      tag: "ENGINEERED SYSTEMS",
-      contain: false,
-    },
+    	title: "Paint Booth Air Preparation",
+    	description:
+      "Point-of-use compressed air filtration for spray painting, automotive refinishing and industrial coating applications.",
+    	href: "/products/paint-booth",
+    	image: "/images/paint-booth.jpg",
+    	tag: "SPRAY FINISHING",
+    	contain: true,
+     },
   ];
 
   const engineeringSteps = [
@@ -286,13 +286,11 @@ export default function TechnoCoreLanding() {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[68px] font-bold leading-[1.04] tracking-tight">
-              Industrial Compressed
-              <span className="block">Air</span>
-              <span className="block text-green-400">
-                & Gas Systems
-              </span>
-            </h1>
+           <h1 className="text-4xl sm:text-5xl lg:text-[68px] font-bold leading-[1.04] tracking-tight">
+  		Industrial Compressed Air
+  		<span className="block">& Gas Systems</span>
+  		<span className="block text-green-400">for Ireland</span>
+	</h1>
 
             <p className="mt-7 text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
               Engineering, supply and integration of compressed air treatment,

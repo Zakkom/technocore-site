@@ -187,6 +187,40 @@ export default function FiltrationPage() {
           href="https://www.technocore.ie/products/filtration"
         />
 
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Compressed Air Filters Ireland | Industrial Filtration | TechnoCore"
+        />
+        <meta
+          property="og:description"
+          content="Compressed air filters and replacement filter elements in Ireland. Coalescing, particulate, activated carbon, sterile and high-pressure filtration for industrial air and gas systems."
+        />
+        <meta
+          property="og:url"
+          content="https://www.technocore.ie/products/filtration"
+        />
+        <meta
+          property="og:image"
+          content="https://www.technocore.ie/images/filtration-elements.png"
+        />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Compressed Air Filters Ireland | Industrial Filtration | TechnoCore"
+        />
+        <meta
+          name="twitter:description"
+          content="Coalescing, particulate, activated carbon, sterile and high-pressure filtration for compressed air and industrial gases. Ireland-wide supply."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.technocore.ie/images/filtration-elements.png"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
