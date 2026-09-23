@@ -80,6 +80,31 @@ const applications = [
   },
 ];
 
+// Standard/optional equipment lists for the N-GEN PSA nitrogen generator range,
+// sourced from the OMEGA AIR N-GEN product data sheet (N-GEN 03-300 v4.0).
+const standardEquipment = [
+  "Set of external feed air filters",
+  "Adsorber vessels in carbon steel",
+  "Long-life pneumatic and solenoid valves",
+  "Internal piping & fittings, zinc-plated carbon steel",
+  "Product pressure transmitter",
+  "SIEMENS PLC control system (Profinet / Modbus TCP/IP or web server access)",
+];
+
+const optionalEquipment = [
+  "Oxygen analyser",
+  "Electronic product flow meter",
+  "Feed air / product moisture analyser",
+  "Feed air pressure transmitter",
+  "Feed air / product temperature transmitters",
+  '4" or 7" touch screen display',
+  "Off-specs valve",
+  "Multi-purity kit",
+  "Nitrogen sterile filters",
+  "Nitrogen booster",
+  "Nitrogen cylinder filling system",
+];
+
 // FAQ content lives in one place and drives BOTH the on-page FAQ block
 // and the FAQPage structured data below, so the two can never drift apart.
 const faqs = [
@@ -283,6 +308,12 @@ export default function NitrogenPage() {
               actual process demand rather than relying on repeated gas
               deliveries.
             </p>
+
+            <p className="text-gray-400 mt-4 leading-relaxed">
+              TechnoCore supplies the OMEGA AIR N-GEN PSA nitrogen generator
+              range across Ireland, from compact single units to large
+              industrial installations.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -423,6 +454,173 @@ export default function NitrogenPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ENGINEERING DATA */}
+      <section
+        id="engineering-data"
+        className="relative overflow-hidden bg-[#032015] text-white"
+      >
+        <div
+          className="absolute inset-0 opacity-[0.09]"
+          style={{
+            backgroundImage:
+              "repeating-radial-gradient(ellipse at bottom right, transparent 0, transparent 28px, #22c55e 29px, transparent 30px)",
+          }}
+        />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <p className="text-green-400 text-xs font-bold tracking-[0.2em] uppercase">
+            Engineering Data
+          </p>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-3">
+            Technical performance
+            <span className="block text-green-400">
+              & system configuration.
+            </span>
+          </h2>
+
+          <p className="text-gray-300 leading-relaxed mt-5 max-w-2xl">
+            TechnoCore supplies the OMEGA AIR N-GEN PSA nitrogen generator
+            range, selected around the required nitrogen purity, flow rate and
+            operating pressure. The N-GEN range covers 03 to 300 models,
+            scaling from compact single-column systems to large industrial
+            installations.
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#87a095] mt-10 border border-[#87a095]">
+            <div className="bg-[#eef3ef] text-black p-7">
+              <p className="text-green-700 text-4xl font-bold">97–99.999%</p>
+              <p className="font-bold mt-3">Nitrogen purity</p>
+              <p className="text-gray-600 text-sm mt-1">
+                Selectable per application
+              </p>
+            </div>
+
+            <div className="bg-[#eef3ef] text-black p-7">
+              <p className="text-green-700 text-4xl font-bold">0.9–535</p>
+              <p className="font-bold mt-3">N₂ flow range</p>
+              <p className="text-gray-600 text-sm mt-1">
+                Nm³/h, model dependent
+              </p>
+            </div>
+
+            <div className="bg-[#eef3ef] text-black p-7">
+              <p className="text-green-700 text-4xl font-bold">6–10</p>
+              <p className="font-bold mt-3">Operating pressure</p>
+              <p className="text-gray-600 text-sm mt-1">barg</p>
+            </div>
+
+            <div className="bg-[#eef3ef] text-black p-7">
+              <p className="text-green-700 text-4xl font-bold">&lt; −45°C</p>
+              <p className="font-bold mt-3">Dew point</p>
+              <p className="text-gray-600 text-sm mt-1">At ambient pressure</p>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-5 mt-5">
+            <div className="bg-[#d8dfda] text-black p-7 md:p-8">
+              <p className="text-green-700 text-xs font-bold tracking-[0.18em] uppercase">
+                Operating Conditions
+              </p>
+
+              <h3 className="text-2xl font-bold mt-2">
+                Industrial operating range.
+              </h3>
+
+              <div className="mt-6 border-t border-[#a8b4ab]">
+                {[
+                  ["Inlet temperature range", "10 – 55 °C"],
+                  ["Power consumption", "< 60 W"],
+                  ["Sound level", "Up to 90 dB(A)"],
+                  ["Protection class", "IP 54"],
+                  ["Compressed air quality (inlet)", "ISO 8573-1 Class 1.4.1"],
+                  ["Control system", "SIEMENS PLC"],
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex justify-between gap-6 py-3.5 border-b border-[#a8b4ab]"
+                  >
+                    <span className="text-gray-700 text-sm">{label}</span>
+                    <span className="font-bold text-sm text-right">
+                      {value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-[#02130d] border border-green-900/60 p-7 md:p-8">
+              <p className="text-green-400 text-xs font-bold tracking-[0.18em] uppercase">
+                Equipment Configuration
+              </p>
+
+              <h3 className="text-2xl font-bold mt-2">
+                Standard & optional equipment.
+              </h3>
+
+              <div className="grid md:grid-cols-2 gap-8 mt-7">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-green-400 font-bold">+</span>
+                    <p className="text-green-400 text-xs font-bold tracking-[0.15em] uppercase">
+                      Standard
+                    </p>
+                  </div>
+
+                  {standardEquipment.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 py-2 border-b border-white/10"
+                    >
+                      <div className="w-4 h-4 mt-[2px] flex items-center justify-center rounded-full bg-green-500 flex-shrink-0">
+                        <svg
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          className="w-3 h-3 text-black"
+                        >
+                          <path d="m4 10 4 4 8-8" />
+                        </svg>
+                      </div>
+
+                      <span className="text-gray-200 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-green-400 font-bold">+</span>
+                    <p className="text-green-400 text-xs font-bold tracking-[0.15em] uppercase">
+                      Optional
+                    </p>
+                  </div>
+
+                  {optionalEquipment.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 py-2 border-b border-white/10"
+                    >
+                      <span className="w-4 h-4 mt-[2px] rounded-full border border-green-400 flex-shrink-0" />
+
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-gray-500 text-xs mt-4">
+            Performance figures refer to inlet temperature 30°C at 7.5 barg
+            operating pressure, +/- 5%. For nitrogen flow capacity at other
+            conditions and purity levels, contact TechnoCore for a system
+            proposal.
+          </p>
         </div>
       </section>
 
