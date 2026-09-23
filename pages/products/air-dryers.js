@@ -116,6 +116,9 @@ export default function AirDryersPage() {
           href="https://www.technocore.ie/products/air-dryers"
         />
 
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+
         <meta
           property="og:title"
           content="Compressed Air Dryers Ireland | TechnoCore"
@@ -133,6 +136,24 @@ export default function AirDryersPage() {
 
         <meta
           property="og:image"
+          content="https://www.technocore.ie/images/air-dryers-hero.jpg"
+        />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Compressed Air Dryers Ireland | TechnoCore"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Refrigerated, adsorption, membrane and heat-regenerated compressed air dryer solutions engineered for industrial applications in Ireland."
+        />
+
+        <meta
+          name="twitter:image"
           content="https://www.technocore.ie/images/air-dryers-hero.jpg"
         />
 

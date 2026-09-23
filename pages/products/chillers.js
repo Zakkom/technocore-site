@@ -163,6 +163,24 @@ export default function ChillersPage() {
           content="https://www.technocore.ie/images/chiller-hero.jpg"
         />
 
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Industrial Chillers Ireland | Process Cooling Systems | TechnoCore"
+        />
+
+        <meta
+          name="twitter:description"
+          content="OMEGA AIR process chillers for manufacturing, laser cutting, machinery and industrial applications across Ireland."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.technocore.ie/images/chiller-hero.jpg"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

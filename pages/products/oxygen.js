@@ -266,6 +266,24 @@ export default function OxygenPage() {
           content="https://www.technocore.ie/images/oxygen-hero.png"
         />
 
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Oxygen Generators Ireland | PSA O2 Systems | TechnoCore"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Industrial PSA oxygen generators for on-site O2 production up to 95% purity. Standalone, skid and containerised systems for Ireland."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.technocore.ie/images/oxygen-hero.png"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

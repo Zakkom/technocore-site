@@ -31,6 +31,21 @@ export default function Contact() {
           property="og:image"
           content="https://www.technocore.ie/images/top-bg.jpg"
         />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Contact TechnoCore | Industrial Gas Systems Ireland"
+        />
+        <meta
+          name="twitter:description"
+          content="Get in touch to discuss nitrogen and oxygen generation, compressed air dryers, filtration, chillers, or turnkey gas systems in Ireland."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.technocore.ie/images/top-bg.jpg"
+        />
       </Head>
 
       {/* HERO */}

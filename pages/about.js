@@ -103,6 +103,24 @@ export default function AboutPage() {
           content="https://www.technocore.ie/images/about-hero.jpg"
         />
 
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="About TechnoCore | Industrial Engineering Ireland"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Irish engineering company supplying and integrating compressed air treatment, gas generation, filtration and process utility systems across Ireland."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.technocore.ie/images/about-hero.jpg"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

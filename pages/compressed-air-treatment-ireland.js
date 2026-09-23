@@ -174,6 +174,21 @@ export default function CompressedAirTreatmentIreland() {
           content="https://www.technocore.ie/images/rdp-dryer.jpg"
         />
 
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Compressed Air Treatment Ireland | TechnoCore"
+        />
+        <meta
+          name="twitter:description"
+          content="Refrigerated and adsorption dryers, coalescing and particulate filtration, activated carbon, separators and condensate management for industry throughout Ireland."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.technocore.ie/images/rdp-dryer.jpg"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -773,6 +788,13 @@ export default function CompressedAirTreatmentIreland() {
             className="block hover:text-green-400"
           >
             Chillers
+          </Link>
+
+          <Link
+            href="/products/paint-booth"
+            className="block hover:text-green-400"
+          >
+            Paint Booth Air Preparation
           </Link>
         </div>
       </div>
