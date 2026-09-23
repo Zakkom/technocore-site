@@ -310,7 +310,7 @@ export default function AirDryersPage() {
 
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
                 {[
-                  ["Pressure Dew Point", "typically around +3°C"],
+                  ["Pressure Dew Point", "+3°C (OMEGA AIR RDP series)"],
                   ["Industrial Duty", "general compressed air systems"],
                   ["Applications", "manufacturing & process air"],
                   ["System Integration", "filters, drains & separation"],
@@ -632,6 +632,173 @@ export default function AirDryersPage() {
                 temperature, required pressure dew point and the final
                 application.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ENGINEERING DATA */}
+      <section id="engineering-data" className="bg-[#eef2ef] text-black">
+        <div className="max-w-7xl mx-auto px-6 py-20 lg:py-24">
+          <p className="text-green-600 text-xs font-bold tracking-[0.2em] uppercase">
+            Engineering Data
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+            Dryer Technology Comparison
+          </h2>
+
+          <p className="text-gray-700 text-lg leading-relaxed mt-6 max-w-3xl">
+            TechnoCore supplies the OMEGA AIR RDP refrigerated, A-DRY and
+            HPR-DRY BP adsorption, and MFP / MAA-Dry membrane dryer ranges.
+            Each technology covers a different pressure dew point and flow
+            range, so the correct series is selected around the actual
+            process requirement.
+          </p>
+
+          <div className="mt-10 overflow-x-auto">
+            <table className="w-full border-collapse min-w-[820px]">
+              <thead>
+                <tr className="bg-black text-white text-left text-sm uppercase tracking-wider">
+                  <th className="p-4 font-semibold">Technology</th>
+                  <th className="p-4 font-semibold">Pressure Dew Point</th>
+                  <th className="p-4 font-semibold">Flow Range</th>
+                  <th className="p-4 font-semibold">Operating Pressure</th>
+                  <th className="p-4 font-semibold">Key Characteristic</th>
+                </tr>
+              </thead>
+
+              <tbody className="text-gray-800">
+                {[
+                  [
+                    "Refrigerated (RDP 20–13200)",
+                    "+3°C",
+                    "20 – 13,200 m³/h",
+                    "16 barg (RDP 20–1900), 14 barg (RDP 2600–13200)",
+                    "Non-cycling, air-cooled, R513a refrigerant",
+                  ],
+                  [
+                    "Adsorption, heatless (A-DRY 06–200)",
+                    "−40°C (−25°C or −70°C on request)",
+                    "6 – 200 m³/h",
+                    "4 – 16 barg",
+                    "Power consumption < 35 W",
+                  ],
+                  [
+                    "Adsorption, heat-regenerated (HPR-DRY 400–3600 BP)",
+                    "−40°C (lower on request)",
+                    "2,200 – 21,100 Nm³/h",
+                    "4 – 40 bar",
+                    "Blower + heater, continuous large-flow duty",
+                  ],
+                  [
+                    "Membrane (MFP / MAA-Dry 3–180)",
+                    "Selectable: 15°C, 3°C, −20°C or −40°C",
+                    "1 – 180 Nm³/h",
+                    "Up to 12.5 barg",
+                    "No moving parts, no electrical supply",
+                  ],
+                ].map((row) => (
+                  <tr
+                    key={row[0]}
+                    className="border-b border-gray-300 even:bg-white odd:bg-[#e3e9e4]"
+                  >
+                    {row.map((cell, i) => (
+                      <td
+                        key={i}
+                        className={
+                          i === 0
+                            ? "p-4 font-semibold text-black"
+                            : "p-4"
+                        }
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-gray-500 text-sm mt-4">
+            Figures refer to standard OMEGA AIR nominal operating conditions
+            and vary by model within each range. Membrane dryer flow and
+            outlet dew point depend on purge air consumption; adsorption dryer
+            dew point and correction factors depend on operating pressure and
+            inlet temperature. Contact TechnoCore for exact model selection.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            <div className="border border-gray-300 bg-white p-8">
+              <p className="text-green-600 font-semibold text-lg">
+                ADC 2.2 Dryer Controller
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mt-4">
+                OMEGA AIR adsorption dryers (A-DRY, HPR-DRY BP series) are
+                controlled by the ADC 2.2, a SIEMENS PLC-based controller that
+                can operate in fixed-cycle mode or dew-point dependent mode,
+                automatically adjusting the adsorption cycle to maintain the
+                required dew point while reducing energy and purge-air
+                consumption.
+              </p>
+
+              <ul className="mt-5 space-y-2 text-gray-700 text-sm">
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>Fixed-cycle or dew-point dependent control</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>Energy-saving stand-by mode</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>Condensate drain control, IP 65 housing</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-green-600 mt-0.5">
+                    <CheckIcon />
+                  </span>
+                  <span>Optional Modbus TCP/IP or Profinet communication</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="border border-gray-300 bg-white p-8">
+              <p className="text-green-600 font-semibold text-lg">
+                Filtration Requirements
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mt-4">
+                Dryer performance depends on correct upstream and downstream
+                filtration. Adsorption dryers require super-fine coalescing
+                pre-filtration (residual oil &lt; 0.01 mg/m³, 0.01 µm) and a
+                dust filter on the outlet; membrane dryers require a
+                super-fine coalescing filter upstream to protect the membrane
+                fibre from contamination.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mt-4">
+                TechnoCore can specify the correct filtration stage alongside
+                any dryer selection as part of a complete air treatment
+                package.
+              </p>
+
+              <Link
+                href="/products/filtration"
+                className="inline-flex items-center gap-2 text-green-600 font-semibold mt-5"
+              >
+                View filtration solutions
+                <ArrowIcon />
+              </Link>
             </div>
           </div>
         </div>
