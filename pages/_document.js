@@ -23,14 +23,17 @@ export default function Document() {
               "name": "TechnoCore",
               "url": "https://www.technocore.ie",
               "logo": "https://www.technocore.ie/logo.png",
+              "image": "https://www.technocore.ie/images/preview.jpg",
               "email": "sales@technocore.ie",
               "telephone": "+353874386157",
               "description":
                 "TechnoCore — Industrial Gas Solutions in Ireland. Distributor of nitrogen and oxygen generators, dryers, chillers, and compressed air systems.",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "37 HG",
                 "addressLocality": "Newtownmountkennedy",
                 "addressRegion": "Co. Wicklow",
+                "postalCode": "A63 E7P4",
                 "addressCountry": "IE"
               },
               "sameAs": [
