@@ -30,7 +30,7 @@ export default function Document() {
                 "TechnoCore — Industrial Gas Solutions in Ireland. Distributor of nitrogen and oxygen generators, dryers, chillers, and compressed air systems.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "37 HG",
+                "streetAddress": "37 Haven Green",
                 "addressLocality": "Newtownmountkennedy",
                 "addressRegion": "Co. Wicklow",
                 "postalCode": "A63 E7P4",
