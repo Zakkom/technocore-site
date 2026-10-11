@@ -147,6 +147,12 @@ export default function SiteLayout({ children }) {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/terms-and-conditions" className="hover:text-green-400">
+                    Terms & Conditions
+                  </Link>
+                </li>
+
+                <li>
                   <button
                     type="button"
                     onClick={() =>
