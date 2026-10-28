@@ -38,6 +38,20 @@ const ArrowIcon = () => (
   </svg>
 );
 
+const QuoteButton = ({ dark = false, label = "Request a Quotation" }) => (
+  <Link
+    href="/contact"
+    className={`inline-flex items-center gap-3 mt-8 px-6 py-3.5 font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 ${
+      dark
+        ? "bg-green-500 hover:bg-green-400 text-black focus-visible:ring-offset-[#0d1412]"
+        : "bg-green-600 hover:bg-green-700 text-white focus-visible:ring-offset-white"
+    }`}
+  >
+    {label}
+    <ArrowIcon />
+  </Link>
+);
+
 // FAQ content lives in one place and drives BOTH the on-page FAQ block
 // and the FAQPage structured data below, so the two can never drift apart.
 const faqs = [
@@ -356,6 +370,7 @@ export default function AirDryersPage() {
                   ))}
                 </div>
               </div>
+              <QuoteButton label="Request Refrigerated Dryer Quote" />
             </div>
 
             <div>
@@ -451,6 +466,7 @@ export default function AirDryersPage() {
                   </div>
                 ))}
               </div>
+              <QuoteButton dark label="Request Adsorption Dryer Quote" />
             </div>
           </div>
         </div>
@@ -507,6 +523,7 @@ export default function AirDryersPage() {
                   ))}
                 </div>
               </div>
+              <QuoteButton label="Request Membrane Dryer Quote" />
             </div>
 
             <div className="border border-gray-200 bg-[#f7f8f7] p-8">
@@ -591,6 +608,7 @@ export default function AirDryersPage() {
                   </div>
                 ))}
               </div>
+              <QuoteButton label="Request Heat-Regenerated Dryer Quote" />
             </div>
 
             <div className="relative overflow-hidden bg-white h-[460px] md:h-[620px]">
@@ -632,6 +650,7 @@ export default function AirDryersPage() {
                 temperature, required pressure dew point and the final
                 application.
               </p>
+              <QuoteButton dark label="Request Specialist Dryer Quote" />
             </div>
           </div>
         </div>
@@ -728,6 +747,7 @@ export default function AirDryersPage() {
             dew point and correction factors depend on operating pressure and
             inlet temperature. Contact TechnoCore for exact model selection.
           </p>
+          <QuoteButton label="Request a Dryer Comparison Quote" />
 
           <div className="grid md:grid-cols-2 gap-6 mt-10">
             <div className="border border-gray-300 bg-white p-8">
@@ -923,6 +943,9 @@ export default function AirDryersPage() {
                 ))}
               </ul>
             </div>
+          </div>
+          <div className="mt-8">
+            <QuoteButton label="Get Help Selecting a Dryer" />
           </div>
         </div>
       </section>
