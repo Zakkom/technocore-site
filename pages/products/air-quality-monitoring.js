@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import CookieConsent from "../../components/CookieConsent";
+import SiteLayout from "../../components/SiteLayout";
 import IrelandCoverage from "../../components/IrelandCoverage";
 
 const productGroups = [
