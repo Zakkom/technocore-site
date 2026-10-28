@@ -51,8 +51,8 @@ const treatmentGroups = [
   {
     title: "Medical & Breathing Air Treatment",
     text: "Specialist adsorption drying and purification equipment for medical and breathing air applications. Solutions selected around air quality, operating conditions and applicable project requirements.",
-    href: "#treatment-enquiry",
-    cta: "Request a Quote",
+    href: "/products/medical-breathing-air-treatment",
+    cta: "Explore Solutions",
   },
   {
     title: "Condensate Management",
