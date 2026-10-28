@@ -2,8 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import CookieConsent from "../components/CookieConsent";
-import IrelandCoverage from "../components/IrelandCoverage";
+import CookieConsent from "../../components/CookieConsent";
+import IrelandCoverage from "../../components/IrelandCoverage";
 
 const productGroups = [
   {
