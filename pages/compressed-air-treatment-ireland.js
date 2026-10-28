@@ -10,46 +10,55 @@ const treatmentGroups = [
     title: "Refrigerated Air Dryers",
     text: "Energy-efficient compressed air drying for general industrial applications where a stable positive pressure dew point is required. Suitable for protecting pneumatic equipment, production lines and downstream filtration from moisture.",
     href: "/products/air-dryers",
+    cta: "Explore Solutions",
   },
   {
     title: "Adsorption / Desiccant Air Dryers",
     text: "Low pressure dew point solutions for demanding process and instrument-air applications. TechnoCore can select heatless, heat-regenerated, modular, hybrid and high-pressure drying solutions according to flow, pressure, ambient conditions and required PDP.",
     href: "/products/air-dryers#desiccant",
+    cta: "Explore Solutions",
   },
   {
     title: "Compressed Air Filtration",
     text: "Particulate and coalescing filtration for removal of solid particles, liquid water, oil aerosols and other contaminants from compressed air systems. Filtration stages are selected to suit the required air quality and application.",
     href: "/products/filtration",
+    cta: "Explore Solutions",
   },
   {
     title: "Activated Carbon Filtration",
     text: "Activated carbon filtration for applications requiring additional reduction of oil vapour, hydrocarbons and odours. These solutions can form part of higher-purity compressed air treatment trains.",
     href: "/products/filtration",
+    cta: "Explore Solutions",
   },
   {
     title: "Sterile & Process Filtration",
     text: "Specialist process and sterile filtration options for sensitive applications including food, pharmaceutical, medical-device and other process industries where compressed-air quality is critical.",
     href: "/products/filtration",
+    cta: "Explore Solutions",
   },
   {
     title: "High-Pressure Filtration",
     text: "Compressed air and gas filtration solutions for medium- and high-pressure applications, engineered around operating pressure, flow, gas type, materials and process requirements.",
     href: "/products/filtration",
+    cta: "Explore Solutions",
   },
   {
-    title: "Water & Condensate Separators",
-    text: "Mechanical separation of bulk liquid water and condensate upstream of dryers and filters. Correct condensate separation reduces the load on downstream treatment equipment and supports stable air quality.",
-    href: "/contact",
+    title: "Air Quality & System Monitoring",
+    text: "Dew point, pressure and flow measurement, leak detection and compressed air purity analysis. Monitor system performance, protect sensitive processes and identify opportunities to improve energy efficiency.",
+    href: "#treatment-enquiry",
+    cta: "Request a Quote",
   },
   {
-    title: "Condensate Drains",
-    text: "Automatic, level-controlled and zero-loss condensate drainage solutions for separators, filters, air receivers, dryers and drip legs.",
-    href: "/contact",
+    title: "Medical & Breathing Air Treatment",
+    text: "Specialist adsorption drying and purification equipment for medical and breathing air applications. Solutions selected around air quality, operating conditions and applicable project requirements.",
+    href: "#treatment-enquiry",
+    cta: "Request a Quote",
   },
   {
-    title: "Oil / Water Separation",
-    text: "Condensate management solutions designed to separate compressor lubricant from water before disposal, helping industrial users manage oily condensate responsibly.",
-    href: "/contact",
+    title: "Condensate Management",
+    text: "Bulk water and condensate separators, automatic and zero-loss condensate drains, and oil/water separation systems. Manage condensate throughout the compressed air installation.",
+    href: "#treatment-enquiry",
+    cta: "Request a Quote",
   },
 ];
 
@@ -351,7 +360,7 @@ export default function CompressedAirTreatmentIreland() {
               {treatmentGroups.map((item) => (
                 <article
                   key={item.title}
-                  className="bg-black border border-green-500/70 rounded-xl p-6 flex flex-col"
+                  className="group relative bg-black border border-green-500/70 rounded-xl p-6 flex flex-col transition-all duration-200 hover:border-green-400 hover:bg-green-950/30 hover:shadow-[0_0_22px_rgba(34,197,94,0.12)] focus-within:ring-2 focus-within:ring-green-400"
                 >
                   <h3 className="text-xl font-semibold text-green-400">
                     {item.title}
@@ -361,9 +370,9 @@ export default function CompressedAirTreatmentIreland() {
                   </p>
                   <Link
                     href={item.href}
-                    className="mt-5 text-sky-400 hover:text-sky-300 font-medium"
+                    className="mt-5 inline-flex w-fit items-center gap-2 rounded-md bg-green-500 px-4 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-green-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 after:absolute after:inset-0 after:content-['']"
                   >
-                    Discuss this solution →
+                    {item.cta} <span aria-hidden="true">→</span>
                   </Link>
                 </article>
               ))}
@@ -548,7 +557,7 @@ export default function CompressedAirTreatmentIreland() {
           </div>
         </section>
 
-        <section className="bg-black border-t border-green-500/30 px-6 py-16">
+        <section id="treatment-enquiry" className="scroll-mt-24 bg-black border-t border-green-500/30 px-6 py-16">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-8">
               <p className="text-green-400 font-semibold uppercase">
