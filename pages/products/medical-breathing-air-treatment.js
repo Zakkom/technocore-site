@@ -238,7 +238,44 @@ export default function MedicalBreathingAirTreatment() {
             </form>
           </div>
         </section>
-        <footer className="border-t border-white/10 bg-black px-6 py-8"><div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between gap-4 text-sm text-gray-400"><span>© {new Date().getFullYear()} TechnoCore Limited. Industrial Engineering, Ireland.</span><div className="flex gap-5"><Link href="/compressed-air-treatment-ireland" className="hover:text-green-400">Air Treatment</Link><Link href="/privacy-policy" className="hover:text-green-400">Privacy</Link><Link href="/contact" className="hover:text-green-400">Contact</Link></div></div></footer>
+        <footer className="bg-black border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+            <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image src="/logo.png" alt="TechnoCore" width={72} height={72} className="w-[72px] h-[72px] object-contain" />
+                  <div><div className="font-bold text-[27px] text-white">TechnoCore</div><div className="text-[10px] tracking-[0.23em] uppercase text-gray-400 mt-1">Industrial Engineering</div></div>
+                </div>
+                <p className="text-gray-400 mt-6 max-w-sm leading-relaxed">Industrial compressed air, gas generation, filtration, cooling and engineered utility systems in Ireland.</p>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">Solutions</h3>
+                <div className="mt-5 space-y-3 text-gray-400">
+                  {[["Compressed Air", "/compressed-air-treatment-ireland"], ["Nitrogen", "/products/nitrogen"], ["Oxygen", "/products/oxygen"], ["Air Dryers", "/products/air-dryers"], ["Filtration", "/products/filtration"], ["Chillers", "/products/chillers"], ["Paint Booth Air Preparation", "/products/paint-booth"]].map(([name, href]) => <Link key={href} href={href} className="block hover:text-green-400">{name}</Link>)}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">Company</h3>
+                <div className="mt-5 space-y-3 text-gray-400">
+                  {[["All Products", "/products"], ["About", "/about"], ["Contact", "/contact"], ["Privacy Policy", "/privacy-policy"]].map(([name, href]) => <Link key={href} href={href} className="block hover:text-green-400">{name}</Link>)}
+                  <button type="button" onClick={() => window.dispatchEvent(new Event("technocore:open-cookie-settings"))} className="block hover:text-green-400">Cookie Settings</button>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">Contact</h3>
+                <div className="mt-5 space-y-3 text-gray-400">
+                  <a href="mailto:sales@technocore.ie" className="block hover:text-green-400">sales@technocore.ie</a>
+                  <a href="tel:+353874386157" className="block hover:text-green-400">+353 87 438 6157</a>
+                  <div>Newtownmountkennedy, Co. Wicklow, Ireland</div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 pt-7 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-sm text-gray-500">
+              <p>© {new Date().getFullYear()} TechnoCore Limited. All rights reserved.</p>
+              <p>Based in Newtownmountkennedy, Co. Wicklow · Supporting industrial customers throughout Ireland</p>
+            </div>
+          </div>
+        </footer>
         <CookieConsent />
       </div>
     </main>
