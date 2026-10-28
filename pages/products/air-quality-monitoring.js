@@ -8,45 +8,67 @@ import IrelandCoverage from "../../components/IrelandCoverage";
 const productGroups = [
   {
     number: "01",
-    title: "Dew Point Monitoring",
-    models: "OS 305 · OS 212 / 215 / 220",
-    text: "Fixed dew point monitors and sensors for refrigerated and adsorption dryers, instrument air and moisture-sensitive production processes. Select measurement range, outputs and alarms to suit the application.",
+    title: "Dew Point Monitor",
+    models: "OS 305",
+    image: "/images/monitoring/os-305.jpg",
+    text: "Integrated dew point measurement, local display and alarm functions for compressed air dryers and moisture-sensitive processes.",
     applications: ["Dryer performance", "Low-PDP processes", "Alarm monitoring"],
   },
   {
     number: "02",
-    title: "Flow & Consumption Measurement",
-    models: "OS 401 / 421 · OS 415 · OS 430",
-    text: "Flow measurement at compressor outlets, distribution headers and points of use. Understand compressed air consumption, identify unusual demand and support system efficiency improvements.",
-    applications: ["Consumption trends", "Point-of-use demand", "System assessment"],
+    title: "Dew Point Sensor",
+    models: "OS 220 · OS 212 / 215 family",
+    image: "/images/monitoring/os-220.jpg",
+    text: "Compact sensors for continuous dew point measurement. Suitable for installation after refrigerated or adsorption dryers and at critical points of use.",
+    applications: ["Permanent monitoring", "Low dew point", "Process protection"],
   },
   {
     number: "03",
-    title: "Pressure & System Data Logging",
-    models: "Pressure sensors · OS 331 / OS 332",
-    text: "Monitor operating pressure and record multiple compressed air parameters in one place. Data logging can support troubleshooting, maintenance planning and process visibility.",
-    applications: ["Pressure trends", "Centralised logging", "Process visibility"],
+    title: "Flow & Consumption Measurement",
+    models: "Thermal Mass Flow Sensors",
+    image: "/images/monitoring/os-flow.jpg",
+    text: "Measure compressed air consumption at distribution headers or points of use. Flow data helps identify demand patterns and opportunities for optimisation.",
+    applications: ["Flow monitoring", "Consumption", "Energy assessment"],
   },
   {
     number: "04",
     title: "Leak Detection",
     models: "OS 531",
+    image: "/images/monitoring/os-531.jpg",
     text: "Portable ultrasonic leak detection for locating compressed air and gas leaks, including in noisy industrial environments. Document findings to prioritise corrective action.",
     applications: ["Leak surveys", "Maintenance", "Energy efficiency"],
   },
   {
     number: "05",
-    title: "Oil, Particles & Air Purity",
-    models: "OS 120 · OS 130 / 132 · OS 600 / 601",
-    text: "Equipment for measuring residual oil, particle concentration and multiple air quality parameters. Choose continuous monitoring or portable assessment based on process and documentation needs.",
-    applications: ["Process air quality", "Purity verification", "Quality investigations"],
+    title: "Portable Dew Point Measurement",
+    models: "OS 505",
+    image: "/images/monitoring/os-505.jpg",
+    text: "Handheld instrument for dew point checks and troubleshooting. Combines dew point and line-pressure measurement in a portable unit.",
+    applications: ["Spot checks", "Commissioning", "Troubleshooting"],
   },
   {
     number: "06",
     title: "Portable Compressed Air Assessment",
-    models: "OS 551-P6 set · OS 600 set",
-    text: "Portable instrumentation for measuring flow, dew point, pressure and air purity at selected locations. Useful for baseline surveys, troubleshooting and comparing conditions before and after upgrades.",
+    models: "OS 551-P6 Set",
+    image: "/images/monitoring/os-551-p6.jpg",
+    text: "Portable multi-sensor data logging set for flow, dew point and pressure measurements across compressed air installations.",
     applications: ["Site surveys", "Troubleshooting", "Upgrade planning"],
+  },
+  {
+    number: "07",
+    title: "Portable Air Purity Analysis",
+    models: "OS 600 Set",
+    image: "/images/monitoring/os-600.jpg",
+    text: "Portable equipment for assessing compressed air quality parameters including particles, dew point and oil vapour, with measurement and recording functions.",
+    applications: ["Air quality surveys", "Purity checks", "Process verification"],
+  },
+  {
+    number: "08",
+    title: "Particle Monitoring",
+    models: "OS 130 · OS 132",
+    image: "/images/monitoring/os-130.jpg",
+    text: "Laser particle counting for industrial compressed air and gas applications where particle contamination needs to be monitored.",
+    applications: ["Particle counting", "Sensitive processes", "Quality control"],
   },
 ];
 
@@ -177,7 +199,8 @@ export default function AirQualitySystemMonitoring() {
 
         <header className="relative overflow-hidden border-b border-green-500/30 pt-[76px]">
           <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/images/top-bg.jpg')" }} />
-          <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
+          <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-10 items-center">
+            <div>
             <Link href="/compressed-air-treatment-ireland" className="inline-flex text-sm text-gray-300 hover:text-green-400 mb-7">← Back to Compressed Air Treatment</Link>
             <p className="text-green-400 font-semibold tracking-wide uppercase mb-3">Industrial Measurement & Process Reliability</p>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-5xl">Air Quality & System Monitoring Ireland</h1>
@@ -186,6 +209,10 @@ export default function AirQualitySystemMonitoring() {
             <div className="flex flex-wrap gap-4 mt-8">
               <Link href="#monitoring-enquiry" className="bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded">Request Technical Selection</Link>
               <Link href="#monitoring-equipment" className="border border-green-500 text-green-400 hover:bg-green-500/10 font-semibold px-6 py-3 rounded">Explore Monitoring Equipment</Link>
+            </div>
+            </div>
+            <div className="relative h-72 md:h-96 rounded-xl overflow-hidden border border-green-500/50 bg-white p-4 shadow-[0_16px_60px_rgba(0,0,0,0.35)]">
+              <Image src="/images/monitoring/os-551-p6.jpg" alt="Omega Air OS 551-P6 portable compressed air flow, dew point and pressure measurement kit" fill sizes="(max-width: 1024px) 100vw, 38vw" className="object-contain p-4" priority />
             </div>
           </div>
         </header>
@@ -217,17 +244,22 @@ export default function AirQualitySystemMonitoring() {
               <h2 className="text-3xl md:text-4xl font-bold mt-2">Compressed Air Monitoring Solutions</h2>
               <p className="text-gray-400 mt-4">Representative instruments available within the Omega Air product portfolio. Final model selection and availability are subject to the technical requirements and quotation.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {productGroups.map((item) => (
-                <article key={item.title} className="group relative flex flex-col bg-black border border-green-500/60 hover:border-green-400 hover:bg-green-950/30 hover:shadow-[0_0_22px_rgba(34,197,94,0.12)] transition-all duration-200 rounded-xl p-6 focus-within:ring-2 focus-within:ring-green-400">
+                <article key={item.title} className="group relative flex flex-col bg-black border border-green-500/60 hover:border-green-400 hover:bg-green-950/30 hover:shadow-[0_0_22px_rgba(34,197,94,0.12)] transition-all duration-200 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-green-400">
+                  <div className="relative h-52 bg-white border-b border-green-500/20">
+                    <Image src={item.image} alt={`Omega Air ${item.models} — ${item.title}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.04]" />
+                  </div>
+                  <div className="p-5 flex flex-col flex-grow">
                   <span className="text-xs tracking-widest font-bold text-green-500">{item.number} / MONITORING</span>
-                  <h3 className="text-xl font-semibold text-green-400 mt-4">{item.title}</h3>
+                  <h3 className="text-lg font-semibold text-green-400 mt-3">{item.title}</h3>
                   <p className="text-sm font-medium text-white/80 mt-2">{item.models}</p>
-                  <p className="text-gray-300 mt-4 leading-relaxed flex-grow">{item.text}</p>
+                  <p className="text-sm text-gray-300 mt-4 leading-relaxed flex-grow">{item.text}</p>
                   <div className="flex flex-wrap gap-2 mt-5">
                     {item.applications.map((tag) => <span key={tag} className="text-xs text-green-200 bg-green-950/60 border border-green-500/30 rounded-full px-2.5 py-1">{tag}</span>)}
                   </div>
                   <Link href="#monitoring-enquiry" className="mt-6 inline-flex w-fit items-center gap-2 rounded-md bg-green-500 px-4 py-2.5 text-sm font-semibold text-black hover:bg-green-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 after:absolute after:inset-0 after:content-['']">Request a Quote <span aria-hidden="true">→</span></Link>
+                  </div>
                 </article>
               ))}
             </div>
