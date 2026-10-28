@@ -45,8 +45,8 @@ const treatmentGroups = [
   {
     title: "Air Quality & System Monitoring",
     text: "Dew point, pressure and flow measurement, leak detection and compressed air purity analysis. Monitor system performance, protect sensitive processes and identify opportunities to improve energy efficiency.",
-    href: "#treatment-enquiry",
-    cta: "Request a Quote",
+    href: "/products/air-quality-monitoring",
+    cta: "Explore Solutions",
   },
   {
     title: "Medical & Breathing Air Treatment",
