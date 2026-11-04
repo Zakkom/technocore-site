@@ -571,19 +571,40 @@ export default function CompressedAirTreatmentIreland() {
               </p>
             </div>
 
-            <form
-              action="https://formsubmit.co/sales@technocore.ie"
-              method="POST"
-              className="bg-gray-900 border border-green-500/50 rounded-xl p-6 md:p-8"
-            >
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://www.technocore.ie/thanks"
-              />
-              <input type="hidden" name="_subject" value="Compressed Air Treatment Enquiry" />
-              <input type="text" name="_honey" style={{ display: "none" }} readOnly />
+            
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  className="mt-8 max-w-xl mx-auto text-left"
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="e03d7d9e-dae5-4631-a549-b15e9e45c508"
+  />
+  <input
+    type="hidden"
+    name="subject"
+    value="New Quotation Enquiry - TechnoCore"
+  />
+  <input
+    type="hidden"
+    name="from_name"
+    value="TechnoCore Website"
+  />
+  <input
+    type="hidden"
+    name="redirect"
+    value="https://www.technocore.ie/thanks"
+  />
+  <input
+    type="checkbox"
+    name="botcheck"
+    style={{ display: "none" }}
+    tabIndex={-1}
+    autoComplete="off"
+  />
+
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
