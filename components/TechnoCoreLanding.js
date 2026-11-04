@@ -741,25 +741,40 @@ export default function TechnoCoreLanding() {
               </div>
             </div>
 
-            <form
-              action="https://formsubmit.co/sales@technocore.ie"
-              method="POST"
-              className="bg-[#dbe1dc] border border-black/10 p-7 lg:p-9"
-            >
-              <input type="hidden" name="_captcha" value="false" />
+            
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  className="mt-8 max-w-xl mx-auto text-left"
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="e03d7d9e-dae5-4631-a549-b15e9e45c508"
+  />
+  <input
+    type="hidden"
+    name="subject"
+    value="New Quotation Enquiry - TechnoCore"
+  />
+  <input
+    type="hidden"
+    name="from_name"
+    value="TechnoCore Website"
+  />
+  <input
+    type="hidden"
+    name="redirect"
+    value="https://www.technocore.ie/thanks"
+  />
+  <input
+    type="checkbox"
+    name="botcheck"
+    style={{ display: "none" }}
+    tabIndex={-1}
+    autoComplete="off"
+  />
 
-              <input
-                type="hidden"
-                name="_next"
-                value="https://www.technocore.ie/thanks"
-              />
-
-              <input
-                type="text"
-                name="_honey"
-                style={{ display: "none" }}
-                readOnly
-              />
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <input
