@@ -218,15 +218,31 @@ export default function TechnoCoreLanding() {
       {/* HEADER — accessible desktop dropdowns and mobile navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-xl" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-5 lg:px-8 h-[76px] flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-            <div className="relative w-[72px] h-[58px] shrink-0">
-              <Image src="/logo.png" alt="TechnoCore" width={112} height={112} className="absolute left-[-20px] top-1/2 -translate-y-1/2 w-[112px] h-[112px] max-w-none object-contain" />
-            </div>
-            <div className="leading-none">
-              <div className="text-[23px] font-bold tracking-tight">TechnoCore</div>
-              <div className="hidden sm:block text-[9px] uppercase tracking-[0.22em] text-gray-400 mt-1.5">Industrial Engineering</div>
-            </div>
-          </Link>
+          
+<Link
+  href="/"
+  className="flex items-center gap-3 shrink-0"
+>
+  <div className="relative w-[58px] h-[58px] shrink-0">
+    <Image
+      src="/logo.png"
+      alt="TechnoCore logo"
+      fill
+      sizes="58px"
+      className="object-contain"
+    />
+  </div>
+
+  <div className="leading-none whitespace-nowrap">
+    <div className="text-[25px] font-bold tracking-tight text-white">
+      TechnoCore
+    </div>
+    <div className="hidden sm:block text-[10px] uppercase tracking-[0.20em] text-gray-400 mt-1.5">
+      Industrial Engineering
+    </div>
+  </div>
+</Link>
+
 
           <div className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium text-gray-300">
             {[
