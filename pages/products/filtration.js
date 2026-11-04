@@ -27,6 +27,14 @@ const faqs = [
     q: "Do I need several filters in one compressed air system?",
     a: "Often yes. Different filtration stages may be required before and after the dryer depending on the dryer technology, air quality requirement and final application.",
   },
+  {
+    q: "Will a compressed air filter remove moisture without an air dryer?",
+    a: "A water separator and coalescing filter can remove liquid water and aerosols, but they do not remove water vapour to a controlled pressure dew point. A refrigerated or adsorption dryer may be needed depending on the application.",
+  },
+  {
+    q: "Which compressed air filters are suitable for spray painting?",
+    a: "Spray painting typically needs control of liquid water, oil aerosols and, where required, oil vapour. The filtration stages and dryer should be selected for the compressor, spray equipment and coating manufacturer's air quality requirements.",
+  },
 ];
 
 const faqJsonLd = {
@@ -72,15 +80,15 @@ export default function FiltrationPage() {
 },
     {
       title: "Coalescing Filters",
-      text: "Remove liquid water, oil aerosols and fine contamination from compressed air systems.",
+      text: "Capture fine liquid aerosols, including oil and water droplets, to protect downstream equipment. Select the filtration grade according to the required air quality.",
     },
     {
       title: "Particulate Filters",
-      text: "High-efficiency filtration for dust, solid particles and downstream desiccant protection.",
+      text: "Capture solid particles and dust. Suitable particulate filtration may also be required downstream of adsorption dryers to retain desiccant dust.",
     },
     {
       title: "Activated Carbon Filters",
-      text: "Reduce oil vapour, hydrocarbon vapours and odours where higher air purity is required.",
+      text: "Reduce oil vapour and odours where low residual oil content is needed. Activated carbon stages normally require suitable upstream filtration and drying.",
     },
     {
       title: "Sterile & Process Filters",
@@ -174,12 +182,12 @@ export default function FiltrationPage() {
     <SiteLayout>
       <Head>
         <title>
-          Compressed Air Filters Ireland | Industrial Filtration | TechnoCore
+          Compressed Air Filters Ireland | Oil and Water Removal | TechnoCore
         </title>
 
         <meta
           name="description"
-          content="Compressed air filters and replacement filter elements in Ireland. Coalescing, particulate, activated carbon, sterile and high-pressure filtration for industrial air and gas systems."
+          content="Compressed air filters in Ireland: water separators, oil removal, coalescing and particulate filters, activated carbon and replacement elements. Request a quote."
         />
 
         <link
@@ -259,18 +267,20 @@ export default function FiltrationPage() {
               </p>
 
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Industrial Air &amp; Gas{" "}
-                <span className="text-green-400">Filtration</span>
+                Compressed Air{" "}
+                <span className="text-green-400">Filters in Ireland</span>
               </h1>
 
               <h2 className="text-xl md:text-2xl text-green-400 font-semibold mt-5">
-                Cleaner air. Better performance. Lower operating costs.
+                Oil Removal, Water Separation &amp; Industrial Air Filtration
               </h2>
 
               <p className="text-gray-200 text-lg leading-relaxed mt-6 max-w-2xl">
-                TechnoCore supplies industrial compressed air and gas filtration
-                solutions for applications across Ireland — including coalescing,
-                particulate, activated-carbon, sterile and specialist filtration.
+                TechnoCore supplies compressed air filters and filtration systems across
+                Ireland, including water separators, coalescing oil-removal filters,
+                particulate filters, activated carbon filters and replacement elements.
+                We help workshops and industrial facilities control water, oil and
+                particle contamination in their compressed air supply.
               </p>
 
               <p className="text-gray-300 mt-4 max-w-2xl leading-relaxed">
@@ -285,7 +295,7 @@ export default function FiltrationPage() {
                   href="/contact"
                   className="bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold text-center"
                 >
-                  Request Filtration Solution
+                  Request a Filtration Quote
                 </Link>
 
                 <a
@@ -409,13 +419,14 @@ export default function FiltrationPage() {
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold mt-3">
-              Our Compressed Air &amp; Gas Filtration Range
+              Compressed Air Filter Types &amp; Water Separators
             </h2>
 
             <p className="text-gray-400 mt-5">
-              Different contaminants require different filtration technologies.
-              TechnoCore can help build the correct filtration train for your
-              compressed air or gas application.
+              Different compressed air problems require different solutions: bulk water
+              separation, oil aerosol removal, particulate filtration or oil vapour
+              treatment. TechnoCore can select a filtration train for your compressor,
+              air dryer and end-use application.
             </p>
 
           </div>
@@ -622,14 +633,15 @@ export default function FiltrationPage() {
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold mt-3">
-              Filtration Works as Part of a Complete System
+              Compressed Air Filtration Before &amp; After the Dryer
             </h2>
 
             <p className="text-gray-300 mt-6 max-w-4xl mx-auto leading-relaxed">
-              Industrial compressed air treatment often requires more than one
-              filtration stage. Depending on the application, the system may
-              combine water separation, coalescing filtration, particulate
-              filtration, drying and activated-carbon treatment.
+              A typical compressed air treatment system may combine a water separator,
+              a coalescing pre-filter, an air dryer and final filtration. The correct
+              order and filtration grades depend on the dryer type, compressor,
+              inlet conditions and required ISO 8573-1 air quality class.
+              Filters alone do not replace a dryer when a lower pressure dew point is required.
             </p>
 
 
@@ -672,6 +684,11 @@ export default function FiltrationPage() {
             >
               View Complete Air Treatment Solutions
             </Link>
+            <div className="mt-5">
+              <Link href="/products/air-dryers" className="text-green-400 hover:text-green-300 underline underline-offset-4 font-medium">
+                Explore Refrigerated &amp; Adsorption Air Dryers
+              </Link>
+            </div>
 
           </div>
 
