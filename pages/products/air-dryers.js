@@ -64,12 +64,16 @@ const faqs = [
     a: "A membrane air dryer removes water vapour by passing compressed air through hollow-fibre membrane modules that allow moisture to permeate out of the air stream. Membrane dryers have no moving parts, require little maintenance and can be a compact option for point-of-use or moderate dew point requirements.",
   },
   {
-    q: "What pressure dew point do I need?",
+    q: "What pressure dew point do I need for a compressed air dryer?",
     a: "The required pressure dew point depends on the process, environmental conditions and required compressed air quality. General manufacturing and critical process applications can have very different requirements.",
   },
   {
     q: "Can TechnoCore size an air dryer for an existing compressor?",
     a: "Yes. Provide the compressor flow, working pressure, temperatures and application, and we can help select an appropriate dryer and associated air treatment equipment.",
+  },
+  {
+    q: "Can I buy a refrigerated or desiccant air dryer in Ireland?",
+    a: "Yes. TechnoCore supplies compressed air dryers for customers across Ireland. Share your compressor flow, operating pressure, inlet and ambient temperatures, and intended application to request a suitable quotation.",
   },
   {
     q: "Do I need filters before and after the dryer?",
@@ -117,12 +121,12 @@ export default function AirDryersPage() {
     <SiteLayout>
       <Head>
         <title>
-          Compressed Air Dryers Ireland | Refrigerated & Adsorption | TechnoCore
+          Compressed Air Dryers Ireland | Refrigerated & Desiccant | TechnoCore
         </title>
 
         <meta
           name="description"
-          content="Industrial compressed air dryers in Ireland. Refrigerated, adsorption, membrane, heat-regenerated and high-pressure dryer solutions for manufacturing and process applications."
+          content="Compressed air dryers in Ireland: refrigerated (+3°C), desiccant (−40°C) and membrane systems. Expert sizing, filtration and quotations from TechnoCore."
         />
 
         <link
@@ -205,16 +209,17 @@ export default function AirDryersPage() {
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.96] mt-5">
-              Industrial
+              Compressed Air Dryers
               <span className="block text-green-400">
-                Compressed Air Dryers
+                in Ireland
               </span>
             </h1>
 
             <p className="text-gray-200 text-lg md:text-xl leading-relaxed mt-7 max-w-2xl">
-              Refrigerated, adsorption, membrane and heat-regenerated air
-              drying solutions engineered around your flow, pressure, dew
-              point and process requirements.
+              Refrigerated (+3°C), adsorption / desiccant (−40°C), membrane
+              and heat-regenerated air dryers for Irish businesses.
+              Get a dryer sized to your compressor flow, pressure,
+              inlet temperature and required pressure dew point.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-9 max-w-2xl">
@@ -288,9 +293,12 @@ export default function AirDryersPage() {
               </p>
 
               <p>
-                TechnoCore supplies and sizes refrigerated, adsorption,
+                TechnoCore supplies and sizes refrigerated, adsorption / desiccant,
                 membrane, heat-regenerated and specialist compressed air
-                dryers for industrial systems across Ireland.
+                dryers for businesses across Ireland. Whether you need to
+                reduce water in a workshop air line or achieve a low pressure
+                dew point for a critical process, we can recommend a suitable
+                dryer and filtration package for your existing compressor.
               </p>
             </div>
           </div>
