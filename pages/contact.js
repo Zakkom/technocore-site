@@ -201,6 +201,37 @@ export default function Contact() {
               </button>
             </div>
           </form>
+
+           {/* Backup contact methods */}
+          <div className="mt-6 border border-green-500/40 rounded-lg p-5 text-center">
+          <p className="text-gray-200 text-sm font-semibold">
+         Having trouble submitting the form?
+        </p>
+         <p className="text-gray-400 text-sm mt-1">
+        You can contact us directly:
+         </p>
+
+           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+             <a
+           href="mailto:sales@technocore.ie?subject=TechnoCore%20Quotation%20Enquiry"
+           className="inline-flex items-center justify-center rounded border border-green-500 px-4 py-3 text-green-400 font-semibold hover:bg-green-500 hover:text-black transition"
+    >
+        Email Us Directly
+       </a>
+
+       <a
+      href="tel:+353874386157"
+      className="inline-flex items-center justify-center rounded border border-green-500 px-4 py-3 text-green-400 font-semibold hover:bg-green-500 hover:text-black transition"
+    >
+      Call TechnoCore
+    </a>
+  </div>
+
+  <p className="text-gray-400 text-xs mt-3">
+    sales@technocore.ie · +353 87 438 6157
+  </p>
+</div>
+
         </div>
       </section>
     </SiteLayout>
