@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     q: "What nitrogen purity do I need?",
-    a: "The required purity depends on the application. TechnoCore nitrogen systems can be configured from general-purpose purity levels up to 99.9995% N2. Higher purity is not automatically better, because increasing purity affects generator capacity and energy consumption, so the system should be sized around the actual process requirement.",
+    a: "The required purity depends on the application. TechnoCore nitrogen systems can be configured from general-purpose purity levels up to 99.999% N2. Higher purity is not automatically better, because increasing purity affects generator capacity and energy consumption, so the system should be sized around the actual process requirement.",
   },
   {
     q: "What is the difference between PSA and membrane nitrogen generation?",
@@ -131,6 +131,14 @@ const faqs = [
   {
     q: "Can TechnoCore supply the compressor and air treatment equipment as well?",
     a: "Yes. A nitrogen system can be configured with compressed air generation, dryers, filtration, receivers, nitrogen generation, monitoring and other required equipment.",
+  },
+  {
+    q: "Do you supply PSA nitrogen generators throughout Ireland?",
+    a: "Yes. TechnoCore supplies on-site nitrogen generation systems for industrial customers across Ireland. We can assess flow, purity, pressure, compressed air treatment and installation requirements before preparing a project quotation.",
+  },
+  {
+    q: "What compressed air quality does a PSA nitrogen generator need?",
+    a: "Feed-air quality depends on the selected generator and its manufacturer's requirements. Dryers and filtration are selected to control moisture, oil and particles; TechnoCore can specify the complete air preparation package alongside the nitrogen generator.",
   },
   {
     q: "Can the system be installed outdoors?",
@@ -160,7 +168,7 @@ const serviceJsonLd = {
   serviceType: "On-Site Nitrogen Generation Systems",
   name: "On-Site Nitrogen Generation Systems",
   description:
-    "Engineered PSA and membrane nitrogen generation systems, from standalone generators to complete skid and containerised packages, with purity up to 99.9995% N2. Systems are sized and quoted individually per project.",
+    "Engineered PSA and membrane nitrogen generation systems, from standalone generators to complete skid and containerised packages, with purity up to 99.999% N2. Systems are sized and quoted individually per project.",
   provider: {
     "@type": "Organization",
     name: "TechnoCore",
@@ -173,17 +181,28 @@ const serviceJsonLd = {
   url: "https://www.technocore.ie/products/nitrogen",
 };
 
+function NitrogenQuoteLink({ children = "Request a Quote", className = "" }) {
+  return (
+    <Link
+      href="/contact"
+      className={`inline-flex items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-semibold text-black transition hover:bg-green-400 ${className}`}
+    >
+      {children}
+    </Link>
+  );
+}
+
 export default function NitrogenPage() {
   return (
     <SiteLayout>
       <Head>
         <title>
-          Nitrogen Generators Ireland | On-Site N2 Systems | TechnoCore
+          Nitrogen Generators Ireland | PSA & On-Site N₂ | TechnoCore
         </title>
 
         <meta
           name="description"
-          content="On-site nitrogen generation systems in Ireland. PSA and membrane nitrogen generators, complete skid and containerised N2 systems for laser cutting, food, pharmaceutical, electronics and industrial applications."
+          content="Nitrogen generators in Ireland: PSA and membrane systems for laser cutting, food and industry. Custom sizing, complete packages and quotations from TechnoCore."
         />
 
         <link
@@ -195,11 +214,11 @@ export default function NitrogenPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Nitrogen Generators Ireland | On-Site N2 Systems | TechnoCore"
+          content="Nitrogen Generators Ireland | PSA & On-Site N₂ | TechnoCore"
         />
         <meta
           property="og:description"
-          content="On-site nitrogen generation systems in Ireland. PSA and membrane nitrogen generators, complete skid and containerised N2 systems for laser cutting, food, pharmaceutical, electronics and industrial applications."
+          content="Nitrogen generators in Ireland: PSA and membrane systems for laser cutting, food and industry. Custom sizing, complete packages and quotations from TechnoCore."
         />
         <meta
           property="og:url"
@@ -214,11 +233,11 @@ export default function NitrogenPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Nitrogen Generators Ireland | On-Site N2 Systems | TechnoCore"
+          content="Nitrogen Generators Ireland | PSA & On-Site N₂ | TechnoCore"
         />
         <meta
           name="twitter:description"
-          content="Engineered PSA and membrane nitrogen generators for industry in Ireland, with purity up to 99.9995% N2. Standalone, skid and containerised systems."
+          content="PSA and membrane nitrogen generators in Ireland. Custom on-site N₂ systems, skid packages and containerised solutions. Request a quotation."
         />
         <meta
           name="twitter:image"
@@ -258,15 +277,15 @@ export default function NitrogenPage() {
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-4">
               Nitrogen Generators
               <span className="block text-green-400">
-                for Industry in Ireland
+                in Ireland
               </span>
             </h1>
 
             <p className="text-gray-200 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
               Generate nitrogen directly at your facility and reduce dependence
               on cylinders, bundles and bulk liquid nitrogen deliveries.
-              TechnoCore supplies engineered PSA and membrane nitrogen systems,
-              with purity up to 99.9995% N2, for industrial applications across
+              TechnoCore supplies engineered PSA nitrogen generators and membrane nitrogen systems,
+              with purity up to 99.999% N2, for industrial applications across
               Ireland.
             </p>
 
@@ -312,7 +331,9 @@ export default function NitrogenPage() {
             <p className="text-gray-400 mt-4 leading-relaxed">
               TechnoCore supplies the OMEGA AIR N-GEN PSA nitrogen generator
               range across Ireland, from compact single units to large
-              industrial installations.
+              industrial installations. We also help size complete on-site nitrogen
+              generation systems for laser cutting, food processing and other
+              industrial applications, including compressed air treatment and storage.
             </p>
           </div>
 
@@ -399,7 +420,7 @@ export default function NitrogenPage() {
               <p className="text-gray-300 mt-4 leading-relaxed">
                 Pressure Swing Adsorption systems use carbon molecular sieve
                 technology to separate oxygen from compressed air and produce
-                high-purity nitrogen, up to 99.9995% N2 depending on system
+                high-purity nitrogen, up to 99.999% N2 depending on system
                 configuration.
               </p>
 
@@ -410,6 +431,8 @@ export default function NitrogenPage() {
                 <li>✓ Modular system design</li>
                 <li>✓ Suitable for demanding process applications</li>
               </ul>
+
+              <NitrogenQuoteLink className="mt-6">Request PSA Generator Quote</NitrogenQuoteLink>
 
               <p className="text-green-400 font-semibold mt-7">
                 Typical applications
@@ -443,6 +466,10 @@ export default function NitrogenPage() {
                 <li>✓ Suitable for moderate purity requirements</li>
                 <li>✓ Simple continuous operation</li>
               </ul>
+
+              <NitrogenQuoteLink className="mt-6">Request Membrane System Quote</NitrogenQuoteLink>
+
+              <NitrogenQuoteLink className="mt-6">Request PSA Generator Quote</NitrogenQuoteLink>
 
               <p className="text-green-400 font-semibold mt-7">
                 Typical applications
@@ -495,7 +522,7 @@ export default function NitrogenPage() {
               <p className="text-green-700 text-4xl font-bold">97–99.999%</p>
               <p className="font-bold mt-3">Nitrogen purity</p>
               <p className="text-gray-600 text-sm mt-1">
-                Selectable per application
+                Model and configuration dependent
               </p>
             </div>
 
@@ -615,11 +642,18 @@ export default function NitrogenPage() {
             </div>
           </div>
 
+          <div className="mt-7 flex flex-wrap gap-4">
+            <NitrogenQuoteLink>Request Technical Quotation</NitrogenQuoteLink>
+            <a href="#system-sizing" className="inline-flex items-center rounded-lg border border-green-500 px-6 py-3 font-semibold text-green-400 transition hover:bg-green-500 hover:text-black">
+              See Sizing Requirements
+            </a>
+          </div>
+
           <p className="text-gray-500 text-xs mt-4">
-            Performance figures refer to inlet temperature 30°C at 7.5 barg
-            operating pressure, +/- 5%. For nitrogen flow capacity at other
-            conditions and purity levels, contact TechnoCore for a system
-            proposal.
+            Published performance values are indicative for the OMEGA AIR N-GEN range
+            and refer to inlet temperature 30°C at 7.5 barg operating pressure,
+            ±5%, unless otherwise specified. Capacity, purity and feed-air requirements
+            must be confirmed against the selected model's current datasheet before quotation.
           </p>
         </div>
       </section>
@@ -700,6 +734,7 @@ export default function NitrogenPage() {
                   system when suitable air quality, capacity and pressure are
                   already available.
                 </p>
+                <NitrogenQuoteLink className="mt-6">Quote Standalone Generator</NitrogenQuoteLink>
               </div>
             </div>
 
@@ -729,6 +764,7 @@ export default function NitrogenPage() {
                   nitrogen generation, storage and associated control equipment
                   on a compact engineered skid.
                 </p>
+                <NitrogenQuoteLink className="mt-6">Quote Complete N₂ Skid</NitrogenQuoteLink>
               </div>
             </div>
 
@@ -758,6 +794,7 @@ export default function NitrogenPage() {
                   equipment needs to be located externally or supplied as a
                   ready-to-install modular solution.
                 </p>
+                <NitrogenQuoteLink className="mt-6">Quote Containerised System</NitrogenQuoteLink>
               </div>
             </div>
           </div>
@@ -863,7 +900,7 @@ export default function NitrogenPage() {
       </section>
 
       {/* SELECTION */}
-      <section className="bg-[#05090b] py-20 px-6 border-y border-gray-800">
+      <section id="system-sizing" className="bg-[#05090b] py-20 px-6 border-y border-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             <div>
@@ -887,7 +924,7 @@ export default function NitrogenPage() {
               <div className="space-y-5">
                 {[
                   ["Required flow", "Nm³/h, SCFH or current consumption"],
-                  ["Nitrogen purity", "Required N₂ concentration, up to 99.9995%"],
+                  ["Nitrogen purity", "Required N₂ concentration, up to 99.999%"],
                   ["Outlet pressure", "Required process pressure"],
                   ["Application", "How nitrogen is being used"],
                   [
@@ -953,6 +990,16 @@ export default function NitrogenPage() {
                 className="inline-block text-green-400 hover:text-green-300 font-semibold mt-2"
               >
                 Explore Compressed Air Treatment →
+              </Link>
+              <p className="mt-4 text-gray-300">
+                For nitrogen generation, correctly sized compressed air dryers and
+                filtration help protect the generator and maintain feed-air quality.
+              </p>
+              <Link
+                href="/products/air-dryers"
+                className="inline-block text-green-400 hover:text-green-300 font-semibold mt-2"
+              >
+                Explore Industrial Air Dryers →
               </Link>
             </div>
           </div>
