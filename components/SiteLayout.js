@@ -146,9 +146,11 @@ export default function SiteLayout({ children }) {
                     Privacy Policy
                   </Link>
                 </li>
+		<li>
                  <Link href="/returns-policy" className="hover:text-green-400">
                   Returns & Refunds Policy
                   </Link>
+		</li>
                 <li>
                   <Link href="/terms-and-conditions" className="hover:text-green-400">
                     Terms & Conditions
