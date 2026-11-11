@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import CookieConsent from "../components/CookieConsent";
 import IrelandCoverage from "../components/IrelandCoverage";
+import SiteHeader from "../components/SiteHeader";
 
 const treatmentGroups = [
   {
@@ -209,66 +210,7 @@ export default function CompressedAirTreatmentIreland() {
       </Head>
 
       <div className="min-h-screen bg-black text-white font-sans">
-        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-xl">
-          <div className="max-w-7xl mx-auto px-5 lg:px-8 h-[76px] flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2.5 group overflow-visible">
-              <div className="relative w-[108px] h-[58px] shrink-0 overflow-visible -ml-8">
-                <Image
-                  src="/logo.png"
-                  alt="TechnoCore"
-                  width={130}
-                  height={130}
-                  className="absolute left-[-4px] top-1/2 -translate-y-1/2 w-[112px] h-[112px] max-w-none object-contain"
-                />
-              </div>
-
-              <div className="leading-none">
-                <div className="text-[25px] font-bold tracking-tight">
-                  TechnoCore
-                </div>
-                <div className="hidden sm:block text-[10px] uppercase tracking-[0.25em] text-gray-400 mt-1.5">
-                  Industrial Engineering
-                </div>
-              </div>
-            </Link>
-
-            <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-300">
-              <Link href="/#solutions" className="hover:text-green-400 transition-colors">
-                Solutions
-              </Link>
-
-              <Link
-                href="/compressed-air-treatment-ireland"
-                className="text-green-400 transition-colors"
-              >
-                Air Treatment
-              </Link>
-
-              <Link href="/#engineering" className="hover:text-green-400 transition-colors">
-                Engineering
-              </Link>
-
-              <Link href="/#industries" className="hover:text-green-400 transition-colors">
-                Industries
-              </Link>
-
-              <Link href="/about" className="hover:text-green-400 transition-colors">
-                About
-              </Link>
-
-              <Link href="/contact" className="hover:text-green-400 transition-colors">
-                Contact
-              </Link>
-            </div>
-
-            <Link
-              href="/contact"
-              className="hidden sm:inline-flex bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-md transition"
-            >
-              Discuss Your Project
-            </Link>
-          </div>
-        </nav>
+        <SiteHeader />
 
         <header className="relative overflow-hidden border-b border-green-500/30 pt-[76px]">
           <div
