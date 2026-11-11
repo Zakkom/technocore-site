@@ -144,12 +144,11 @@ const comparisonRows = [
   },
 ];
 
+
 const TextLink = ({ href, children, dark = false }) => (
   <Link
     href={href}
-    className={`inline-flex items-center gap-2 font-semibold mt-6 ${
-      dark ? "text-green-400 hover:text-green-300" : "text-green-600 hover:text-green-700"
-    }`}
+    className="inline-flex items-center justify-center gap-3 mt-6 px-7 py-4 bg-green-500 hover:bg-green-400 text-black font-semibold rounded-md shadow-sm transition-colors"
   >
     {children}
     <ArrowIcon />
@@ -381,7 +380,7 @@ export default function AirDryersPage() {
               </div>
 
               <TextLink href="/products/air-dryers/refrigerated">
-                Refrigerated air dryers in detail
+                Explore Refrigerated Dryers
               </TextLink>
             </div>
 
@@ -441,7 +440,7 @@ export default function AirDryersPage() {
               </div>
 
               <TextLink dark href="/products/air-dryers/adsorption">
-                Desiccant air dryers in detail
+                Explore Adsorption Dryers
               </TextLink>
             </div>
           </div>
