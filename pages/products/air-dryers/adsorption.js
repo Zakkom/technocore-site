@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "What is the difference between heatless and heat-regenerated desiccant dryers?",
-    a: "Heatless dryers (A-DRY) regenerate the desiccant with a portion of the dried compressed air and are best for small to medium flows. Heat-regenerated dryers (HPR-DRY BP) use a blower and heater, which reduces compressed air loss at larger flows.",
+    a: "Heatless dryers use a portion of dry compressed air for regeneration. Blower/heater-regenerated designs use external energy to reduce compressed-air purge demand. The best option depends on flow, pressure and running costs.",
   },
   {
     q: "What pressure dew point do I need?",
@@ -28,11 +28,11 @@ const faqs = [
   },
   {
     q: "What flow range do your adsorption dryers cover?",
-    a: "A-DRY heatless dryers cover 6 to 200 m³/h at 4 to 16 barg. HPR-DRY BP heat-regenerated dryers cover 2,200 to 21,100 Nm³/h at 4 to 40 bar.",
+    a: "The range includes compact A-DRY, B-DRY and X-DRY models, larger R-DRY blower-regenerated systems, high-pressure HPR-DRY BP and integrated COM-DRY. Capacity must be confirmed against the chosen model and operating conditions.",
   },
   {
     q: "Do I need filters with an adsorption dryer?",
-    a: "Yes. A super-fine coalescing pre-filter (residual oil below 0.01 mg/m³, 0.01 µm) protects the desiccant, and a dust filter on the outlet catches desiccant dust.",
+    a: "Adsorption systems normally require appropriate inlet oil/aerosol removal and downstream particulate filtration. The exact filtration grade, included filter housings and element specification must be checked for each model.",
   },
   {
     q: "Can I buy a desiccant air dryer in Ireland from TechnoCore?",
@@ -44,9 +44,9 @@ const serviceLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "Desiccant and Adsorption Compressed Air Dryers",
-  name: "Desiccant (Adsorption) Compressed Air Dryers (OMEGA AIR A-DRY, HPR-DRY BP)",
+  name: "OMEGA AIR Desiccant and Adsorption Compressed Air Dryers",
   description:
-    "Heatless and heat-regenerated adsorption compressed air dryers with −40°C pressure dew point as standard, from 6 to 21,100 m³/h, supplied and sized for industrial users in Ireland.",
+    "OMEGA AIR A-DRY, B-DRY, X-DRY, R-DRY, HPR-DRY and COM-DRY adsorption dryers supplied and sized for industrial compressed air systems in Ireland.",
   provider: { "@type": "Organization", name: "TechnoCore", url: "https://www.technocore.ie" },
   areaServed: { "@type": "Country", name: "Ireland" },
   url: `https://www.technocore.ie${PATH}`,
@@ -83,7 +83,7 @@ export default function AdsorptionDryersPage() {
         <meta property="og:title" content="Desiccant Air Dryers Ireland | TechnoCore" />
         <meta
           property="og:description"
-          content="Heatless and heat-regenerated adsorption air dryers, −40°C pressure dew point, supplied across Ireland."
+          content="OMEGA AIR heatless, blower-regenerated and specialist adsorption dryers supplied across Ireland."
         />
         <meta property="og:url" content={`https://www.technocore.ie${PATH}`} />
         <meta property="og:image" content="https://www.technocore.ie/images/dryer-adsorption.jpg" />
@@ -114,9 +114,10 @@ export default function AdsorptionDryersPage() {
             </h1>
 
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed mt-6 max-w-xl">
-              Heatless A-DRY and heat-regenerated HPR-DRY BP adsorption dryers
-              for a −40°C pressure dew point, from 6 to 21,100 m³/h. We size the
-              dryer and its filtration around your compressor and process.
+              OMEGA AIR heatless, blower-regenerated and specialist adsorption dryers
+              for low pressure dew points, including −40°C solutions.
+              Compare A-DRY, B-DRY, X-DRY, R-DRY, HPR-DRY and COM-DRY
+              systems, sized to your compressor and process.
             </p>
 
             <QuoteButton dark label="Request Adsorption Dryer Quote" />
@@ -125,7 +126,7 @@ export default function AdsorptionDryersPage() {
           <div className="relative overflow-hidden border border-white/10 h-[360px] md:h-[480px]">
             <Image
               src="/images/dryer-adsorption.jpg"
-              alt="OMEGA AIR adsorption desiccant compressed air dryer"
+              alt="Industrial OMEGA AIR desiccant adsorption dryer system"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -192,62 +193,166 @@ export default function AdsorptionDryersPage() {
         </div>
       </section>
 
-      {/* TYPES */}
-      <section className="bg-[#eef2ef] text-black">
+      {/* PRODUCT SERIES — verified against OMEGA AIR datasheets */}
+      <section id="dryer-ranges" className="bg-[#eef2ef] text-black">
         <div className="max-w-7xl mx-auto px-6 py-20">
-          <h2 className="text-3xl md:text-4xl font-bold">Heatless vs heat-regenerated dryers</h2>
-
-          <div className="grid md:grid-cols-2 gap-6 mt-10">
-            <div className="border border-gray-300 bg-white p-8">
-              <h3 className="text-green-600 font-semibold text-xl">Heatless (A-DRY 06–200)</h3>
-              <p className="text-gray-700 leading-relaxed mt-4">
-                Regenerates the desiccant with a portion of the dried air. A
-                simple, low-power design for small and medium flows, with
-                power consumption under 35 W.
-              </p>
-            </div>
-
-            <div className="border border-gray-300 bg-white p-8">
-              <h3 className="text-green-600 font-semibold text-xl">Heat-regenerated (HPR-DRY 400–3600 BP)</h3>
-              <p className="text-gray-700 leading-relaxed mt-4">
-                Uses a blower and heater for regeneration, which reduces
-                compressed air loss at large flows. Cooling can be ambient-air,
-                purge-air or closed-loop, or can use heat of compression where
-                suitable.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-10 overflow-x-auto">
-            <table className="w-full border-collapse min-w-[820px]">
-              <thead>
-                <tr className="bg-black text-white text-left text-sm">
-                  <th className="p-4 font-semibold">Technology</th>
-                  <th className="p-4 font-semibold">Pressure dew point</th>
-                  <th className="p-4 font-semibold">Flow range</th>
-                  <th className="p-4 font-semibold">Operating pressure</th>
-                  <th className="p-4 font-semibold">Key characteristic</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-800">
-                {rows.map((row) => (
-                  <tr key={row[0]} className="border-b border-gray-300 even:bg-white odd:bg-[#e3e9e4]">
-                    {row.map((cell, i) => (
-                      <td key={i} className={i === 0 ? "p-4 font-semibold text-black" : "p-4"}>
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <p className="text-gray-500 text-sm mt-4">
-            Figures refer to OMEGA AIR nominal operating conditions and vary by
-            model. Dew point and correction factors depend on operating
-            pressure and inlet temperature.
+          <p className="text-green-700 text-xs font-bold tracking-[0.2em] uppercase">OMEGA AIR Product Range</p>
+          <h2 className="text-3xl md:text-5xl font-bold mt-4">Explore Adsorption Dryer Series</h2>
+          <p className="text-gray-700 text-lg mt-5 max-w-4xl leading-relaxed">
+            From compact heatless dryers to blower-regenerated and high-pressure systems.
+            Select a series based on inlet flow, operating pressure, required pressure dew point,
+            regeneration energy and available installation space.
           </p>
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 mt-10">
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">Heatless twin-tower</p>
+                <h3 className="text-xl font-bold mt-3">A-DRY 06–200</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">Compact heatless adsorption for smaller compressed-air systems.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–16 barg</p>
+                  <p><strong>Pressure dew point:</strong> −40°C; −25°C / −70°C options</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">TAC configuration</p>
+                <h3 className="text-xl font-bold mt-3">A-DRY TAC 06–200</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">A-DRY configuration with temperature-related regeneration controls; confirm configuration when quoting.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–16 barg</p>
+                  <p><strong>Pressure dew point:</strong> −40°C; −25°C / −70°C options</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">Heatless adsorption</p>
+                <h3 className="text-xl font-bold mt-3">B-DRY 110–1200</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">Larger heatless adsorption dryer range for industrial air demand.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–16 barg</p>
+                  <p><strong>Pressure dew point:</strong> −40°C; alternative PDP options</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">TAC configuration</p>
+                <h3 className="text-xl font-bold mt-3">B-DRY TAC 110–1200</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">TAC version of the B-DRY range; verify options and controls by model.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–16 barg</p>
+                  <p><strong>Pressure dew point:</strong> −40°C</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">Adsorption dryer</p>
+                <h3 className="text-xl font-bold mt-3">X-DRY 300–1050</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">Industrial adsorption dryers for medium-to-large compressed-air duties.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–16 barg</p>
+                  <p><strong>Pressure dew point:</strong> −40°C; −25°C / −70°C options</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">Blower-regenerated</p>
+                <h3 className="text-xl font-bold mt-3">R-DRY BVA 400–20000</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">Blower-regenerated dryers for high-flow compressed-air systems.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–11 bar</p>
+                  <p><strong>Pressure dew point:</strong> −40°C; lower on request</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">High-pressure regenerated</p>
+                <h3 className="text-xl font-bold mt-3">HPR-DRY BP 400–3600</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">High-pressure adsorption drying with blower and heater regeneration.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–40 bar</p>
+                  <p><strong>Pressure dew point:</strong> −40°C; lower on request</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+              <article className="border border-gray-200 bg-white p-7 flex flex-col">
+                <p className="text-green-700 text-xs font-bold tracking-[0.15em] uppercase">Combined refrigeration + adsorption</p>
+                <h3 className="text-xl font-bold mt-3">COM-DRY</h3>
+                <p className="text-gray-700 mt-3 leading-relaxed flex-1">Integrated refrigeration and adsorption stages in one drying solution.</p>
+                <div className="mt-5 pt-4 border-t border-gray-200 text-sm space-y-2">
+                  <p><strong>Pressure:</strong> 4–14 bar</p>
+                  <p><strong>Pressure dew point:</strong> Down to −40°C</p>
+                </div>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-400 text-black font-semibold transition-colors">
+                  Request a Quote <ArrowIcon />
+                </Link>
+              </article>
+          </div>
+          <p className="text-gray-600 text-sm mt-6">
+            Model names denote product series, not guaranteed flow at your site. Nominal performance
+            and available options vary by model and operating conditions; TechnoCore confirms sizing
+            and filtration against the applicable OMEGA AIR datasheet before quotation.
+          </p>
+        </div>
+      </section>
+
+      {/* FEATURED A-DRY TAC PRODUCT IMAGE */}
+      <section className="bg-white text-black">
+        <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative bg-[#f4f6f5] border border-gray-200 h-[420px] md:h-[560px]">
+            <Image
+              src="/images/a-dry-tac.jpg"
+              alt="OMEGA AIR A-DRY TAC twin-tower desiccant compressed air dryer with integrated filtration"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-contain p-5"
+            />
+          </div>
+          <div>
+            <p className="text-green-700 text-xs font-bold tracking-[0.2em] uppercase">Featured Product</p>
+            <h2 className="text-3xl md:text-5xl font-bold mt-4">OMEGA AIR A-DRY TAC</h2>
+            <p className="text-gray-700 text-lg leading-relaxed mt-6">
+              Compact twin-tower adsorption drying for applications requiring a low pressure dew point.
+              The A-DRY TAC range is designed for 4–16 barg operation, with −40°C pressure dew point
+              and alternative dew point configurations specified in the manufacturer datasheet.
+            </p>
+            <p className="text-gray-700 mt-4 leading-relaxed">
+              Send us your compressor FAD, pressure, inlet temperature and target dew point.
+              We will confirm the model, regeneration requirements and recommended inlet/outlet filtration.
+            </p>
+            <Link href="/contact" className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-black font-semibold px-7 py-4 mt-7 transition-colors">
+              Request A-DRY TAC Quote <ArrowIcon />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SPECIALIST CO2 */}
+      <section className="bg-[#0d1412] text-white">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <p className="text-green-400 text-xs font-bold tracking-[0.2em] uppercase">Specialist Gas Drying</p>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4">CO₂-R-DRY BVA — Carbon Dioxide Drying</h2>
+          <p className="text-gray-300 leading-relaxed mt-5 max-w-4xl">
+            OMEGA AIR also offers a dedicated CO₂-R-DRY BVA 400–20000 series for compressed
+            carbon dioxide, rated 4–25 bar with −40°C pressure dew point (lower on request).
+            This is a specialist CO₂ product, not a standard compressed-air dryer.
+          </p>
+          <Link href="/contact" className="inline-flex items-center gap-3 mt-7 px-7 py-4 border border-green-400 text-green-400 hover:bg-green-500 hover:text-black font-semibold transition-colors">
+            Enquire About CO₂ Drying <ArrowIcon />
+          </Link>
         </div>
       </section>
 
@@ -255,21 +360,20 @@ export default function AdsorptionDryersPage() {
       <section className="bg-[#0d1412] text-white">
         <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10">
           <div className="border border-white/10 bg-white/[0.03] p-8">
-            <h2 className="text-green-400 font-semibold text-2xl">ADC 2.2 dryer controller</h2>
+            <h2 className="text-green-400 font-semibold text-2xl">Controls and regeneration</h2>
             <p className="text-gray-300 leading-relaxed mt-4">
-              OMEGA AIR adsorption dryers are controlled by the ADC 2.2, a
-              SIEMENS PLC-based controller. It can run a fixed cycle or a
-              dew-point dependent cycle that adjusts to maintain the required
-              dew point while reducing energy and purge-air use.
+              Control systems and regeneration strategies vary by dryer series and ordered configuration.
+              Fixed-cycle and dew-point-dependent operation are available on selected models;
+              dew-point-dependent control may require an optional dew point sensor.
             </p>
             <div className="mt-5">
               <BulletList
                 dark
                 items={[
-                  "Fixed-cycle or dew-point dependent control",
-                  "Energy-saving stand-by mode",
-                  "Condensate drain control, IP 65 housing",
-                  "Optional Modbus TCP/IP or Profinet communication",
+                  "Controller and monitoring options depend on series",
+                  "Dew-point-dependent control requires suitable sensing where offered",
+                  "Regeneration method and energy demand vary by technology",
+                  "Confirm remote communications and alarms for the selected model",
                 ]}
               />
             </div>
@@ -278,10 +382,7 @@ export default function AdsorptionDryersPage() {
           <div className="border border-white/10 bg-white/[0.03] p-8">
             <h2 className="text-green-400 font-semibold text-2xl">Filtration requirements</h2>
             <p className="text-gray-300 leading-relaxed mt-4">
-              Adsorption dryers need a super-fine coalescing pre-filter
-              (residual oil below 0.01 mg/m³, 0.01 µm) to protect the
-              desiccant, and a dust filter on the outlet. We specify both with
-              the dryer.
+              Adsorption dryers require suitable upstream oil and aerosol removal to protect the desiccant, plus downstream particulate filtration where specified. Filter housings and elements vary by series and configuration. We confirm the required filtration with each quotation.
             </p>
             <Link
               href="/products/filtration"
