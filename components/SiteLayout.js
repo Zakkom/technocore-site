@@ -12,6 +12,8 @@ const solutions = [
   { label: "Nitrogen Generation", href: "/products/nitrogen" },
   { label: "Oxygen Generation", href: "/products/oxygen" },
   { label: "Air Dryers", href: "/products/air-dryers" },
+  { label: "Refrigerated Air Dryers", href: "/products/air-dryers/refrigerated" },
+  { label: "Desiccant Air Dryers", href: "/products/air-dryers/adsorption" },
   { label: "Industrial Filtration", href: "/products/filtration" },
   { label: "Industrial Chillers", href: "/products/chillers" },
   { label: "Paint Booth Air Preparation", href: "/products/paint-booth" },
