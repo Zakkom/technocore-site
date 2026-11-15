@@ -32,6 +32,18 @@ const faqs = [
     a: "A water separator and coalescing filter can remove liquid water and aerosols, but they do not remove water vapour to a controlled pressure dew point. A refrigerated or adsorption dryer may be needed depending on the application.",
   },
   {
+    q: "What is the difference between a coalescing filter and a particulate filter?",
+    a: "A coalescing filter captures fine liquid aerosols such as oil and water droplets. A particulate filter captures solid particles and dust, and is often fitted downstream of an adsorption dryer to retain desiccant dust.",
+  },
+  {
+    q: "What does an activated carbon compressed air filter do?",
+    a: "An activated carbon filter reduces oil vapour and odours where a low residual oil content is needed. It normally needs suitable filtration and drying upstream so the carbon is not overloaded by liquid water or oil.",
+  },
+  {
+    q: "Which filters do I need with a compressed air dryer?",
+    a: "Adsorption dryers need a super-fine coalescing pre-filter upstream and a dust filter on the outlet, and membrane dryers need a super-fine coalescing filter upstream. Refrigerated dryers are normally protected by a coalescing filter, with final filtration chosen for the application.",
+  },
+  {
     q: "Which compressed air filters are suitable for spray painting?",
     a: "Spray painting typically needs control of liquid water, oil aerosols and, where required, oil vapour. The filtration stages and dryer should be selected for the compressor, spray equipment and coating manufacturer's air quality requirements.",
   },
@@ -70,6 +82,16 @@ const serviceJsonLd = {
     name: "Ireland",
   },
   url: "https://www.technocore.ie/products/filtration",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.technocore.ie/" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.technocore.ie/products" },
+    { "@type": "ListItem", position: 3, name: "Filtration", item: "https://www.technocore.ie/products/filtration" },
+  ],
 };
 
 export default function FiltrationPage() {
@@ -182,12 +204,12 @@ export default function FiltrationPage() {
     <SiteLayout>
       <Head>
         <title>
-          Compressed Air Filters Ireland | Oil and Water Removal | TechnoCore
+          Industrial Compressed Air Filters Ireland | TechnoCore
         </title>
 
         <meta
           name="description"
-          content="Compressed air filters in Ireland: water separators, oil removal, coalescing and particulate filters, activated carbon and replacement elements. Request a quote."
+          content="Industrial compressed air filters in Ireland: coalescing, particulate and activated carbon filters, water separators and replacement elements. Get a quote."
         />
 
         <link
@@ -238,6 +260,11 @@ export default function FiltrationPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
       </Head>
 
       <main className="bg-black text-white">
@@ -252,10 +279,10 @@ export default function FiltrationPage() {
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center opacity-45"
+              className="object-cover object-center opacity-75 brightness-110"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28">
@@ -263,7 +290,10 @@ export default function FiltrationPage() {
             <div className="max-w-3xl">
 
               <p className="text-sm text-gray-400 mb-5">
-                Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Filtration
+                <Link href="/" className="hover:text-green-400">Home</Link>
+                &nbsp;›&nbsp;
+                <Link href="/products" className="hover:text-green-400">Products</Link>
+                &nbsp;›&nbsp; Filtration
               </p>
 
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -303,6 +333,13 @@ export default function FiltrationPage() {
                   className="border border-gray-500 hover:border-green-400 hover:text-green-400 px-6 py-3 rounded font-semibold text-center"
                 >
                   Need a Replacement Element?
+                </a>
+
+                <a
+                  href="tel:+353874386157"
+                  className="border border-gray-500 hover:border-green-400 hover:text-green-400 px-6 py-3 rounded font-semibold text-center"
+                >
+                  Call +353 87 438 6157
                 </a>
 
               </div>
@@ -520,10 +557,10 @@ export default function FiltrationPage() {
     alt="Technician replacing a compressed air filter element"
     fill
     sizes="100vw"
-    className="object-cover object-center"
+    className="object-cover object-center brightness-125"
   />
 
-  <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
 
   <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
 
@@ -684,9 +721,15 @@ export default function FiltrationPage() {
             >
               View Complete Air Treatment Solutions
             </Link>
-            <div className="mt-5">
+            <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2">
+              <Link href="/products/air-dryers/refrigerated" className="text-green-400 hover:text-green-300 underline underline-offset-4 font-medium">
+                Refrigerated Air Dryers
+              </Link>
+              <Link href="/products/air-dryers/adsorption" className="text-green-400 hover:text-green-300 underline underline-offset-4 font-medium">
+                Desiccant Air Dryers
+              </Link>
               <Link href="/products/air-dryers" className="text-green-400 hover:text-green-300 underline underline-offset-4 font-medium">
-                Explore Refrigerated &amp; Adsorption Air Dryers
+                All Compressed Air Dryers
               </Link>
             </div>
 
@@ -775,6 +818,28 @@ export default function FiltrationPage() {
         </section>
 
 {/* IRELAND COVERAGE */}
+<section className="max-w-7xl mx-auto px-6 py-14">
+          <h2 className="text-2xl md:text-3xl font-bold text-center">
+            Related Compressed Air Equipment
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            {[
+              ["Compressed Air Dryers", "/products/air-dryers"],
+              ["Paint Booth Air Preparation", "/products/paint-booth"],
+              ["Compressed Air Treatment", "/compressed-air-treatment-ireland"],
+              ["Nitrogen Generators", "/products/nitrogen"],
+            ].map(([label, href]) => (
+              <Link
+                key={href}
+                href={href}
+                className="border border-gray-800 bg-[#081115] hover:border-green-500 rounded-lg p-4 text-center text-gray-200 hover:text-green-400 transition"
+              >
+                {label} →
+              </Link>
+            ))}
+          </div>
+        </section>
+
 <IrelandCoverage product="industrial compressed air filtration systems" />
 
         {/* FAQ */}
