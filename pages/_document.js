@@ -50,6 +50,25 @@ export default function Document() {
                   "areaServed": "IE",
                   "availableLanguage": ["English"]
                 }
+              ],
+              "areaServed": [
+                ...[
+                  "Dublin",
+                  "Wicklow",
+                  "Kildare",
+                  "Meath",
+                  "Wexford",
+                  "Carlow",
+                  "Kilkenny",
+                  "Tipperary",
+                  "Laois",
+                  "Cork",
+                  "Limerick",
+                  "Shannon",
+                  "Galway",
+                  "Waterford"
+                ].map((name) => ({ "@type": "AdministrativeArea", name })),
+                { "@type": "Country", "name": "Ireland" }
               ]
             })
           }}

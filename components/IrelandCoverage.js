@@ -5,6 +5,11 @@ export default function IrelandCoverage({
   // because Search Console shows real search demand for these counties
   // (e.g. "refrigerant air dryer in tipperary", "desiccant air dryer in
   // kilkenny") that the page previously had no matching text for.
+  //
+  // NOTE: the Organization structured data (including areaServed) now lives
+  // in ONE place only: the site-wide Organization JSON-LD. It used to be
+  // repeated here, which produced a second, partial Organization block on
+  // every page that renders this component.
   const regions = [
     "Dublin",
     "Wicklow",
@@ -22,30 +27,8 @@ export default function IrelandCoverage({
     "Waterford",
   ];
 
-  const areaServedJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "TechnoCore",
-  url: "https://www.technocore.ie",
-  areaServed: [
-    ...regions.map((region) => ({
-      "@type": "AdministrativeArea",
-      name: region,
-    })),
-    {
-      "@type": "Country",
-      name: "Ireland",
-    },
-  ],
-};
-
   return (
     <section className="bg-[#eef2ef] text-black">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(areaServedJsonLd) }}
-      />
-
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-start">
           <div>

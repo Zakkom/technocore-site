@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 
 const productLinks = [
   { label: "Air Dryers", href: "/products/air-dryers" },
-  { label: "Refrigerated Dryers", href: "/products/air-dryers/refrigerated" },
-  { label: "Adsorption Dryers", href: "/products/air-dryers/adsorption" },
+  { label: "Refrigerated Air Dryers", href: "/products/air-dryers/refrigerated" },
+  { label: "Desiccant Air Dryers", href: "/products/air-dryers/adsorption" },
   { label: "Air Filtration", href: "/products/filtration" },
   { label: "Nitrogen Generators", href: "/products/nitrogen" },
   { label: "Oxygen Generators", href: "/products/oxygen" },
@@ -61,11 +61,11 @@ export default function SiteHeader() {
               <button type="button" aria-haspopup="true" aria-expanded={desktopOpen === menu.label} onClick={() => setDesktopOpen(v => v === menu.label ? null : menu.label)} className="flex items-center gap-2 py-5 hover:text-green-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 rounded">
                 {menu.label}<Chevron open={desktopOpen === menu.label} />
               </button>
-              {desktopOpen === menu.label && (
-                <div className="absolute top-full left-0 w-[280px] bg-[#0b130e] border border-white/20 shadow-2xl rounded-md p-2">
-                  {menu.links.map(item => <Link key={item.href} href={item.href} onClick={closeAll} className="block px-4 py-2.5 rounded text-gray-200 hover:bg-green-500/10 hover:text-green-400 focus-visible:bg-green-500/10 focus-visible:text-green-400">{item.label}</Link>)}
-                </div>
-              )}
+              {/* Always rendered and hidden with CSS, so the links exist in the
+                  server-rendered HTML and search engines can follow them. */}
+              <div className={`${desktopOpen === menu.label ? "block" : "hidden"} absolute top-full left-0 w-[280px] bg-[#0b130e] border border-white/20 shadow-2xl rounded-md p-2`}>
+                {menu.links.map(item => <Link key={item.href} href={item.href} onClick={closeAll} className="block px-4 py-2.5 rounded text-gray-200 hover:bg-green-500/10 hover:text-green-400 focus-visible:bg-green-500/10 focus-visible:text-green-400">{item.label}</Link>)}
+              </div>
             </div>
           ))}
           {navigation.map(item => <Link key={item.href} href={item.href} onClick={closeAll} className="hover:text-green-400 whitespace-nowrap">{item.label}</Link>)}

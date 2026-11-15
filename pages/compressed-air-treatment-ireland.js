@@ -2,21 +2,20 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import CookieConsent from "../components/CookieConsent";
 import IrelandCoverage from "../components/IrelandCoverage";
-import SiteHeader from "../components/SiteHeader";
+import SiteLayout from "../components/SiteLayout";
 
 const treatmentGroups = [
   {
     title: "Refrigerated Air Dryers",
     text: "Energy-efficient compressed air drying for general industrial applications where a stable positive pressure dew point is required. Suitable for protecting pneumatic equipment, production lines and downstream filtration from moisture.",
-    href: "/products/air-dryers",
+    href: "/products/air-dryers/refrigerated",
     cta: "Explore Solutions",
   },
   {
     title: "Adsorption / Desiccant Air Dryers",
     text: "Low pressure dew point solutions for demanding process and instrument-air applications. TechnoCore can select heatless, heat-regenerated, modular, hybrid and high-pressure drying solutions according to flow, pressure, ambient conditions and required PDP.",
-    href: "/products/air-dryers#desiccant",
+    href: "/products/air-dryers/adsorption",
     cta: "Explore Solutions",
   },
   {
@@ -113,6 +112,18 @@ const faqs = [
     a: "Yes. Condensate must be removed from separators, filters, receivers, dryers and low points in the system. The appropriate drain type depends on pressure, condensate volume and efficiency requirements.",
   },
   {
+    q: "What is compressed air treatment?",
+    a: "Compressed air treatment is the removal of water, oil and particles from compressed air after the compressor. A typical system combines separation, filtration, drying and condensate drainage so the air meets the quality the process needs.",
+  },
+  {
+    q: "What is ISO 8573-1?",
+    a: "ISO 8573-1 is the international standard that classifies compressed air purity. It sets separate classes for solid particles, water (pressure dew point) and oil, so the required class can be specified for each contaminant.",
+  },
+  {
+    q: "Where can I buy compressed air dryers and filters in Ireland?",
+    a: "TechnoCore supplies compressed air dryers, filters and complete treatment packages to industrial customers across Ireland. Send your flow, pressure and air-quality requirements and we will recommend suitable equipment.",
+  },
+  {
     q: "Can TechnoCore size a complete compressed air treatment system?",
     a: "Yes. TechnoCore can assist with technical selection of separators, filters, refrigerated or adsorption dryers, condensate management and monitoring based on flow, pressure, PDP, air-quality and process requirements.",
   },
@@ -139,7 +150,7 @@ export default function CompressedAirTreatmentIreland() {
     serviceType: "Industrial compressed air treatment, drying, filtration and condensate management",
     provider: {
       "@type": "Organization",
-      name: "TechnoCore Limited",
+      name: "TechnoCore",
       url: "https://www.technocore.ie",
       email: "sales@technocore.ie",
       telephone: "+353874386157",
@@ -151,17 +162,27 @@ export default function CompressedAirTreatmentIreland() {
     url: "https://www.technocore.ie/compressed-air-treatment-ireland",
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.technocore.ie/" },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Compressed Air Treatment Ireland",
+        item: "https://www.technocore.ie/compressed-air-treatment-ireland",
+      },
+    ],
+  };
+
   return (
-    <main>
+    <SiteLayout>
       <Head>
         <title>Compressed Air Treatment Ireland | Dryers & Filtration | TechnoCore</title>
         <meta
           name="description"
-          content="Industrial compressed air treatment in Ireland: refrigerated and adsorption dryers, coalescing and particulate filtration, activated carbon, separators and condensate management."
-        />
-        <meta
-          name="keywords"
-          content="compressed air treatment Ireland, compressed air dryer Ireland, refrigerated air dryer Ireland, adsorption dryer Ireland, desiccant air dryer Ireland, compressed air filtration Ireland, coalescing filter Ireland, particulate filter Ireland, activated carbon filter Ireland, water separator Ireland, condensate drain Ireland, oil water separator Ireland, pressure dew point, ISO 8573-1"
+          content="Compressed air treatment in Ireland: refrigerated and desiccant dryers, coalescing and particulate filtration, activated carbon, separators and condensate drains."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.technocore.ie/compressed-air-treatment-ireland" />
@@ -207,10 +228,13 @@ export default function CompressedAirTreatmentIreland() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
-      <div className="min-h-screen bg-black text-white font-sans">
-        <SiteHeader />
+      <div className="font-sans">
 
         <header className="relative overflow-hidden border-b border-green-500/30 pt-[76px]">
           <div
@@ -248,6 +272,12 @@ export default function CompressedAirTreatmentIreland() {
                   className="border border-sky-500 text-sky-400 hover:bg-sky-500/10 font-semibold px-6 py-3 rounded"
                 >
                   Email Engineering Enquiry
+                </a>
+                <a
+                  href="tel:+353874386157"
+                  className="border border-white/30 hover:border-green-400 text-white font-semibold px-6 py-3 rounded"
+                >
+                  Call +353 87 438 6157
                 </a>
               </div>
             </div>
@@ -344,10 +374,10 @@ export default function CompressedAirTreatmentIreland() {
                   temperature, ambient conditions and installation requirements.
                 </p>
                 <Link
-                  href="/products/air-dryers"
+                  href="/products/air-dryers/refrigerated"
                   className="inline-block mt-5 text-sky-400 hover:text-sky-300"
                 >
-                  View air dryer solutions →
+                  View refrigerated air dryers →
                 </Link>
               </div>
             </article>
@@ -372,10 +402,10 @@ export default function CompressedAirTreatmentIreland() {
                   required PDP, lifecycle cost and operating conditions.
                 </p>
                 <Link
-                  href="/products/air-dryers#desiccant"
+                  href="/products/air-dryers/adsorption"
                   className="inline-block mt-5 text-sky-400 hover:text-sky-300"
                 >
-                  View adsorption dryer solutions →
+                  View desiccant air dryers →
                 </Link>
               </div>
             </article>
@@ -399,6 +429,19 @@ export default function CompressedAirTreatmentIreland() {
                   For demanding applications, multiple filtration and drying stages may
                   be combined with differential-pressure and dew-point monitoring to
                   provide a more controlled compressed-air supply.
+                </p>
+                <p className="text-gray-400 mt-4 leading-relaxed">
+                  ISO 8573-1 classifies compressed-air purity separately for
+                  solid particles, water and oil, and a lower class number means
+                  cleaner air. Water is controlled by the{" "}
+                  <Link href="/products/air-dryers" className="text-sky-400 hover:text-sky-300">
+                    air dryer
+                  </Link>{" "}
+                  and particles and oil by{" "}
+                  <Link href="/products/filtration" className="text-sky-400 hover:text-sky-300">
+                    compressed air filtration
+                  </Link>
+                  , so each class is specified for the stage that achieves it.
                 </p>
               </div>
 
@@ -440,6 +483,28 @@ export default function CompressedAirTreatmentIreland() {
           </div>
         </section>
 
+
+        <section className="max-w-7xl mx-auto px-6 py-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center">
+            Related Compressed Air Equipment
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            {[
+              ["Compressed Air Dryers", "/products/air-dryers"],
+              ["Industrial Air Filtration", "/products/filtration"],
+              ["Air Quality Monitoring", "/products/air-quality-monitoring"],
+              ["Medical & Breathing Air", "/products/medical-breathing-air-treatment"],
+            ].map(([label, href]) => (
+              <Link
+                key={href}
+                href={href}
+                className="bg-gray-900 border border-green-500/40 hover:border-green-400 rounded-lg p-4 text-center text-gray-200 hover:text-green-400 transition"
+              >
+                {label} →
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* IRELAND COVERAGE */}
         <IrelandCoverage product="compressed air treatment and air quality systems" />
@@ -682,184 +747,7 @@ export default function CompressedAirTreatmentIreland() {
           </div>
         </section>
 
-        {/* FOOTER */}
-<footer className="bg-black border-t border-white/10">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
-    <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
-
-      <div>
-        <div className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
-            alt="TechnoCore"
-            width={72}
-            height={72}
-            className="w-[72px] h-[72px] object-contain"
-          />
-
-          <div>
-            <div className="font-bold text-[27px] text-white">
-              TechnoCore
-            </div>
-
-            <div className="text-[10px] tracking-[0.23em] uppercase text-gray-400 mt-1">
-              Industrial Engineering
-            </div>
-          </div>
-        </div>
-
-        <p className="text-gray-400 mt-6 max-w-sm leading-relaxed">
-          Industrial compressed air, gas generation, filtration,
-          cooling and engineered utility systems in Ireland.
-        </p>
       </div>
-
-      <div>
-        <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">
-          Solutions
-        </h3>
-
-        <div className="mt-5 space-y-3 text-gray-400">
-          <Link
-            href="/compressed-air-treatment-ireland"
-            className="block hover:text-green-400"
-          >
-            Compressed Air
-          </Link>
-
-          <Link
-            href="/products/nitrogen"
-            className="block hover:text-green-400"
-          >
-            Nitrogen
-          </Link>
-
-          <Link
-            href="/products/oxygen"
-            className="block hover:text-green-400"
-          >
-            Oxygen
-          </Link>
-
-          <Link
-            href="/products/air-dryers"
-            className="block hover:text-green-400"
-          >
-            Air Dryers
-          </Link>
-
-          <Link
-            href="/products/filtration"
-            className="block hover:text-green-400"
-          >
-            Filtration
-          </Link>
-
-          <Link
-            href="/products/chillers"
-            className="block hover:text-green-400"
-          >
-            Chillers
-          </Link>
-
-          <Link
-            href="/products/paint-booth"
-            className="block hover:text-green-400"
-          >
-            Paint Booth Air Preparation
-          </Link>
-        </div>
-      </div>
-
-      <div>
-        <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">
-          Company
-        </h3>
-
-        <div className="mt-5 space-y-3 text-gray-400">
-          <Link
-            href="/products"
-            className="block hover:text-green-400"
-          >
-            All Products
-          </Link>
-
-          <Link
-            href="/about"
-            className="block hover:text-green-400"
-          >
-            About
-          </Link>
-
-          <Link
-            href="/contact"
-            className="block hover:text-green-400"
-          >
-            Contact
-          </Link>
-
-          <Link
-            href="/privacy-policy"
-            className="block hover:text-green-400"
-          >
-            Privacy Policy
-          </Link>
-
-          <button
-            type="button"
-            onClick={() =>
-              window.dispatchEvent(
-                new Event("technocore:open-cookie-settings")
-              )
-            }
-            className="block hover:text-green-400"
-          >
-            Cookie Settings
-          </button>
-        </div>
-      </div>
-
-      <div>
-        <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">
-          Contact
-        </h3>
-
-        <div className="mt-5 space-y-3 text-gray-400">
-          <a
-            href="mailto:sales@technocore.ie"
-            className="block hover:text-green-400"
-          >
-            sales@technocore.ie
-          </a>
-
-          <a
-            href="tel:+353874386157"
-            className="block hover:text-green-400"
-          >
-            +353 87 438 6157
-          </a>
-
-          <div>
-            Newtownmountkennedy, Co. Wicklow, Ireland
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="mt-12 pt-7 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-sm text-gray-500">
-      <p>
-        © {new Date().getFullYear()} TechnoCore Limited. All rights reserved.
-      </p>
-
-      <p>
-        Based in Newtownmountkennedy, Co. Wicklow · Supporting industrial customers throughout Ireland
-      </p>
-    </div>
-  </div>
-</footer>
-
-        <CookieConsent />
-      </div>
-    </main>
+    </SiteLayout>
   );
 }

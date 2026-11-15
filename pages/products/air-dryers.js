@@ -98,6 +98,7 @@ const technologies = [
     title: "Specialist",
     text: "Applications operating above standard compressed-air pressure.",
     href: "/contact",
+    cta: "Contact us",
   },
 ];
 
@@ -163,7 +164,7 @@ export default function AirDryersPage() {
 
         <meta
           name="description"
-          content="Compressed air dryers in Ireland: refrigerated (+3°C), desiccant (−40°C) and membrane dryers. Compare technologies, get sizing help and a quotation from TechnoCore."
+          content="Compressed air dryers in Ireland: refrigerated (+3°C), desiccant (−40°C) and membrane. Compare technologies, get sizing help and a quote from TechnoCore."
         />
 
         <link rel="canonical" href={`https://www.technocore.ie${PATH}`} />
@@ -249,6 +250,13 @@ export default function AirDryersPage() {
               >
                 Air Treatment Solutions
               </Link>
+
+              <a
+                href="tel:+353874386157"
+                className="inline-flex items-center gap-3 border border-white/30 hover:border-green-400 text-white px-7 py-4 font-semibold transition"
+              >
+                Call +353 87 438 6157
+              </a>
             </div>
           </div>
         </div>
@@ -329,7 +337,7 @@ export default function AirDryersPage() {
                   <h3 className="text-xl font-bold mt-5">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed mt-3">{item.text}</p>
                   <span className="inline-flex items-center gap-2 text-green-600 font-semibold mt-5">
-                    Learn more
+                    {item.cta || "Learn more"}
                     <ArrowIcon />
                   </span>
                 </>
