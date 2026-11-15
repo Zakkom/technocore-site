@@ -52,142 +52,66 @@ export default function TechnoCoreLanding() {
       contain: false,
     },
     {
-    	title: "Paint Booth Air Preparation",
-    	description:
-      "Point-of-use compressed air filtration for spray painting, automotive refinishing and industrial coating applications.",
-    	href: "/products/paint-booth",
-    	image: "/images/paint-booth.jpg",
-    	tag: "SPRAY FINISHING",
-    	contain: true,
-     },
+      title: "Paint Booth Air Preparation",
+      description:
+        "Point-of-use compressed air filtration for spray painting, automotive refinishing and industrial coating applications.",
+      href: "/products/paint-booth",
+      image: "/images/paint-booth.jpg",
+      tag: "SPRAY FINISHING",
+      contain: true,
+    },
   ];
 
   const engineeringSteps = [
-    {
-      number: "01",
-      title: "Assess",
-      text: "Understand process demand, pressure, purity and air quality requirements.",
-    },
-    {
-      number: "02",
-      title: "Design",
-      text: "Configure the system around operating conditions and future capacity.",
-    },
-    {
-      number: "03",
-      title: "Supply",
-      text: "Provide selected equipment and the complete required system package.",
-    },
-    {
-      number: "04",
-      title: "Install",
-      text: "Coordinate installation and integration into existing infrastructure.",
-    },
-    {
-      number: "05",
-      title: "Commission",
-      text: "Verify operation, controls, performance and system parameters.",
-    },
-    {
-      number: "06",
-      title: "Support",
-      text: "Provide practical technical support throughout system operation.",
-    },
+    { number: "01", title: "Assess", text: "Understand process demand, pressure, purity and air quality requirements." },
+    { number: "02", title: "Design", text: "Configure the system around operating conditions and future capacity." },
+    { number: "03", title: "Supply", text: "Provide selected equipment and the complete required system package." },
+    { number: "04", title: "Install", text: "Coordinate installation and integration into existing infrastructure." },
+    { number: "05", title: "Commission", text: "Verify operation, controls, performance and system parameters." },
+    { number: "06", title: "Support", text: "Provide practical technical support throughout system operation." },
   ];
 
   const industries = [
-    {
-      number: "01",
-      title: "Pharmaceutical",
-      lines: [
-        "Clean compressed air",
-        "Process gases",
-        "Critical air quality",
-      ],
-    },
-    {
-      number: "02",
-      title: "Medical Devices",
-      lines: [
-        "Controlled manufacturing",
-        "Clean utilities",
-        "Process gases",
-      ],
-    },
-    {
-      number: "03",
-      title: "Food & Beverage",
-      lines: [
-        "Production air",
-        "Packaging nitrogen",
-        "Dry & filtered utilities",
-      ],
-    },
-    {
-      number: "04",
-      title: "Manufacturing",
-      lines: [
-        "Automation utilities",
-        "Production air",
-        "Reliable plant supply",
-      ],
-    },
-    {
-      number: "05",
-      title: "Laser Cutting",
-      lines: [
-        "High-purity nitrogen",
-        "Cutting applications",
-        "Stable gas supply",
-      ],
-    },
-    {
-      number: "06",
-      title: "Electronics",
-      lines: [
-        "Sensitive production",
-        "Clean process air",
-        "Inert gas systems",
-      ],
-    },
-    {
-      number: "07",
-      title: "Automotive",
-      lines: [
-        "Compressed air treatment",
-        "Nitrogen applications",
-        "Production utilities",
-      ],
-    },
-    {
-      number: "08",
-      title: "Process Industry",
-      lines: [
-        "Engineered utility packages",
-        "Gas systems",
-        "Demanding applications",
-      ],
-    },
+    { number: "01", title: "Pharmaceutical", lines: ["Clean compressed air", "Process gases", "Critical air quality"] },
+    { number: "02", title: "Medical Devices", lines: ["Controlled manufacturing", "Clean utilities", "Process gases"] },
+    { number: "03", title: "Food & Beverage", lines: ["Production air", "Packaging nitrogen", "Dry & filtered utilities"] },
+    { number: "04", title: "Manufacturing", lines: ["Automation utilities", "Production air", "Reliable plant supply"] },
+    { number: "05", title: "Laser Cutting", lines: ["High-purity nitrogen", "Cutting applications", "Stable gas supply"] },
+    { number: "06", title: "Electronics", lines: ["Sensitive production", "Clean process air", "Inert gas systems"] },
+    { number: "07", title: "Automotive", lines: ["Compressed air treatment", "Nitrogen applications", "Production utilities"] },
+    { number: "08", title: "Process Industry", lines: ["Engineered utility packages", "Gas systems", "Demanding applications"] },
   ];
 
   const engineeredSystems = [
-    {
-      title: "Air Quality",
-      text: "Pressure · Dew Point · ISO 8573-1",
-    },
-    {
-      title: "Gas Generation",
-      text: "Nitrogen · Oxygen · Purity",
-    },
-    {
-      title: "Integration",
-      text: "Skid · Container · Controls",
-    },
-    {
-      title: "Lifecycle",
-      text: "Design · Commissioning · Support",
-    },
+    { title: "Air Quality", text: "Pressure · Dew Point · ISO 8573-1" },
+    { title: "Gas Generation", text: "Nitrogen · Oxygen · Purity" },
+    { title: "Integration", text: "Skid · Container · Controls" },
+    { title: "Lifecycle", text: "Design · Commissioning · Support" },
   ];
+
+  const footerSolutions = [
+    { label: "Compressed Air", href: "/compressed-air-treatment-ireland" },
+    { label: "Nitrogen", href: "/products/nitrogen" },
+    { label: "Oxygen", href: "/products/oxygen" },
+    { label: "Air Dryers", href: "/products/air-dryers" },
+    { label: "Refrigerated Air Dryers", href: "/products/air-dryers/refrigerated" },
+    { label: "Desiccant Air Dryers", href: "/products/air-dryers/adsorption" },
+    { label: "Filtration", href: "/products/filtration" },
+    { label: "Chillers", href: "/products/chillers" },
+    { label: "Paint Booth Air Preparation", href: "/products/paint-booth" },
+  ];
+
+  const footerCompany = [
+    { label: "All Products", href: "/products" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Returns & Refunds Policy", href: "/returns-policy" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  ];
+
+  const inputClass =
+    "w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700";
 
   return (
     <main className="min-h-screen bg-[#050806] text-white overflow-hidden">
@@ -213,7 +137,6 @@ export default function TechnoCoreLanding() {
             sizes="100vw"
             className="object-cover object-center brightness-[1.15]"
           />
-
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/5" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/95 via-transparent to-black/20" />
         </div>
@@ -227,11 +150,11 @@ export default function TechnoCoreLanding() {
               </span>
             </div>
 
-           <h1 className="text-4xl sm:text-5xl lg:text-[68px] font-bold leading-[1.04] tracking-tight">
-  		Industrial Compressed Air
-  		<span className="block">& Gas Systems</span>
-  		<span className="block text-green-400">for Ireland</span>
-	</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-[68px] font-bold leading-[1.04] tracking-tight">
+              Industrial Compressed Air
+              <span className="block">&amp; Gas Systems</span>
+              <span className="block text-green-400">for Ireland</span>
+            </h1>
 
             <p className="mt-7 text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
               Engineering, supply and integration of compressed air treatment,
@@ -258,7 +181,9 @@ export default function TechnoCoreLanding() {
 
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
               <span className="text-gray-300">Looking for equipment?</span>
-              <Link href="/products/air-dryers" className="text-green-400 hover:text-green-300 underline underline-offset-4">Shop Air Dryers</Link>
+              <Link href="/products/air-dryers" className="text-green-400 hover:text-green-300 underline underline-offset-4">Compressed Air Dryers</Link>
+              <Link href="/products/air-dryers/refrigerated" className="text-green-400 hover:text-green-300 underline underline-offset-4">Refrigerated Dryers</Link>
+              <Link href="/products/air-dryers/adsorption" className="text-green-400 hover:text-green-300 underline underline-offset-4">Desiccant Dryers</Link>
               <Link href="/products/filtration" className="text-green-400 hover:text-green-300 underline underline-offset-4">Air Filters</Link>
               <Link href="/products" className="text-green-400 hover:text-green-300 underline underline-offset-4">All Products</Link>
             </div>
@@ -327,7 +252,6 @@ export default function TechnoCoreLanding() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover brightness-[1.08]"
             />
-
             <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#d2d9d3]/88 via-[#d2d9d3]/20 to-transparent" />
           </div>
         </div>
@@ -387,9 +311,7 @@ export default function TechnoCoreLanding() {
                     {solution.tag}
                   </span>
 
-                  <h3 className="text-2xl font-bold mt-3">
-                    {solution.title}
-                  </h3>
+                  <h3 className="text-2xl font-bold mt-3">{solution.title}</h3>
 
                   <p className="text-gray-300 mt-3 leading-relaxed">
                     {solution.description}
@@ -419,28 +341,18 @@ export default function TechnoCoreLanding() {
 
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
                 From requirement
-                <span className="block text-green-700">
-                  to operating system
-                </span>
+                <span className="block text-green-700">to operating system</span>
               </h2>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#aeb8b0] border border-[#aeb8b0]">
               {engineeringSteps.map((step) => (
-                <div
-                  key={step.number}
-                  className="bg-[#d4dbd5] p-7 min-h-[220px]"
-                >
+                <div key={step.number} className="bg-[#d4dbd5] p-7 min-h-[220px]">
                   <div className="text-green-700 text-xs font-bold tracking-[0.18em]">
                     {step.number}
                   </div>
-
                   <div className="w-10 h-px bg-green-700 mt-5" />
-
-                  <h3 className="text-xl font-bold mt-6">
-                    {step.title}
-                  </h3>
-
+                  <h3 className="text-xl font-bold mt-6">{step.title}</h3>
                   <p className="text-gray-700 text-sm mt-3 leading-relaxed">
                     {step.text}
                   </p>
@@ -478,18 +390,11 @@ export default function TechnoCoreLanding() {
                 <div className="text-green-500 text-xs font-bold tracking-[0.2em]">
                   {industry.number}
                 </div>
-
                 <div className="w-10 h-px bg-green-500 mt-5" />
-
-                <h3 className="text-xl font-semibold mt-7">
-                  {industry.title}
-                </h3>
-
+                <h3 className="text-xl font-semibold mt-7">{industry.title}</h3>
                 <div className="mt-5 space-y-2 text-gray-400 text-sm">
                   {industry.lines.map((line) => (
-                    <div key={line}>
-                      {line}
-                    </div>
+                    <div key={line}>{line}</div>
                   ))}
                 </div>
               </div>
@@ -498,7 +403,7 @@ export default function TechnoCoreLanding() {
         </div>
       </section>
 
-      {/* WHY TECHNОCORE */}
+      {/* WHY TECHNOCORE */}
       <section className="bg-[#cbd4cc] text-black">
         <div className="grid lg:grid-cols-2 min-h-[560px]">
           <div className="relative min-h-[430px] lg:min-h-full">
@@ -509,7 +414,6 @@ export default function TechnoCoreLanding() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center brightness-[1.08] saturate-[1.03]"
             />
-
             <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-[#cbd4cc]/88" />
           </div>
 
@@ -521,9 +425,7 @@ export default function TechnoCoreLanding() {
 
               <h2 className="text-4xl md:text-5xl font-bold mt-4 tracking-tight leading-[1.07]">
                 Technical selection.
-                <span className="block text-green-700">
-                  Practical engineering.
-                </span>
+                <span className="block text-green-700">Practical engineering.</span>
               </h2>
 
               <p className="text-gray-700 mt-6 text-lg leading-relaxed">
@@ -533,36 +435,18 @@ export default function TechnoCoreLanding() {
 
               <div className="mt-9 space-y-6">
                 {[
-                  [
-                    "Engineering Selection",
-                    "Equipment selected around application, demand and operating requirements.",
-                  ],
-                  [
-                    "System Integration",
-                    "From individual components to complete integrated utility packages.",
-                  ],
-                  [
-                    "Ireland-Based Support",
-                    "Technical support for industrial customers and projects across Ireland.",
-                  ],
-                  [
-                    "Practical Solutions",
-                    "Solutions focused on reliability, efficiency and real production conditions.",
-                  ],
+                  ["Engineering Selection", "Equipment selected around application, demand and operating requirements."],
+                  ["System Integration", "From individual components to complete integrated utility packages."],
+                  ["Ireland-Based Support", "Technical support for industrial customers and projects across Ireland."],
+                  ["Practical Solutions", "Solutions focused on reliability, efficiency and real production conditions."],
                 ].map(([title, text]) => (
                   <div key={title} className="flex gap-4">
                     <div className="shrink-0 w-8 h-8 rounded-full border border-green-700 flex items-center justify-center text-green-700 font-bold">
                       ✓
                     </div>
-
                     <div>
-                      <h3 className="font-bold text-lg">
-                        {title}
-                      </h3>
-
-                      <p className="text-gray-600 mt-1 leading-relaxed">
-                        {text}
-                      </p>
+                      <h3 className="font-bold text-lg">{title}</h3>
+                      <p className="text-gray-600 mt-1 leading-relaxed">{text}</p>
                     </div>
                   </div>
                 ))}
@@ -572,7 +456,7 @@ export default function TechnoCoreLanding() {
         </div>
       </section>
 
-      {/* ENGINEERED SYSTEMS - BLACK BLOCK */}
+      {/* ENGINEERED SYSTEMS */}
       <section className="bg-[#030504] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
           <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 lg:gap-20 items-start">
@@ -583,9 +467,7 @@ export default function TechnoCoreLanding() {
 
               <h2 className="text-3xl md:text-5xl font-bold mt-4 tracking-tight leading-tight">
                 Built around the
-                <span className="block text-green-400">
-                  complete process.
-                </span>
+                <span className="block text-green-400">complete process.</span>
               </h2>
 
               <p className="text-gray-400 text-lg mt-6 leading-relaxed max-w-xl">
@@ -597,21 +479,12 @@ export default function TechnoCoreLanding() {
 
             <div className="grid sm:grid-cols-2 gap-px bg-white/10 border border-white/10">
               {engineeredSystems.map((item, index) => (
-                <div
-                  key={item.title}
-                  className="bg-[#07100b] p-8 min-h-[180px]"
-                >
+                <div key={item.title} className="bg-[#07100b] p-8 min-h-[180px]">
                   <div className="text-green-500 text-xs font-bold tracking-[0.2em]">
                     0{index + 1}
                   </div>
-
-                  <h3 className="text-xl font-semibold mt-5">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-400 mt-3 leading-relaxed">
-                    {item.text}
-                  </p>
+                  <h3 className="text-xl font-semibold mt-5">{item.title}</h3>
+                  <p className="text-gray-400 mt-3 leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -628,7 +501,6 @@ export default function TechnoCoreLanding() {
           sizes="100vw"
           className="object-cover object-center brightness-[0.62] contrast-[1.08]"
         />
-
         <div className="absolute inset-0 bg-black/45" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center">
@@ -639,15 +511,13 @@ export default function TechnoCoreLanding() {
 
             <h2 className="text-2xl md:text-4xl font-bold mt-3 text-white">
               Complete systems.
-              <span className="text-green-400">
-                {" "}One engineered approach.
-              </span>
+              <span className="text-green-400"> One engineered approach.</span>
             </h2>
           </div>
         </div>
       </section>
 
-      {/* TECHNICAL ENQUIRY - LIGHT */}
+      {/* TECHNICAL ENQUIRY */}
       <section id="enquiry" className="bg-[#c7d0c8] text-black">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 lg:gap-20">
@@ -658,9 +528,7 @@ export default function TechnoCoreLanding() {
 
               <h2 className="text-4xl md:text-5xl font-bold mt-4 tracking-tight">
                 Tell us about
-                <span className="block text-green-700">
-                  your application.
-                </span>
+                <span className="block text-green-700">your application.</span>
               </h2>
 
               <p className="text-gray-700 mt-6 text-lg leading-relaxed">
@@ -669,88 +537,38 @@ export default function TechnoCoreLanding() {
               </p>
 
               <div className="mt-10 space-y-4 text-gray-700">
-                <a
-                  href="mailto:sales@technocore.ie"
-                  className="block hover:text-green-700"
-                >
+                <a href="mailto:sales@technocore.ie" className="block hover:text-green-700">
                   sales@technocore.ie
                 </a>
-
-                <a
-                  href="tel:+353874386157"
-                  className="block hover:text-green-700"
-                >
+                <a href="tel:+353874386157" className="block hover:text-green-700">
                   +353 87 438 6157
                 </a>
-
-                <div>
-  Newtownmountkennedy, Co. Wicklow · Ireland
-</div>
+                <div>Newtownmountkennedy, Co. Wicklow · Ireland</div>
               </div>
             </div>
 
-            
-<form
-  action="https://api.web3forms.com/submit"
-  method="POST"
-  className="mt-8 max-w-xl mx-auto text-left"
->
-  <input
-    type="hidden"
-    name="access_key"
-    value="e03d7d9e-dae5-4631-a549-b15e9e45c508"
-  />
-  <input
-    type="hidden"
-    name="subject"
-    value="New Quotation Enquiry - TechnoCore"
-  />
-  <input
-    type="hidden"
-    name="from_name"
-    value="TechnoCore Website"
-  />
-  <input
-    type="hidden"
-    name="redirect"
-    value="https://www.technocore.ie/thanks"
-  />
-  <input
-    type="checkbox"
-    name="botcheck"
-    style={{ display: "none" }}
-    tabIndex={-1}
-    autoComplete="off"
-  />
-
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              className="mt-8 max-w-xl mx-auto text-left"
+            >
+              <input type="hidden" name="access_key" value="e03d7d9e-dae5-4631-a549-b15e9e45c508" />
+              <input type="hidden" name="subject" value="New Quotation Enquiry - TechnoCore" />
+              <input type="hidden" name="from_name" value="TechnoCore Website" />
+              <input type="hidden" name="redirect" value="https://www.technocore.ie/thanks" />
+              <input
+                type="checkbox"
+                name="botcheck"
+                style={{ display: "none" }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
 
               <div className="grid sm:grid-cols-2 gap-5">
-                <input
-                  name="name"
-                  required
-                  placeholder="Name *"
-                  className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700"
-                />
-
-                <input
-                  name="company"
-                  placeholder="Company"
-                  className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700"
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Email *"
-                  className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700"
-                />
-
-                <input
-                  name="phone"
-                  placeholder="Phone"
-                  className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700"
-                />
+                <input name="name" required placeholder="Name *" className={inputClass} />
+                <input name="company" placeholder="Company" className={inputClass} />
+                <input type="email" name="email" required placeholder="Email *" className={inputClass} />
+                <input name="phone" placeholder="Phone" className={inputClass} />
 
                 <div className="sm:col-span-2">
                   <select
@@ -758,9 +576,7 @@ export default function TechnoCoreLanding() {
                     required
                     className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-gray-700 outline-none focus:border-green-700"
                   >
-                    <option value="">
-                      What do you need? *
-                    </option>
+                    <option value="">What do you need? *</option>
                     <option>Compressed Air Treatment</option>
                     <option>Nitrogen Generation</option>
                     <option>Oxygen Generation</option>
@@ -772,17 +588,8 @@ export default function TechnoCoreLanding() {
                   </select>
                 </div>
 
-                <input
-                  name="flow_capacity"
-                  placeholder="Flow / Capacity"
-                  className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700"
-                />
-
-                <input
-                  name="operating_pressure"
-                  placeholder="Operating Pressure"
-                  className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700"
-                />
+                <input name="flow_capacity" placeholder="Flow / Capacity" className={inputClass} />
+                <input name="operating_pressure" placeholder="Operating Pressure" className={inputClass} />
 
                 <div className="sm:col-span-2">
                   <textarea
@@ -790,7 +597,7 @@ export default function TechnoCoreLanding() {
                     rows={5}
                     required
                     placeholder="Application / Requirements *"
-                    className="w-full bg-[#edf1ee] border border-black/15 px-4 py-3.5 text-black placeholder:text-gray-500 outline-none focus:border-green-700"
+                    className={inputClass}
                   />
                 </div>
               </div>
@@ -804,10 +611,7 @@ export default function TechnoCoreLanding() {
 
               <p className="text-xs text-gray-600 mt-5">
                 By submitting this form, you agree to our{" "}
-                <Link
-                  href="/privacy-policy"
-                  className="underline hover:text-gray-900"
-                >
+                <Link href="/privacy-policy" className="underline hover:text-gray-900">
                   Privacy Policy
                 </Link>
                 .
@@ -824,20 +628,17 @@ export default function TechnoCoreLanding() {
             <div>
               <div className="flex items-center gap-2.5 overflow-visible">
                 <div className="relative w-[110px] h-[58px] shrink-0 overflow-visible -ml-8">
-  <Image
-    src="/logo.png"
-    alt="TechnoCore"
-    width={132}
-    height={132}
-    className="absolute left-[-4px] top-1/2 -translate-y-1/2 w-[114px] h-[114px] max-w-none object-contain"
-  />
-</div>
+                  <Image
+                    src="/logo.png"
+                    alt="TechnoCore"
+                    width={132}
+                    height={132}
+                    className="absolute left-[-4px] top-1/2 -translate-y-1/2 w-[114px] h-[114px] max-w-none object-contain"
+                  />
+                </div>
 
                 <div>
-                  <div className="font-bold text-[27px]">
-                    TechnoCore
-                  </div>
-
+                  <div className="font-bold text-[27px]">TechnoCore</div>
                   <div className="text-[10px] tracking-[0.23em] uppercase text-gray-400 mt-1">
                     Industrial Engineering
                   </div>
@@ -854,56 +655,12 @@ export default function TechnoCoreLanding() {
               <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">
                 Solutions
               </h3>
-
               <div className="mt-5 space-y-3 text-gray-400">
-                <Link
-                  href="/compressed-air-treatment-ireland"
-                  className="block hover:text-green-400"
-                >
-                  Compressed Air
-                </Link>
-
-                <Link
-                  href="/products/nitrogen"
-                  className="block hover:text-green-400"
-                >
-                  Nitrogen
-                </Link>
-
-                <Link
-                  href="/products/oxygen"
-                  className="block hover:text-green-400"
-                >
-                  Oxygen
-                </Link>
-
-                <Link
-                  href="/products/air-dryers"
-                  className="block hover:text-green-400"
-                >
-                  Air Dryers
-                </Link>
-
-                <Link
-                  href="/products/filtration"
-                  className="block hover:text-green-400"
-                >
-                  Filtration
-                </Link>
-
-                <Link
-                  href="/products/chillers"
-                  className="block hover:text-green-400"
-                >
-                  Chillers
-                </Link>
-
-                <Link
-                  href="/products/paint-booth"
-                  className="block hover:text-green-400"
-                >
-                  Paint Booth Air Preparation
-                </Link>
+                {footerSolutions.map((item) => (
+                  <Link key={item.href} href={item.href} className="block hover:text-green-400">
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -911,42 +668,17 @@ export default function TechnoCoreLanding() {
               <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">
                 Company
               </h3>
-
               <div className="mt-5 space-y-3 text-gray-400">
-                <Link
-                  href="/products"
-                  className="block hover:text-green-400"
-                >
-                  All Products
-                </Link>
-
-                <Link
-                  href="/about"
-                  className="block hover:text-green-400"
-                >
-                  About
-                </Link>
-
-                <Link
-                  href="/contact"
-                  className="block hover:text-green-400"
-                >
-                  Contact
-                </Link>
-
-                <Link
-                  href="/privacy-policy"
-                  className="block hover:text-green-400"
-                >
-                  Privacy Policy
-                </Link>
+                {footerCompany.map((item) => (
+                  <Link key={item.href} href={item.href} className="block hover:text-green-400">
+                    {item.label}
+                  </Link>
+                ))}
 
                 <button
                   type="button"
                   onClick={() =>
-                    window.dispatchEvent(
-                      new Event("technocore:open-cookie-settings")
-                    )
+                    window.dispatchEvent(new Event("technocore:open-cookie-settings"))
                   }
                   className="block hover:text-green-400"
                 >
@@ -959,37 +691,24 @@ export default function TechnoCoreLanding() {
               <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-gray-200">
                 Contact
               </h3>
-
               <div className="mt-5 space-y-3 text-gray-400">
-                <a
-                  href="mailto:sales@technocore.ie"
-                  className="block hover:text-green-400"
-                >
+                <a href="mailto:sales@technocore.ie" className="block hover:text-green-400">
                   sales@technocore.ie
                 </a>
-
-                <a
-                  href="tel:+353874386157"
-                  className="block hover:text-green-400"
-                >
+                <a href="tel:+353874386157" className="block hover:text-green-400">
                   +353 87 438 6157
                 </a>
-
-                <div>
-  Newtownmountkennedy, Co. Wicklow, Ireland
-</div>
+                <div>Newtownmountkennedy, Co. Wicklow, Ireland</div>
               </div>
             </div>
           </div>
 
           <div className="mt-12 pt-7 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-sm text-gray-500">
+            <p>© {new Date().getFullYear()} TechnoCore Limited. All rights reserved.</p>
             <p>
-              © {new Date().getFullYear()} TechnoCore Limited. All rights reserved.
+              Based in Newtownmountkennedy, Co. Wicklow · Supporting industrial
+              customers throughout Ireland
             </p>
-
-            <p>
-  Based in Newtownmountkennedy, Co. Wicklow · Supporting industrial customers throughout Ireland
-</p>
           </div>
         </div>
       </footer>
