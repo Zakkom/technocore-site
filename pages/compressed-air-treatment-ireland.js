@@ -10,49 +10,49 @@ const treatmentGroups = [
     title: "Refrigerated Air Dryers",
     text: "Energy-efficient compressed air drying for general industrial applications where a stable positive pressure dew point is required. Suitable for protecting pneumatic equipment, production lines and downstream filtration from moisture.",
     href: "/products/air-dryers/refrigerated",
-    cta: "Explore Solutions",
+    cta: "Explore Refrigerated Dryers",
   },
   {
     title: "Adsorption / Desiccant Air Dryers",
     text: "Low pressure dew point solutions for demanding process and instrument-air applications. TechnoCore can select heatless, heat-regenerated, modular, hybrid and high-pressure drying solutions according to flow, pressure, ambient conditions and required PDP.",
     href: "/products/air-dryers/adsorption",
-    cta: "Explore Solutions",
+    cta: "Explore Desiccant Dryers",
   },
   {
     title: "Compressed Air Filtration",
     text: "Particulate and coalescing filtration for removal of solid particles, liquid water, oil aerosols and other contaminants from compressed air systems. Filtration stages are selected to suit the required air quality and application.",
     href: "/products/filtration",
-    cta: "Explore Solutions",
+    cta: "Explore Air Filters",
   },
   {
     title: "Activated Carbon Filtration",
     text: "Activated carbon filtration for applications requiring additional reduction of oil vapour, hydrocarbons and odours. These solutions can form part of higher-purity compressed air treatment trains.",
     href: "/products/filtration",
-    cta: "Explore Solutions",
+    cta: "View Carbon Filters",
   },
   {
     title: "Sterile & Process Filtration",
     text: "Specialist process and sterile filtration options for sensitive applications including food, pharmaceutical, medical-device and other process industries where compressed-air quality is critical.",
     href: "/products/filtration",
-    cta: "Explore Solutions",
+    cta: "View Process Filters",
   },
   {
     title: "High-Pressure Filtration",
     text: "Compressed air and gas filtration solutions for medium- and high-pressure applications, engineered around operating pressure, flow, gas type, materials and process requirements.",
     href: "/products/filtration",
-    cta: "Explore Solutions",
+    cta: "View High-Pressure Filters",
   },
   {
     title: "Air Quality & System Monitoring",
     text: "Dew point, pressure and flow measurement, leak detection and compressed air purity analysis. Monitor system performance, protect sensitive processes and identify opportunities to improve energy efficiency.",
     href: "/products/air-quality-monitoring",
-    cta: "Explore Solutions",
+    cta: "View Air Quality Monitoring",
   },
   {
     title: "Medical & Breathing Air Treatment",
     text: "Specialist adsorption drying and purification equipment for medical and breathing air applications. Solutions selected around air quality, operating conditions and applicable project requirements.",
     href: "/products/medical-breathing-air-treatment",
-    cta: "Explore Solutions",
+    cta: "View Breathing Air Treatment",
   },
   {
     title: "Condensate Management",
@@ -213,7 +213,7 @@ export default function CompressedAirTreatmentIreland() {
         />
         <meta
           name="twitter:description"
-          content="Refrigerated and adsorption dryers, coalescing and particulate filtration, activated carbon, separators and condensate management for industry throughout Ireland."
+          content="Refrigerated and desiccant dryers, coalescing and particulate filtration, activated carbon, separators and condensate management for industry throughout Ireland."
         />
         <meta
           name="twitter:image"
@@ -243,6 +243,13 @@ export default function CompressedAirTreatmentIreland() {
           />
           <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28">
             <div className="max-w-4xl">
+              <nav aria-label="Breadcrumb" className="text-sm text-gray-400 mb-5">
+                <Link href="/" className="hover:text-green-400">
+                  Home
+                </Link>
+                <span className="mx-2">›</span>
+                <span className="text-gray-300">Compressed Air Treatment Ireland</span>
+              </nav>
               <p className="text-green-400 font-semibold tracking-wide uppercase mb-3">
                 Industrial Air Quality Engineering
               </p>
